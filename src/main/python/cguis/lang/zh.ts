@@ -2154,4 +2154,50 @@ Press ESC to cancel</source>
         <translation>恢复默认</translation>
     </message>
 </context>
+<context>
+    <name>QLineEdit</name>
+    <message>
+        <source>&amp;Undo</source>
+        <translation>撤消</translation>
+    </message>
+    <message>
+        <source>&amp;Redo</source>
+        <translation>恢复</translation>
+    </message>
+    <message>
+        <source>Cu&amp;t</source>
+        <translation>剪切</translation>
+    </message>
+    <message>
+        <source>&amp;Copy</source>
+        <translation>复制</translation>
+    </message>
+    <message>
+        <source>&amp;Paste</source>
+        <translation>粘贴</translation>
+    </message>
+    <message>
+        <source>Delete</source>
+        <translation>删除</translation>
+    </message>
+    <message>
+        <source>Select All</source>
+        <translation>全选</translation>
+    </message>
+</context>
+<context>
+    <name>QAbstractSpinBox</name>
+    <message>
+        <source>&amp;Select All</source>
+        <translation>全选</translation>
+    </message>
+    <message>
+        <source>&amp;Step up</source>
+        <translation>增加</translation>
+    </message>
+    <message>
+        <source>Step &amp;down</source>
+        <translation>减少</translation>
+    </message>
+</context>
 </TS>
