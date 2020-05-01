@@ -81,12 +81,12 @@ class Args(object):
         # software informations.
         self.info_main_site = "https://liujiacode.github.io/DigitalPalette"
         self.info_update_site = "https://github.com/liujiacode/DigitalPalette/releases"
-        self.info_version_zh = "v2.2.7-开发版"
-        self.info_version_en = "v2.2.7-dev"
+        self.info_version_zh = "v2.2.8-开发版"
+        self.info_version_en = "v2.2.8-dev"
         self.info_author_zh = "本征喵"
         self.info_author_en = "Eigenmiao"
-        self.info_date_zh = "2020年4月25日"
-        self.info_date_en = "Apr. 25th, 2020"
+        self.info_date_zh = "2020年5月1日"
+        self.info_date_en = "May 1st, 2020"
 
         # init settings.
         self.usr_store = os.sep.join((os.path.expanduser('~'), "Documents", "DigitalPalette"))

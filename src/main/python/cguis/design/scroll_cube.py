@@ -2,10 +2,9 @@
 
 # Form implementation generated from reading ui file 'src\main\python\cguis\design\scroll_cube.ui'
 #
-# Created by: PyQt5 UI code generator 5.13.2
+# Created by: PyQt5 UI code generator 5.12.1
 #
 # WARNING! All changes made in this file will be lost!
-
 
 from PyQt5 import QtCore, QtGui, QtWidgets
 
@@ -40,6 +39,7 @@ class Ui_ScrollCube(object):
         self.le_hec.setMinimumSize(QtCore.QSize(60, 0))
         self.le_hec.setMaximumSize(QtCore.QSize(60, 16777215))
         self.le_hec.setFocusPolicy(QtCore.Qt.StrongFocus)
+        self.le_hec.setContextMenuPolicy(QtCore.Qt.NoContextMenu)
         self.le_hec.setMaxLength(6)
         self.le_hec.setAlignment(QtCore.Qt.AlignLeading|QtCore.Qt.AlignLeft|QtCore.Qt.AlignVCenter)
         self.le_hec.setObjectName("le_hec")
@@ -67,6 +67,7 @@ class Ui_ScrollCube(object):
         self.sp_rgb_r = QtWidgets.QSpinBox(self.gbox_rgb)
         self.sp_rgb_r.setMinimumSize(QtCore.QSize(32, 0))
         self.sp_rgb_r.setMaximumSize(QtCore.QSize(32, 16777215))
+        self.sp_rgb_r.setContextMenuPolicy(QtCore.Qt.NoContextMenu)
         self.sp_rgb_r.setButtonSymbols(QtWidgets.QAbstractSpinBox.NoButtons)
         self.sp_rgb_r.setMaximum(255)
         self.sp_rgb_r.setObjectName("sp_rgb_r")
@@ -85,6 +86,7 @@ class Ui_ScrollCube(object):
         self.sp_rgb_g = QtWidgets.QSpinBox(self.gbox_rgb)
         self.sp_rgb_g.setMinimumSize(QtCore.QSize(32, 0))
         self.sp_rgb_g.setMaximumSize(QtCore.QSize(32, 16777215))
+        self.sp_rgb_g.setContextMenuPolicy(QtCore.Qt.NoContextMenu)
         self.sp_rgb_g.setButtonSymbols(QtWidgets.QAbstractSpinBox.NoButtons)
         self.sp_rgb_g.setMaximum(255)
         self.sp_rgb_g.setObjectName("sp_rgb_g")
@@ -103,6 +105,7 @@ class Ui_ScrollCube(object):
         self.sp_rgb_b = QtWidgets.QSpinBox(self.gbox_rgb)
         self.sp_rgb_b.setMinimumSize(QtCore.QSize(32, 0))
         self.sp_rgb_b.setMaximumSize(QtCore.QSize(32, 16777215))
+        self.sp_rgb_b.setContextMenuPolicy(QtCore.Qt.NoContextMenu)
         self.sp_rgb_b.setButtonSymbols(QtWidgets.QAbstractSpinBox.NoButtons)
         self.sp_rgb_b.setMaximum(255)
         self.sp_rgb_b.setObjectName("sp_rgb_b")
@@ -129,6 +132,7 @@ class Ui_ScrollCube(object):
         self.dp_hsv_h = QtWidgets.QDoubleSpinBox(self.gbox_hsv)
         self.dp_hsv_h.setMinimumSize(QtCore.QSize(32, 0))
         self.dp_hsv_h.setMaximumSize(QtCore.QSize(32, 16777215))
+        self.dp_hsv_h.setContextMenuPolicy(QtCore.Qt.NoContextMenu)
         self.dp_hsv_h.setButtonSymbols(QtWidgets.QAbstractSpinBox.NoButtons)
         self.dp_hsv_h.setDecimals(3)
         self.dp_hsv_h.setMaximum(360.0)
@@ -148,6 +152,7 @@ class Ui_ScrollCube(object):
         self.dp_hsv_s = QtWidgets.QDoubleSpinBox(self.gbox_hsv)
         self.dp_hsv_s.setMinimumSize(QtCore.QSize(32, 0))
         self.dp_hsv_s.setMaximumSize(QtCore.QSize(32, 16777215))
+        self.dp_hsv_s.setContextMenuPolicy(QtCore.Qt.NoContextMenu)
         self.dp_hsv_s.setButtonSymbols(QtWidgets.QAbstractSpinBox.NoButtons)
         self.dp_hsv_s.setDecimals(3)
         self.dp_hsv_s.setMaximum(1.0)
@@ -168,6 +173,7 @@ class Ui_ScrollCube(object):
         self.dp_hsv_v = QtWidgets.QDoubleSpinBox(self.gbox_hsv)
         self.dp_hsv_v.setMinimumSize(QtCore.QSize(32, 0))
         self.dp_hsv_v.setMaximumSize(QtCore.QSize(32, 16777215))
+        self.dp_hsv_v.setContextMenuPolicy(QtCore.Qt.NoContextMenu)
         self.dp_hsv_v.setButtonSymbols(QtWidgets.QAbstractSpinBox.NoButtons)
         self.dp_hsv_v.setDecimals(3)
         self.dp_hsv_v.setMaximum(1.0)
@@ -183,3 +189,5 @@ class Ui_ScrollCube(object):
 
     def retranslateUi(self, ScrollCube):
         pass
+
+
