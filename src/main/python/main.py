@@ -647,6 +647,60 @@ class DigitalPalette(QMainWindow, Ui_MainWindow):
             _translate("DigitalPalette", "Depot Volume: Row {}, Col {}; Total {}, Index {}."),
         )
 
+        _QColorDialog = (
+            _translate("QColorDialog", "Hu&e:"),
+            _translate("QColorDialog", "&Sat:"),
+            _translate("QColorDialog", "&Val:"),
+            _translate("QColorDialog", "&Red:"),
+            _translate("QColorDialog", "&Green:"),
+            _translate("QColorDialog", "Bl&ue:"),
+            _translate("QColorDialog", "A&lpha channel:"),
+            _translate("QColorDialog", "&HTML:"),
+            _translate("QColorDialog", "Cursor at %1, %2\nPress ESC to cancel"),
+            _translate("QColorDialog", "Select Color"),
+            _translate("QColorDialog", "&Pick Screen Color"),
+            _translate("QColorDialog", "&Basic colors"),
+            _translate("QColorDialog", "&Custom colors"),
+            _translate("QColorDialog", "&Add to Custom Colors"),
+        )
+
+        _QPlatformTheme = (
+            _translate("QPlatformTheme", "OK"),
+            _translate("QPlatformTheme", "Save"),
+            _translate("QPlatformTheme", "Save All"),
+            _translate("QPlatformTheme", "Open"),
+            _translate("QPlatformTheme", "&Yes"),
+            _translate("QPlatformTheme", "Yes to &All"),
+            _translate("QPlatformTheme", "&No"),
+            _translate("QPlatformTheme", "N&o to All"),
+            _translate("QPlatformTheme", "Abort"),
+            _translate("QPlatformTheme", "Retry"),
+            _translate("QPlatformTheme", "Ignore"),
+            _translate("QPlatformTheme", "Close"),
+            _translate("QPlatformTheme", "Cancel"),
+            _translate("QPlatformTheme", "Discard"),
+            _translate("QPlatformTheme", "Help"),
+            _translate("QPlatformTheme", "Apply"),
+            _translate("QPlatformTheme", "Reset"),
+            _translate("QPlatformTheme", "Restore Defaults"),
+        )
+
+        _QLineEdit = (
+            _translate("QLineEdit", "&Undo"),
+            _translate("QLineEdit", "&Redo"),
+            _translate("QLineEdit", "Cu&t"),
+            _translate("QLineEdit", "&Copy"),
+            _translate("QLineEdit", "&Paste"),
+            _translate("QLineEdit", "Delete"),
+            _translate("QLineEdit", "Select All"),
+        )
+
+        _QAbstractSpinBox = (
+            _translate("QAbstractSpinBox", "&Select All"),
+            _translate("QAbstractSpinBox", "&Step up"),
+            _translate("QAbstractSpinBox", "Step &down"),
+        )
+
 
 if __name__ == "__main__":
     appctxt = ApplicationContext()
