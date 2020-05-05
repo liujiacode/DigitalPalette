@@ -33,7 +33,8 @@ import sys
 import json
 from fbs_runtime.application_context.PyQt5 import ApplicationContext
 from PyQt5.QtWidgets import QMainWindow, QApplication, QGridLayout, QMessageBox, QShortcut, QPushButton
-from PyQt5.QtCore import QCoreApplication, QUrl, QTranslator
+from PyQt5.QtCore import QCoreApplication, QUrl, QTranslator, QT_VERSION_STR
+from PyQt5.Qt import PYQT_VERSION_STR
 from PyQt5.QtGui import QIcon, QPixmap, QDesktopServices, QKeySequence
 from cguis.design.main_window import Ui_MainWindow
 from cguis.resource import view_rc
@@ -591,7 +592,9 @@ class DigitalPalette(QMainWindow, Ui_MainWindow):
         info += "---------- ---------- ----------\n"
         info += "{}\n".format(self._info_descs[4])
         info += "---------- ---------- ----------\n"
-        info += self._info_descs[5]
+        info += "{}\n".format(self._info_descs[5])
+        info += "---------- ---------- ----------\n"
+        info += "{}\n".format(self._info_descs[8].format(QT_VERSION_STR, PYQT_VERSION_STR))
 
         box = QMessageBox(self)
         box.setWindowTitle(self._info_descs[0])
@@ -638,6 +641,7 @@ class DigitalPalette(QMainWindow, Ui_MainWindow):
             _translate("DigitalPalette", "DigitalPalette is a free software, which is distributed in the hope that it will be useful, but WITHOUT ANY WARRANTY. You can redistribute it and/or modify it under the terms of the GNU General Public License as published by the Free Software Foundation. See the GNU General Public License for more details."),
             _translate("DigitalPalette", "OK"),
             _translate("DigitalPalette", "Visit Website"),
+            _translate("DigitalPalette", "DigitalPalette uses Qt version {} (PyQt version {}) licensed under GNU General Public License. Please see qt.io/licensing for an overview of Qt licensing."),
         )
 
         self._status_descs = (

@@ -145,7 +145,7 @@
 <context>
     <name>DigitalPalette</name>
     <message>
-        <location filename="../../main.py" line="632"/>
+        <location filename="../../main.py" line="635"/>
         <source>About</source>
         <translation>关于</translation>
     </message>
@@ -170,17 +170,17 @@
         <translation type="obsolete">网址</translation>
     </message>
     <message>
-        <location filename="../../main.py" line="632"/>
+        <location filename="../../main.py" line="635"/>
         <source>DigitalPalette is a free software, which is distributed in the hope that it will be useful, but WITHOUT ANY WARRANTY. You can redistribute it and/or modify it under the terms of the GNU General Public License as published by the Free Software Foundation. See the GNU General Public License for more details.</source>
         <translation>DigitalPalette 是自由软件，本着可用的意愿分发，但不作任何担保。您可以在遵守由自由软件基金会发布的 GNU 通用公共许可协议的情况下重新分发并且（或者）修改软件。更多细节请参看 GNU 通用公共许可协议。</translation>
     </message>
     <message>
-        <location filename="../../main.py" line="632"/>
+        <location filename="../../main.py" line="635"/>
         <source>OK</source>
         <translation>确定</translation>
     </message>
     <message>
-        <location filename="../../main.py" line="643"/>
+        <location filename="../../main.py" line="647"/>
         <source>Ready.</source>
         <translation>准备就绪。</translation>
     </message>
@@ -190,7 +190,7 @@
         <translation type="obsolete">版权 © 2019。版权所有。</translation>
     </message>
     <message>
-        <location filename="../../main.py" line="632"/>
+        <location filename="../../main.py" line="635"/>
         <source>Visit Website</source>
         <translation>访问网站</translation>
     </message>
@@ -210,39 +210,44 @@
         <translation type="obsolete">更新：</translation>
     </message>
     <message>
-        <location filename="../../main.py" line="632"/>
+        <location filename="../../main.py" line="635"/>
         <source>Version: {}</source>
         <translation>版本：{}</translation>
     </message>
     <message>
-        <location filename="../../main.py" line="632"/>
+        <location filename="../../main.py" line="635"/>
         <source>Author: {}</source>
         <translation>作者：{}</translation>
     </message>
     <message>
-        <location filename="../../main.py" line="632"/>
+        <location filename="../../main.py" line="635"/>
         <source>Update: {}</source>
         <translation>更新：{}</translation>
     </message>
     <message>
-        <location filename="../../main.py" line="632"/>
+        <location filename="../../main.py" line="635"/>
         <source>All Rights Reserved.</source>
         <translation>版权 © 2019-2020。版权所有。</translation>
     </message>
     <message>
-        <location filename="../../main.py" line="643"/>
+        <location filename="../../main.py" line="647"/>
         <source>Image Size: {} x {}.</source>
         <translation>图像尺寸：{} × {}。</translation>
     </message>
     <message>
-        <location filename="../../main.py" line="643"/>
+        <location filename="../../main.py" line="647"/>
         <source>Image Size: {} x {}. Position: {} %, {} %.</source>
         <translation>图像尺寸：{} × {}。坐标：{}% × {}%。</translation>
     </message>
     <message>
-        <location filename="../../main.py" line="643"/>
+        <location filename="../../main.py" line="647"/>
         <source>Depot Volume: Row {}, Col {}; Total {}, Index {}.</source>
         <translation>仓库容量：行 {}，列 {}，总共 {}，索引 {}。</translation>
+    </message>
+    <message>
+        <location filename="../../main.py" line="635"/>
+        <source>DigitalPalette uses Qt version {} (PyQt version {}) licensed under GNU General Public License. Please see qt.io/licensing for an overview of Qt licensing.</source>
+        <translation>DigitalPalette 使用 GNU 通用公共许可协议许可的 Qt 版本 {} (PyQt 版本 {})。关于 Qt 许可协议的概述，请参阅 qt.io/licensing。</translation>
     </message>
 </context>
 <context>
@@ -951,17 +956,17 @@
 <context>
     <name>QAbstractSpinBox</name>
     <message>
-        <location filename="../../main.py" line="698"/>
+        <location filename="../../main.py" line="702"/>
         <source>&amp;Select All</source>
         <translation>全选</translation>
     </message>
     <message>
-        <location filename="../../main.py" line="698"/>
+        <location filename="../../main.py" line="702"/>
         <source>&amp;Step up</source>
         <translation>增加</translation>
     </message>
     <message>
-        <location filename="../../main.py" line="698"/>
+        <location filename="../../main.py" line="702"/>
         <source>Step &amp;down</source>
         <translation>减少</translation>
     </message>
@@ -969,74 +974,74 @@
 <context>
     <name>QColorDialog</name>
     <message>
-        <location filename="../../main.py" line="650"/>
+        <location filename="../../main.py" line="654"/>
         <source>Hu&amp;e:</source>
         <translation>H：</translation>
     </message>
     <message>
-        <location filename="../../main.py" line="650"/>
+        <location filename="../../main.py" line="654"/>
         <source>&amp;Sat:</source>
         <translation>S：</translation>
     </message>
     <message>
-        <location filename="../../main.py" line="650"/>
+        <location filename="../../main.py" line="654"/>
         <source>&amp;Val:</source>
         <translation>V：</translation>
     </message>
     <message>
-        <location filename="../../main.py" line="650"/>
+        <location filename="../../main.py" line="654"/>
         <source>&amp;Red:</source>
         <translation>R：</translation>
     </message>
     <message>
-        <location filename="../../main.py" line="650"/>
+        <location filename="../../main.py" line="654"/>
         <source>&amp;Green:</source>
         <translation>G：</translation>
     </message>
     <message>
-        <location filename="../../main.py" line="650"/>
+        <location filename="../../main.py" line="654"/>
         <source>Bl&amp;ue:</source>
         <translation>B：</translation>
     </message>
     <message>
-        <location filename="../../main.py" line="650"/>
+        <location filename="../../main.py" line="654"/>
         <source>A&amp;lpha channel:</source>
         <translation>A：</translation>
     </message>
     <message>
-        <location filename="../../main.py" line="650"/>
+        <location filename="../../main.py" line="654"/>
         <source>&amp;HTML:</source>
         <translation>HTML：</translation>
     </message>
     <message>
-        <location filename="../../main.py" line="650"/>
+        <location filename="../../main.py" line="654"/>
         <source>Cursor at %1, %2
 Press ESC to cancel</source>
         <translation>光标位于：%1 x %2。
 按下 ESC 键取消。</translation>
     </message>
     <message>
-        <location filename="../../main.py" line="650"/>
+        <location filename="../../main.py" line="654"/>
         <source>Select Color</source>
         <translation>选择色彩</translation>
     </message>
     <message>
-        <location filename="../../main.py" line="650"/>
+        <location filename="../../main.py" line="654"/>
         <source>&amp;Pick Screen Color</source>
         <translation>选取屏幕色彩</translation>
     </message>
     <message>
-        <location filename="../../main.py" line="650"/>
+        <location filename="../../main.py" line="654"/>
         <source>&amp;Basic colors</source>
         <translation>基本色彩</translation>
     </message>
     <message>
-        <location filename="../../main.py" line="650"/>
+        <location filename="../../main.py" line="654"/>
         <source>&amp;Custom colors</source>
         <translation>自定义色彩</translation>
     </message>
     <message>
-        <location filename="../../main.py" line="650"/>
+        <location filename="../../main.py" line="654"/>
         <source>&amp;Add to Custom Colors</source>
         <translation>添加到自定义色彩</translation>
     </message>
@@ -1044,37 +1049,37 @@ Press ESC to cancel</source>
 <context>
     <name>QLineEdit</name>
     <message>
-        <location filename="../../main.py" line="688"/>
+        <location filename="../../main.py" line="692"/>
         <source>&amp;Undo</source>
         <translation>撤消</translation>
     </message>
     <message>
-        <location filename="../../main.py" line="688"/>
+        <location filename="../../main.py" line="692"/>
         <source>&amp;Redo</source>
         <translation>恢复</translation>
     </message>
     <message>
-        <location filename="../../main.py" line="688"/>
+        <location filename="../../main.py" line="692"/>
         <source>Cu&amp;t</source>
         <translation>剪切</translation>
     </message>
     <message>
-        <location filename="../../main.py" line="688"/>
+        <location filename="../../main.py" line="692"/>
         <source>&amp;Copy</source>
         <translation>复制</translation>
     </message>
     <message>
-        <location filename="../../main.py" line="688"/>
+        <location filename="../../main.py" line="692"/>
         <source>&amp;Paste</source>
         <translation>粘贴</translation>
     </message>
     <message>
-        <location filename="../../main.py" line="688"/>
+        <location filename="../../main.py" line="692"/>
         <source>Delete</source>
         <translation>删除</translation>
     </message>
     <message>
-        <location filename="../../main.py" line="688"/>
+        <location filename="../../main.py" line="692"/>
         <source>Select All</source>
         <translation>全选</translation>
     </message>
@@ -1082,92 +1087,92 @@ Press ESC to cancel</source>
 <context>
     <name>QPlatformTheme</name>
     <message>
-        <location filename="../../main.py" line="667"/>
+        <location filename="../../main.py" line="671"/>
         <source>OK</source>
         <translation>确定</translation>
     </message>
     <message>
-        <location filename="../../main.py" line="667"/>
+        <location filename="../../main.py" line="671"/>
         <source>Save</source>
         <translation>保存</translation>
     </message>
     <message>
-        <location filename="../../main.py" line="667"/>
+        <location filename="../../main.py" line="671"/>
         <source>Save All</source>
         <translation>全部保存</translation>
     </message>
     <message>
-        <location filename="../../main.py" line="667"/>
+        <location filename="../../main.py" line="671"/>
         <source>Open</source>
         <translation>打开</translation>
     </message>
     <message>
-        <location filename="../../main.py" line="667"/>
+        <location filename="../../main.py" line="671"/>
         <source>&amp;Yes</source>
         <translation>是(&amp;Y)</translation>
     </message>
     <message>
-        <location filename="../../main.py" line="667"/>
+        <location filename="../../main.py" line="671"/>
         <source>Yes to &amp;All</source>
         <translation>全部是(&amp;A)</translation>
     </message>
     <message>
-        <location filename="../../main.py" line="667"/>
+        <location filename="../../main.py" line="671"/>
         <source>&amp;No</source>
         <translation>否(&amp;N)</translation>
     </message>
     <message>
-        <location filename="../../main.py" line="667"/>
+        <location filename="../../main.py" line="671"/>
         <source>N&amp;o to All</source>
         <translation>全部否(&amp;O)</translation>
     </message>
     <message>
-        <location filename="../../main.py" line="667"/>
+        <location filename="../../main.py" line="671"/>
         <source>Abort</source>
         <translation>中止</translation>
     </message>
     <message>
-        <location filename="../../main.py" line="667"/>
+        <location filename="../../main.py" line="671"/>
         <source>Retry</source>
         <translation>重试</translation>
     </message>
     <message>
-        <location filename="../../main.py" line="667"/>
+        <location filename="../../main.py" line="671"/>
         <source>Ignore</source>
         <translation>忽略</translation>
     </message>
     <message>
-        <location filename="../../main.py" line="667"/>
+        <location filename="../../main.py" line="671"/>
         <source>Close</source>
         <translation>关闭</translation>
     </message>
     <message>
-        <location filename="../../main.py" line="667"/>
+        <location filename="../../main.py" line="671"/>
         <source>Cancel</source>
         <translation>取消</translation>
     </message>
     <message>
-        <location filename="../../main.py" line="667"/>
+        <location filename="../../main.py" line="671"/>
         <source>Discard</source>
         <translation>放弃</translation>
     </message>
     <message>
-        <location filename="../../main.py" line="667"/>
+        <location filename="../../main.py" line="671"/>
         <source>Help</source>
         <translation>帮助</translation>
     </message>
     <message>
-        <location filename="../../main.py" line="667"/>
+        <location filename="../../main.py" line="671"/>
         <source>Apply</source>
         <translation>应用</translation>
     </message>
     <message>
-        <location filename="../../main.py" line="667"/>
+        <location filename="../../main.py" line="671"/>
         <source>Reset</source>
         <translation>重置</translation>
     </message>
     <message>
-        <location filename="../../main.py" line="667"/>
+        <location filename="../../main.py" line="671"/>
         <source>Restore Defaults</source>
         <translation>恢复默认</translation>
     </message>
