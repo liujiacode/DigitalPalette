@@ -13,7 +13,7 @@ Copyright © 2019-2020 by Eigenmiao. All Rights Reserved.
 """
 
 __WEBSITE__ = """
-https://liujiacode.github.io/DigitalPalette
+https://github.com/liujiacode/DigitalPalette
 """
 
 __VERSION__ = """
@@ -21,7 +21,7 @@ v2.2.8-dev
 """
 
 __AUTHOR__ = """
-Eigenmiao
+Eigenmiao (eigenmiao@outlook.com)
 """
 
 __DATE__ = """

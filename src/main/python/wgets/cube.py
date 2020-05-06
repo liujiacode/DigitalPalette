@@ -7,7 +7,7 @@ it and/or modify it under the terms of the GNU General Public License
 as published by the Free Software Foundation. See the GNU General Public 
 License for more details. 
 
-Please visit https://liujiacode.github.io/DigitalPalette for more 
+Please visit https://github.com/liujiacode/DigitalPalette for more 
 infomation about DigitalPalette.
 
 Copyright © 2019-2020 by Eigenmiao. All Rights Reserved.
