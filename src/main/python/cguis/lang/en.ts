@@ -135,68 +135,73 @@
 <context>
     <name>DigitalPalette</name>
     <message>
-        <location filename="../../main.py" line="635"/>
+        <location filename="../../main.py" line="637"/>
         <source>About</source>
         <translation></translation>
     </message>
     <message>
-        <location filename="../../main.py" line="635"/>
-        <source>DigitalPalette is a free software, which is distributed in the hope that it will be useful, but WITHOUT ANY WARRANTY. You can redistribute it and/or modify it under the terms of the GNU General Public License as published by the Free Software Foundation. See the GNU General Public License for more details.</source>
-        <translation></translation>
-    </message>
-    <message>
-        <location filename="../../main.py" line="635"/>
+        <location filename="../../main.py" line="637"/>
         <source>OK</source>
         <translation>OK</translation>
     </message>
     <message>
-        <location filename="../../main.py" line="647"/>
+        <location filename="../../main.py" line="650"/>
         <source>Ready.</source>
         <translation></translation>
     </message>
     <message>
-        <location filename="../../main.py" line="635"/>
+        <location filename="../../main.py" line="637"/>
         <source>Visit Website</source>
         <translation></translation>
     </message>
     <message>
-        <location filename="../../main.py" line="635"/>
+        <location filename="../../main.py" line="637"/>
         <source>Version: {}</source>
         <translation></translation>
     </message>
     <message>
-        <location filename="../../main.py" line="635"/>
+        <location filename="../../main.py" line="637"/>
         <source>Author: {}</source>
         <translation></translation>
     </message>
     <message>
-        <location filename="../../main.py" line="635"/>
+        <location filename="../../main.py" line="637"/>
         <source>Update: {}</source>
         <translation></translation>
     </message>
     <message>
-        <location filename="../../main.py" line="635"/>
+        <location filename="../../main.py" line="637"/>
         <source>All Rights Reserved.</source>
         <translation>Copyright © 2019-2020. All Rights Reserved.</translation>
     </message>
     <message>
-        <location filename="../../main.py" line="647"/>
+        <location filename="../../main.py" line="650"/>
         <source>Image Size: {} x {}.</source>
         <translation>Image Size: {} × {}.</translation>
     </message>
     <message>
-        <location filename="../../main.py" line="647"/>
+        <location filename="../../main.py" line="650"/>
         <source>Image Size: {} x {}. Position: {} %, {} %.</source>
         <translation>Image Size: {} × {}. Position: {}% × {}%.</translation>
     </message>
     <message>
-        <location filename="../../main.py" line="647"/>
+        <location filename="../../main.py" line="650"/>
         <source>Depot Volume: Row {}, Col {}; Total {}, Index {}.</source>
         <translation>Depot Volume: Row {}, Col {}; Total {}, Index {}.</translation>
     </message>
     <message>
-        <location filename="../../main.py" line="635"/>
+        <location filename="../../main.py" line="637"/>
         <source>DigitalPalette uses Qt version {} (PyQt version {}) licensed under GNU General Public License. Please see qt.io/licensing for an overview of Qt licensing.</source>
+        <translation></translation>
+    </message>
+    <message>
+        <location filename="../../main.py" line="637"/>
+        <source>DigitalPalette is a free software, which is distributed in the hope that it will be useful, but without any warranty. You can redistribute it and/or modify it under the terms of the GNU General Public License as published by the Free Software Foundation. See the GNU General Public License 3.0 (GPL 3.0) for more details.</source>
+        <translation></translation>
+    </message>
+    <message>
+        <location filename="../../main.py" line="637"/>
+        <source>All images (including logo and sample images, etc.), documents and translations in DigitalPalette code repository are licensed under Creative Commons Attribution-NonCommercial-ShareAlike License 4.0 (CC BY-NC-SA 4.0) unless stating additionally.</source>
         <translation></translation>
     </message>
 </context>
@@ -766,17 +771,17 @@
 <context>
     <name>QAbstractSpinBox</name>
     <message>
-        <location filename="../../main.py" line="702"/>
+        <location filename="../../main.py" line="705"/>
         <source>&amp;Select All</source>
         <translation></translation>
     </message>
     <message>
-        <location filename="../../main.py" line="702"/>
+        <location filename="../../main.py" line="705"/>
         <source>&amp;Step up</source>
         <translation></translation>
     </message>
     <message>
-        <location filename="../../main.py" line="702"/>
+        <location filename="../../main.py" line="705"/>
         <source>Step &amp;down</source>
         <translation></translation>
     </message>
@@ -784,74 +789,74 @@
 <context>
     <name>QColorDialog</name>
     <message>
-        <location filename="../../main.py" line="654"/>
+        <location filename="../../main.py" line="657"/>
         <source>Hu&amp;e:</source>
         <translation>H: </translation>
     </message>
     <message>
-        <location filename="../../main.py" line="654"/>
+        <location filename="../../main.py" line="657"/>
         <source>&amp;Sat:</source>
         <translation>S: </translation>
     </message>
     <message>
-        <location filename="../../main.py" line="654"/>
+        <location filename="../../main.py" line="657"/>
         <source>&amp;Val:</source>
         <translation>V: </translation>
     </message>
     <message>
-        <location filename="../../main.py" line="654"/>
+        <location filename="../../main.py" line="657"/>
         <source>&amp;Red:</source>
         <translation>R: </translation>
     </message>
     <message>
-        <location filename="../../main.py" line="654"/>
+        <location filename="../../main.py" line="657"/>
         <source>&amp;Green:</source>
         <translation>G: </translation>
     </message>
     <message>
-        <location filename="../../main.py" line="654"/>
+        <location filename="../../main.py" line="657"/>
         <source>Bl&amp;ue:</source>
         <translation>B: </translation>
     </message>
     <message>
-        <location filename="../../main.py" line="654"/>
+        <location filename="../../main.py" line="657"/>
         <source>A&amp;lpha channel:</source>
         <translation>A: </translation>
     </message>
     <message>
-        <location filename="../../main.py" line="654"/>
+        <location filename="../../main.py" line="657"/>
         <source>&amp;HTML:</source>
         <translation>HTML: </translation>
     </message>
     <message>
-        <location filename="../../main.py" line="654"/>
+        <location filename="../../main.py" line="657"/>
         <source>Cursor at %1, %2
 Press ESC to cancel</source>
         <translation>Cursor at: %1 x %2.
 Press ESC to cancel.</translation>
     </message>
     <message>
-        <location filename="../../main.py" line="654"/>
+        <location filename="../../main.py" line="657"/>
         <source>Select Color</source>
         <translation>Select Color</translation>
     </message>
     <message>
-        <location filename="../../main.py" line="654"/>
+        <location filename="../../main.py" line="657"/>
         <source>&amp;Pick Screen Color</source>
         <translation>Pick Screen Color</translation>
     </message>
     <message>
-        <location filename="../../main.py" line="654"/>
+        <location filename="../../main.py" line="657"/>
         <source>&amp;Basic colors</source>
         <translation>Basic Colors</translation>
     </message>
     <message>
-        <location filename="../../main.py" line="654"/>
+        <location filename="../../main.py" line="657"/>
         <source>&amp;Custom colors</source>
         <translation>Custom Colors</translation>
     </message>
     <message>
-        <location filename="../../main.py" line="654"/>
+        <location filename="../../main.py" line="657"/>
         <source>&amp;Add to Custom Colors</source>
         <translation>Add to Custom Colors</translation>
     </message>
@@ -859,37 +864,37 @@ Press ESC to cancel.</translation>
 <context>
     <name>QLineEdit</name>
     <message>
-        <location filename="../../main.py" line="692"/>
+        <location filename="../../main.py" line="695"/>
         <source>&amp;Undo</source>
         <translation></translation>
     </message>
     <message>
-        <location filename="../../main.py" line="692"/>
+        <location filename="../../main.py" line="695"/>
         <source>&amp;Redo</source>
         <translation></translation>
     </message>
     <message>
-        <location filename="../../main.py" line="692"/>
+        <location filename="../../main.py" line="695"/>
         <source>Cu&amp;t</source>
         <translation></translation>
     </message>
     <message>
-        <location filename="../../main.py" line="692"/>
+        <location filename="../../main.py" line="695"/>
         <source>&amp;Copy</source>
         <translation></translation>
     </message>
     <message>
-        <location filename="../../main.py" line="692"/>
+        <location filename="../../main.py" line="695"/>
         <source>&amp;Paste</source>
         <translation></translation>
     </message>
     <message>
-        <location filename="../../main.py" line="692"/>
+        <location filename="../../main.py" line="695"/>
         <source>Delete</source>
         <translation></translation>
     </message>
     <message>
-        <location filename="../../main.py" line="692"/>
+        <location filename="../../main.py" line="695"/>
         <source>Select All</source>
         <translation></translation>
     </message>
@@ -897,92 +902,92 @@ Press ESC to cancel.</translation>
 <context>
     <name>QPlatformTheme</name>
     <message>
-        <location filename="../../main.py" line="671"/>
+        <location filename="../../main.py" line="674"/>
         <source>OK</source>
         <translation>OK</translation>
     </message>
     <message>
-        <location filename="../../main.py" line="671"/>
+        <location filename="../../main.py" line="674"/>
         <source>Save</source>
         <translation></translation>
     </message>
     <message>
-        <location filename="../../main.py" line="671"/>
+        <location filename="../../main.py" line="674"/>
         <source>Save All</source>
         <translation></translation>
     </message>
     <message>
-        <location filename="../../main.py" line="671"/>
+        <location filename="../../main.py" line="674"/>
         <source>Open</source>
         <translation></translation>
     </message>
     <message>
-        <location filename="../../main.py" line="671"/>
+        <location filename="../../main.py" line="674"/>
         <source>&amp;Yes</source>
         <translation></translation>
     </message>
     <message>
-        <location filename="../../main.py" line="671"/>
+        <location filename="../../main.py" line="674"/>
         <source>Yes to &amp;All</source>
         <translation></translation>
     </message>
     <message>
-        <location filename="../../main.py" line="671"/>
+        <location filename="../../main.py" line="674"/>
         <source>&amp;No</source>
         <translation></translation>
     </message>
     <message>
-        <location filename="../../main.py" line="671"/>
+        <location filename="../../main.py" line="674"/>
         <source>N&amp;o to All</source>
         <translation></translation>
     </message>
     <message>
-        <location filename="../../main.py" line="671"/>
+        <location filename="../../main.py" line="674"/>
         <source>Abort</source>
         <translation></translation>
     </message>
     <message>
-        <location filename="../../main.py" line="671"/>
+        <location filename="../../main.py" line="674"/>
         <source>Retry</source>
         <translation></translation>
     </message>
     <message>
-        <location filename="../../main.py" line="671"/>
+        <location filename="../../main.py" line="674"/>
         <source>Ignore</source>
         <translation></translation>
     </message>
     <message>
-        <location filename="../../main.py" line="671"/>
+        <location filename="../../main.py" line="674"/>
         <source>Close</source>
         <translation></translation>
     </message>
     <message>
-        <location filename="../../main.py" line="671"/>
+        <location filename="../../main.py" line="674"/>
         <source>Cancel</source>
         <translation>Cancel</translation>
     </message>
     <message>
-        <location filename="../../main.py" line="671"/>
+        <location filename="../../main.py" line="674"/>
         <source>Discard</source>
         <translation></translation>
     </message>
     <message>
-        <location filename="../../main.py" line="671"/>
+        <location filename="../../main.py" line="674"/>
         <source>Help</source>
         <translation>Help</translation>
     </message>
     <message>
-        <location filename="../../main.py" line="671"/>
+        <location filename="../../main.py" line="674"/>
         <source>Apply</source>
         <translation>Apply</translation>
     </message>
     <message>
-        <location filename="../../main.py" line="671"/>
+        <location filename="../../main.py" line="674"/>
         <source>Reset</source>
         <translation>Reset</translation>
     </message>
     <message>
-        <location filename="../../main.py" line="671"/>
+        <location filename="../../main.py" line="674"/>
         <source>Restore Defaults</source>
         <translation></translation>
     </message>

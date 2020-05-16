@@ -594,6 +594,8 @@ class DigitalPalette(QMainWindow, Ui_MainWindow):
         info += "---------- ---------- ----------\n"
         info += "{}\n".format(self._info_descs[5])
         info += "---------- ---------- ----------\n"
+        info += "{}\n".format(self._info_descs[9])
+        info += "---------- ---------- ----------\n"
         info += "{}\n".format(self._info_descs[8].format(QT_VERSION_STR, PYQT_VERSION_STR))
 
         box = QMessageBox(self)
@@ -638,10 +640,11 @@ class DigitalPalette(QMainWindow, Ui_MainWindow):
             _translate("DigitalPalette", "Author: {}"),
             _translate("DigitalPalette", "Update: {}"),
             _translate("DigitalPalette", "All Rights Reserved."),
-            _translate("DigitalPalette", "DigitalPalette is a free software, which is distributed in the hope that it will be useful, but WITHOUT ANY WARRANTY. You can redistribute it and/or modify it under the terms of the GNU General Public License as published by the Free Software Foundation. See the GNU General Public License for more details."),
+            _translate("DigitalPalette", "DigitalPalette is a free software, which is distributed in the hope that it will be useful, but without any warranty. You can redistribute it and/or modify it under the terms of the GNU General Public License as published by the Free Software Foundation. See the GNU General Public License 3.0 (GPL 3.0) for more details."),
             _translate("DigitalPalette", "OK"),
             _translate("DigitalPalette", "Visit Website"),
             _translate("DigitalPalette", "DigitalPalette uses Qt version {} (PyQt version {}) licensed under GNU General Public License. Please see qt.io/licensing for an overview of Qt licensing."),
+            _translate("DigitalPalette", "All images (including logo and sample images, etc.), documents and translations in DigitalPalette code repository are licensed under Creative Commons Attribution-NonCommercial-ShareAlike License 4.0 (CC BY-NC-SA 4.0) unless stating additionally."),
         )
 
         self._status_descs = (
