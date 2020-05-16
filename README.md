@@ -10,7 +10,7 @@ https://github.com/liujiacode/DigitalPalette
 [2.2.8 preview](https://github.com/liujiacode/DigitalPalette/releases/tag/v2.2.8-pre)
 
 # Author
-[Eigenmiao](eigenmiao@outlook.com)
+[Eigenmiao](mailto:eigenmiao@outlook.com)
 
 # Copyright
 Copyright © 2019-2020 Eigenmiao. All Rights Reserved.
