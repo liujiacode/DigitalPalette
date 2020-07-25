@@ -106,6 +106,7 @@ venv.bak/
 # editor
 *.editorconfig
 *.psd
+*.svg
 .vscode/
 
 # src
