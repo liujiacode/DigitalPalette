@@ -4,16 +4,16 @@
 DigitalPalette is a free software for generating harmonious colors from color wheel and local images.
 
 # Repository
-https://github.com/liujiacode/DigitalPalette
+[Source Code](https://github.com/liujiacode/DigitalPalette)
 
 # Version
-[2.2.8 preview](https://github.com/liujiacode/DigitalPalette/releases/tag/v2.2.8-pre)
+[2.2.8 Preview](https://github.com/liujiacode/DigitalPalette/releases/tag/v2.2.8-pre)
 
 # Author
 [Eigenmiao](mailto:eigenmiao@outlook.com)
 
 # Copyright
-Copyright © 2019-2020 Eigenmiao. All Rights Reserved.
+Copyright © 2019-2020 [Eigenmiao](mailto:eigenmiao@outlook.com). All Rights Reserved.
 
 # License
 DigitalPalette is a free software, which is distributed in the hope that it will be useful, but without any warranty. You can redistribute it and/or modify it under the terms of the GNU General Public License as published by the Free Software Foundation. See the [GNU General Public License 3.0 (GPL 3.0)](https://www.gnu.org/licenses/) for more details.
