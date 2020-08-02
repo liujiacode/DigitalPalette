@@ -145,7 +145,7 @@
 <context>
     <name>DigitalPalette</name>
     <message>
-        <location filename="../../main.py" line="637"/>
+        <location filename="../../main.py" line="641"/>
         <source>About</source>
         <translation>关于</translation>
     </message>
@@ -175,12 +175,12 @@
         <translation type="obsolete">DigitalPalette 是自由软件，本着可用的意愿分发，但不作任何担保。您可以在遵守由自由软件基金会发布的 GNU 通用公共许可协议的情况下重新分发并且（或者）修改软件。更多细节请参看 GNU 通用公共许可协议。</translation>
     </message>
     <message>
-        <location filename="../../main.py" line="637"/>
+        <location filename="../../main.py" line="641"/>
         <source>OK</source>
         <translation>确定</translation>
     </message>
     <message>
-        <location filename="../../main.py" line="650"/>
+        <location filename="../../main.py" line="654"/>
         <source>Ready.</source>
         <translation>准备就绪。</translation>
     </message>
@@ -190,7 +190,7 @@
         <translation type="obsolete">版权 © 2019。版权所有。</translation>
     </message>
     <message>
-        <location filename="../../main.py" line="637"/>
+        <location filename="../../main.py" line="641"/>
         <source>Visit Website</source>
         <translation>访问网站</translation>
     </message>
@@ -210,42 +210,42 @@
         <translation type="obsolete">更新：</translation>
     </message>
     <message>
-        <location filename="../../main.py" line="637"/>
+        <location filename="../../main.py" line="641"/>
         <source>Version: {}</source>
         <translation>版本：{}</translation>
     </message>
     <message>
-        <location filename="../../main.py" line="637"/>
+        <location filename="../../main.py" line="641"/>
         <source>Author: {}</source>
         <translation>作者：{}</translation>
     </message>
     <message>
-        <location filename="../../main.py" line="637"/>
+        <location filename="../../main.py" line="641"/>
         <source>Update: {}</source>
         <translation>更新：{}</translation>
     </message>
     <message>
-        <location filename="../../main.py" line="637"/>
+        <location filename="../../main.py" line="641"/>
         <source>All Rights Reserved.</source>
         <translation>版权 © 2019-2020。版权所有。</translation>
     </message>
     <message>
-        <location filename="../../main.py" line="650"/>
+        <location filename="../../main.py" line="654"/>
         <source>Image Size: {} x {}.</source>
         <translation>图像尺寸：{} × {}。</translation>
     </message>
     <message>
-        <location filename="../../main.py" line="650"/>
+        <location filename="../../main.py" line="654"/>
         <source>Image Size: {} x {}. Position: {} %, {} %.</source>
         <translation>图像尺寸：{} × {}。坐标：{}% × {}%。</translation>
     </message>
     <message>
-        <location filename="../../main.py" line="650"/>
+        <location filename="../../main.py" line="654"/>
         <source>Depot Volume: Row {}, Col {}; Total {}, Index {}.</source>
         <translation>仓库容量：行 {}，列 {}，总共 {}，索引 {}。</translation>
     </message>
     <message>
-        <location filename="../../main.py" line="637"/>
+        <location filename="../../main.py" line="641"/>
         <source>DigitalPalette uses Qt version {} (PyQt version {}) licensed under GNU General Public License. Please see qt.io/licensing for an overview of Qt licensing.</source>
         <translation>DigitalPalette 使用 GNU 通用公共许可协议许可的 Qt 版本 {} (PyQt 版本 {})。关于 Qt 许可协议的概述，请参阅 qt.io/licensing。</translation>
     </message>
@@ -257,7 +257,7 @@ All images in DigitalPalette code repository (including logo and sample images, 
 DigitalPalette 代码仓库中所有图片（包括图标和示例图片等）除特别声明外，均采用知识共享署名-非商业性使用-相同方式共享 4.0 协议（CC BY-NC-SA 4.0）发布。</translation>
     </message>
     <message>
-        <location filename="../../main.py" line="637"/>
+        <location filename="../../main.py" line="641"/>
         <source>DigitalPalette is a free software, which is distributed in the hope that it will be useful, but without any warranty. You can redistribute it and/or modify it under the terms of the GNU General Public License as published by the Free Software Foundation. See the GNU General Public License 3.0 (GPL 3.0) for more details.</source>
         <translation>DigitalPalette 是自由软件，本着可用的意愿分发，但不作任何担保。您可以在遵守由自由软件基金会发布的 GNU 通用公共许可协议的情况下重新分发并且（或者）修改软件。更多细节请参看 GNU 通用公共许可协议 3.0（GPL 3.0）。</translation>
     </message>
@@ -267,9 +267,19 @@ DigitalPalette 代码仓库中所有图片（包括图标和示例图片等）�
         <translation type="obsolete">DigitalPalette 代码仓库中所有图片（包括图标和示例图片等）、文档和翻译除特别声明外，均采用知识共享署名-非商业性使用-相同方式共享 4.0 协议（CC BY-NC-SA 4.0）发布。</translation>
     </message>
     <message>
-        <location filename="../../main.py" line="637"/>
+        <location filename="../../main.py" line="641"/>
         <source>All images (including logo and sample images, etc.), documents and translations in DigitalPalette code repository are licensed under Creative Commons Attribution-NonCommercial-ShareAlike License 4.0 (CC BY-NC-SA 4.0) unless stating additionally.</source>
         <translation>DigitalPalette 代码仓库中所有图片（包括图标和示例图片等）、文档和翻译除特别声明外，均采用知识共享署名-非商业性使用-相同方式共享协议 4.0（CC BY-NC-SA 4.0）发布。</translation>
+    </message>
+    <message>
+        <location filename="../../main.py" line="724"/>
+        <source>Error</source>
+        <translation type="obsolete">错误</translation>
+    </message>
+    <message>
+        <location filename="../../main.py" line="724"/>
+        <source>Could not load settings.</source>
+        <translation type="obsolete">无法加载设置。</translation>
     </message>
 </context>
 <context>
@@ -820,12 +830,12 @@ DigitalPalette 代码仓库中所有图片（包括图标和示例图片等）�
         <translation type="obsolete">定点</translation>
     </message>
     <message>
-        <location filename="../../wgets/operation.py" line="560"/>
+        <location filename="../../wgets/operation.py" line="590"/>
         <source>Error</source>
         <translation>错误</translation>
     </message>
     <message>
-        <location filename="../../wgets/operation.py" line="560"/>
+        <location filename="../../wgets/operation.py" line="590"/>
         <source>Import color file error. Color file is broken.</source>
         <translation>导入色彩文件出错。色彩文件已损坏。</translation>
     </message>
@@ -835,62 +845,62 @@ DigitalPalette 代码仓库中所有图片（包括图标和示例图片等）�
         <translation type="obsolete">导入色彩格式出错。数据不是字典类型。</translation>
     </message>
     <message>
-        <location filename="../../wgets/operation.py" line="560"/>
+        <location filename="../../wgets/operation.py" line="590"/>
         <source>Import color version error. Version does not match.</source>
         <translation>导入色彩的版本出错。版本不匹配。</translation>
     </message>
     <message>
-        <location filename="../../wgets/operation.py" line="560"/>
+        <location filename="../../wgets/operation.py" line="590"/>
         <source>Import color version error. Version does not exist.</source>
         <translation>导入色彩的版本出错。版本不存在。</translation>
     </message>
     <message>
-        <location filename="../../wgets/operation.py" line="560"/>
+        <location filename="../../wgets/operation.py" line="590"/>
         <source>Import color set error. Color set is broken.</source>
         <translation>导入色彩组出错。色彩组已损坏。</translation>
     </message>
     <message>
-        <location filename="../../wgets/operation.py" line="560"/>
+        <location filename="../../wgets/operation.py" line="590"/>
         <source>Import color set error. HSV tags do not exist.</source>
         <translation>导入色彩组出错。HSV 标签不存在。</translation>
     </message>
     <message>
-        <location filename="../../wgets/operation.py" line="560"/>
+        <location filename="../../wgets/operation.py" line="590"/>
         <source>Import color set error. Color tags do not exist.</source>
         <translation>导入色彩组出错。色彩标签不存在。</translation>
     </message>
     <message>
-        <location filename="../../wgets/operation.py" line="560"/>
+        <location filename="../../wgets/operation.py" line="590"/>
         <source>Import harmony rule error. Rule does not match.</source>
         <translation>导入调和规则出错。规则不匹配。</translation>
     </message>
     <message>
-        <location filename="../../wgets/operation.py" line="560"/>
+        <location filename="../../wgets/operation.py" line="590"/>
         <source>Import harmony rule error. Rule does not exist.</source>
         <translation>导入调和规则出错。规则不存在。</translation>
     </message>
     <message>
-        <location filename="../../wgets/operation.py" line="560"/>
+        <location filename="../../wgets/operation.py" line="590"/>
         <source>Export Color file error. Extension does not match.</source>
         <translation>导出色彩文件出错。扩展名不匹配。</translation>
     </message>
     <message>
-        <location filename="../../wgets/operation.py" line="560"/>
+        <location filename="../../wgets/operation.py" line="590"/>
         <source>Import color format error. Data is not in dict type.</source>
         <translation>导入色彩的格式出错。数据不是字典类型。</translation>
     </message>
     <message>
-        <location filename="../../wgets/operation.py" line="560"/>
+        <location filename="../../wgets/operation.py" line="590"/>
         <source>Import color type error. Type does not match.</source>
         <translation>导入色彩类型出错。类型不匹配。</translation>
     </message>
     <message>
-        <location filename="../../wgets/operation.py" line="560"/>
+        <location filename="../../wgets/operation.py" line="590"/>
         <source>Import color type error. Type does not exist.</source>
         <translation>导入色彩类型出错。类型不存在。</translation>
     </message>
     <message>
-        <location filename="../../wgets/operation.py" line="560"/>
+        <location filename="../../wgets/operation.py" line="590"/>
         <source>Import color depot error.</source>
         <translation>导入色彩仓库出错。</translation>
     </message>
@@ -905,7 +915,7 @@ DigitalPalette 代码仓库中所有图片（包括图标和示例图片等）�
         <translation type="obsolete">导入仓库中某些色彩组出错。</translation>
     </message>
     <message>
-        <location filename="../../wgets/operation.py" line="560"/>
+        <location filename="../../wgets/operation.py" line="590"/>
         <source>Import some color sets into depot error. These color sets are discarded.</source>
         <translation>导入某些色彩组至仓库出错。这些色彩组已被舍弃。</translation>
     </message>
@@ -920,75 +930,120 @@ DigitalPalette 代码仓库中所有图片（包括图标和示例图片等）�
         <translation type="obsolete">导入色彩类型出错。这是一个色彩仓库类型的文件，请使用‘打开’。</translation>
     </message>
     <message>
-        <location filename="../../wgets/operation.py" line="560"/>
+        <location filename="../../wgets/operation.py" line="590"/>
         <source>Detail:</source>
         <translation>详情：</translation>
     </message>
     <message>
-        <location filename="../../wgets/operation.py" line="560"/>
+        <location filename="../../wgets/operation.py" line="590"/>
         <source>Import color type error. This is a color set file, please use &apos;Import&apos;.</source>
         <translation>导入色彩类型出错。这是一个色彩组文件，请使用‘导入’。</translation>
     </message>
     <message>
-        <location filename="../../wgets/operation.py" line="560"/>
+        <location filename="../../wgets/operation.py" line="590"/>
         <source>Import color type error. This is a color depot file, please use &apos;Open&apos;.</source>
         <translation>导入色彩类型出错。这是一个色彩仓库文件，请使用‘打开’。</translation>
     </message>
     <message>
-        <location filename="../../wgets/operation.py" line="560"/>
+        <location filename="../../wgets/operation.py" line="590"/>
         <source>OK</source>
         <translation>确定</translation>
     </message>
     <message>
-        <location filename="../../wgets/operation.py" line="550"/>
+        <location filename="../../wgets/operation.py" line="580"/>
         <source>DigiPale Json File</source>
         <translation>DigiPale Json 文档</translation>
     </message>
     <message>
-        <location filename="../../wgets/operation.py" line="550"/>
+        <location filename="../../wgets/operation.py" line="580"/>
         <source>Plain Text File</source>
         <translation>纯文本文档</translation>
     </message>
     <message>
-        <location filename="../../wgets/operation.py" line="550"/>
+        <location filename="../../wgets/operation.py" line="580"/>
         <source>Adobe Swatch File</source>
         <translation>Adobe 样板文档</translation>
     </message>
     <message>
-        <location filename="../../wgets/operation.py" line="550"/>
+        <location filename="../../wgets/operation.py" line="580"/>
         <source>DigiPale Set File</source>
         <translation>DigiPale 色彩组文档</translation>
     </message>
     <message>
-        <location filename="../../wgets/operation.py" line="550"/>
+        <location filename="../../wgets/operation.py" line="580"/>
         <source>DigiPale Depot File</source>
         <translation>DigiPale 色彩仓库文档</translation>
     </message>
     <message>
-        <location filename="../../wgets/operation.py" line="550"/>
+        <location filename="../../wgets/operation.py" line="580"/>
         <source>GIMP Palette File</source>
         <translation>GIMP 色板文档</translation>
     </message>
     <message>
-        <location filename="../../wgets/operation.py" line="550"/>
+        <location filename="../../wgets/operation.py" line="580"/>
         <source>Pencil Palette File</source>
         <translation>Pencil 色板文档</translation>
+    </message>
+    <message>
+        <location filename="../../wgets/operation.py" line="586"/>
+        <source>Could not load settings. Settings file is broken.</source>
+        <translation type="obsolete">无法加载设置。设置文件已损坏。</translation>
+    </message>
+    <message>
+        <location filename="../../wgets/operation.py" line="586"/>
+        <source>Could not load settings. Version does not match.</source>
+        <translation type="obsolete">无法加载设置。版本不匹配。</translation>
+    </message>
+    <message>
+        <location filename="../../wgets/operation.py" line="586"/>
+        <source>Could not load settings. Version does not exist.</source>
+        <translation type="obsolete">无法加载设置。版本不存在。</translation>
+    </message>
+    <message>
+        <location filename="../../wgets/operation.py" line="586"/>
+        <source>Could not load settings. Settings file is broken (Old settings file has been backed up as &apos;settings.json.old&apos;).</source>
+        <translation type="obsolete">无法加载设置。设置文件已损坏（旧设置文件已备份为‘settings.json.old’）。</translation>
+    </message>
+    <message>
+        <location filename="../../wgets/operation.py" line="586"/>
+        <source>Could not load settings. Version does not match (Old settings file has been backed up as &apos;settings.json.old&apos;).</source>
+        <translation type="obsolete">无法加载设置。版本不匹配（旧设置文件已备份为‘settings.json.old’）。</translation>
+    </message>
+    <message>
+        <location filename="../../wgets/operation.py" line="586"/>
+        <source>Could not load settings. Version does not exist (Old settings file has been backed up as &apos;settings.json.old&apos;).</source>
+        <translation type="obsolete">无法加载设置。版本不存在（旧设置文件已备份为‘settings.json.old’）。</translation>
+    </message>
+    <message>
+        <location filename="../../wgets/operation.py" line="612"/>
+        <source>Could not load settings. Settings file is broken. Old settings file has been backed up as &apos;settings.json.old&apos;.</source>
+        <translation>无法加载设置。设置文件已损坏。原设置文件已备份为‘settings.json.old’。</translation>
+    </message>
+    <message>
+        <location filename="../../wgets/operation.py" line="612"/>
+        <source>Could not load settings. Version does not match. Old settings file has been backed up as &apos;settings.json.old&apos;.</source>
+        <translation>无法加载设置。版本不匹配。原设置文件已备份为‘settings.json.old’。</translation>
+    </message>
+    <message>
+        <location filename="../../wgets/operation.py" line="612"/>
+        <source>Could not load settings. Version does not exist. Old settings file has been backed up as &apos;settings.json.old&apos;.</source>
+        <translation>无法加载设置。版本不存在。原设置文件已备份为‘settings.json.old’。</translation>
     </message>
 </context>
 <context>
     <name>QAbstractSpinBox</name>
     <message>
-        <location filename="../../main.py" line="705"/>
+        <location filename="../../main.py" line="709"/>
         <source>&amp;Select All</source>
         <translation>全选</translation>
     </message>
     <message>
-        <location filename="../../main.py" line="705"/>
+        <location filename="../../main.py" line="709"/>
         <source>&amp;Step up</source>
         <translation>增加</translation>
     </message>
     <message>
-        <location filename="../../main.py" line="705"/>
+        <location filename="../../main.py" line="709"/>
         <source>Step &amp;down</source>
         <translation>减少</translation>
     </message>
@@ -996,74 +1051,74 @@ DigitalPalette 代码仓库中所有图片（包括图标和示例图片等）�
 <context>
     <name>QColorDialog</name>
     <message>
-        <location filename="../../main.py" line="657"/>
+        <location filename="../../main.py" line="661"/>
         <source>Hu&amp;e:</source>
         <translation>H：</translation>
     </message>
     <message>
-        <location filename="../../main.py" line="657"/>
+        <location filename="../../main.py" line="661"/>
         <source>&amp;Sat:</source>
         <translation>S：</translation>
     </message>
     <message>
-        <location filename="../../main.py" line="657"/>
+        <location filename="../../main.py" line="661"/>
         <source>&amp;Val:</source>
         <translation>V：</translation>
     </message>
     <message>
-        <location filename="../../main.py" line="657"/>
+        <location filename="../../main.py" line="661"/>
         <source>&amp;Red:</source>
         <translation>R：</translation>
     </message>
     <message>
-        <location filename="../../main.py" line="657"/>
+        <location filename="../../main.py" line="661"/>
         <source>&amp;Green:</source>
         <translation>G：</translation>
     </message>
     <message>
-        <location filename="../../main.py" line="657"/>
+        <location filename="../../main.py" line="661"/>
         <source>Bl&amp;ue:</source>
         <translation>B：</translation>
     </message>
     <message>
-        <location filename="../../main.py" line="657"/>
+        <location filename="../../main.py" line="661"/>
         <source>A&amp;lpha channel:</source>
         <translation>A：</translation>
     </message>
     <message>
-        <location filename="../../main.py" line="657"/>
+        <location filename="../../main.py" line="661"/>
         <source>&amp;HTML:</source>
         <translation>HTML：</translation>
     </message>
     <message>
-        <location filename="../../main.py" line="657"/>
+        <location filename="../../main.py" line="661"/>
         <source>Cursor at %1, %2
 Press ESC to cancel</source>
         <translation>光标位于：%1 x %2。
 按下 ESC 键取消。</translation>
     </message>
     <message>
-        <location filename="../../main.py" line="657"/>
+        <location filename="../../main.py" line="661"/>
         <source>Select Color</source>
         <translation>选择色彩</translation>
     </message>
     <message>
-        <location filename="../../main.py" line="657"/>
+        <location filename="../../main.py" line="661"/>
         <source>&amp;Pick Screen Color</source>
         <translation>选取屏幕色彩</translation>
     </message>
     <message>
-        <location filename="../../main.py" line="657"/>
+        <location filename="../../main.py" line="661"/>
         <source>&amp;Basic colors</source>
         <translation>基本色彩</translation>
     </message>
     <message>
-        <location filename="../../main.py" line="657"/>
+        <location filename="../../main.py" line="661"/>
         <source>&amp;Custom colors</source>
         <translation>自定义色彩</translation>
     </message>
     <message>
-        <location filename="../../main.py" line="657"/>
+        <location filename="../../main.py" line="661"/>
         <source>&amp;Add to Custom Colors</source>
         <translation>添加到自定义色彩</translation>
     </message>
@@ -1071,37 +1126,37 @@ Press ESC to cancel</source>
 <context>
     <name>QLineEdit</name>
     <message>
-        <location filename="../../main.py" line="695"/>
+        <location filename="../../main.py" line="699"/>
         <source>&amp;Undo</source>
         <translation>撤消</translation>
     </message>
     <message>
-        <location filename="../../main.py" line="695"/>
+        <location filename="../../main.py" line="699"/>
         <source>&amp;Redo</source>
         <translation>恢复</translation>
     </message>
     <message>
-        <location filename="../../main.py" line="695"/>
+        <location filename="../../main.py" line="699"/>
         <source>Cu&amp;t</source>
         <translation>剪切</translation>
     </message>
     <message>
-        <location filename="../../main.py" line="695"/>
+        <location filename="../../main.py" line="699"/>
         <source>&amp;Copy</source>
         <translation>复制</translation>
     </message>
     <message>
-        <location filename="../../main.py" line="695"/>
+        <location filename="../../main.py" line="699"/>
         <source>&amp;Paste</source>
         <translation>粘贴</translation>
     </message>
     <message>
-        <location filename="../../main.py" line="695"/>
+        <location filename="../../main.py" line="699"/>
         <source>Delete</source>
         <translation>删除</translation>
     </message>
     <message>
-        <location filename="../../main.py" line="695"/>
+        <location filename="../../main.py" line="699"/>
         <source>Select All</source>
         <translation>全选</translation>
     </message>
@@ -1109,92 +1164,92 @@ Press ESC to cancel</source>
 <context>
     <name>QPlatformTheme</name>
     <message>
-        <location filename="../../main.py" line="674"/>
+        <location filename="../../main.py" line="678"/>
         <source>OK</source>
         <translation>确定</translation>
     </message>
     <message>
-        <location filename="../../main.py" line="674"/>
+        <location filename="../../main.py" line="678"/>
         <source>Save</source>
         <translation>保存</translation>
     </message>
     <message>
-        <location filename="../../main.py" line="674"/>
+        <location filename="../../main.py" line="678"/>
         <source>Save All</source>
         <translation>全部保存</translation>
     </message>
     <message>
-        <location filename="../../main.py" line="674"/>
+        <location filename="../../main.py" line="678"/>
         <source>Open</source>
         <translation>打开</translation>
     </message>
     <message>
-        <location filename="../../main.py" line="674"/>
+        <location filename="../../main.py" line="678"/>
         <source>&amp;Yes</source>
         <translation>是(&amp;Y)</translation>
     </message>
     <message>
-        <location filename="../../main.py" line="674"/>
+        <location filename="../../main.py" line="678"/>
         <source>Yes to &amp;All</source>
         <translation>全部是(&amp;A)</translation>
     </message>
     <message>
-        <location filename="../../main.py" line="674"/>
+        <location filename="../../main.py" line="678"/>
         <source>&amp;No</source>
         <translation>否(&amp;N)</translation>
     </message>
     <message>
-        <location filename="../../main.py" line="674"/>
+        <location filename="../../main.py" line="678"/>
         <source>N&amp;o to All</source>
         <translation>全部否(&amp;O)</translation>
     </message>
     <message>
-        <location filename="../../main.py" line="674"/>
+        <location filename="../../main.py" line="678"/>
         <source>Abort</source>
         <translation>中止</translation>
     </message>
     <message>
-        <location filename="../../main.py" line="674"/>
+        <location filename="../../main.py" line="678"/>
         <source>Retry</source>
         <translation>重试</translation>
     </message>
     <message>
-        <location filename="../../main.py" line="674"/>
+        <location filename="../../main.py" line="678"/>
         <source>Ignore</source>
         <translation>忽略</translation>
     </message>
     <message>
-        <location filename="../../main.py" line="674"/>
+        <location filename="../../main.py" line="678"/>
         <source>Close</source>
         <translation>关闭</translation>
     </message>
     <message>
-        <location filename="../../main.py" line="674"/>
+        <location filename="../../main.py" line="678"/>
         <source>Cancel</source>
         <translation>取消</translation>
     </message>
     <message>
-        <location filename="../../main.py" line="674"/>
+        <location filename="../../main.py" line="678"/>
         <source>Discard</source>
         <translation>放弃</translation>
     </message>
     <message>
-        <location filename="../../main.py" line="674"/>
+        <location filename="../../main.py" line="678"/>
         <source>Help</source>
         <translation>帮助</translation>
     </message>
     <message>
-        <location filename="../../main.py" line="674"/>
+        <location filename="../../main.py" line="678"/>
         <source>Apply</source>
         <translation>应用</translation>
     </message>
     <message>
-        <location filename="../../main.py" line="674"/>
+        <location filename="../../main.py" line="678"/>
         <source>Reset</source>
         <translation>重置</translation>
     </message>
     <message>
-        <location filename="../../main.py" line="674"/>
+        <location filename="../../main.py" line="678"/>
         <source>Restore Defaults</source>
         <translation>恢复默认</translation>
     </message>

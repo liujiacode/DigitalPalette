@@ -216,6 +216,10 @@ class DigitalPalette(QMainWindow, Ui_MainWindow):
             except Exception as err:
                 pass
 
+        # show_errors.
+        if self._args.load_settings_failed:
+            self._wget_operation.warning(self._wget_operation.main_errs[self._args.load_settings_failed - 1])
+
         # install stylesheet.
         """
         with open(os.sep.join((resources, "styles", "dark", "style.qss"))) as qf:
@@ -561,10 +565,10 @@ class DigitalPalette(QMainWindow, Ui_MainWindow):
 
         # set window title.
         if self._args.lang[:2].lower() == "zh":
-            self.setWindowTitle("DigitalPalette {}".format(self._args.info_version_zh))
+            self.setWindowTitle("DigitalPalette {}".format("-".join((self._args.info_version_zh.split("-")[0], self._args.info_version_zh.split("-")[2]))))
 
         else:
-            self.setWindowTitle("DigitalPalette {}".format(self._args.info_version_en))
+            self.setWindowTitle("DigitalPalette {}".format("-".join((self._args.info_version_en.split("-")[0], self._args.info_version_en.split("-")[2]))))
 
         # set ready status.
         self.setStatusTip(self._status_descs[0])

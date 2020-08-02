@@ -17,6 +17,7 @@ import os
 import json
 import re
 import time
+import unittest
 from clibs.color_set import ColorSet
 from PyQt5.QtCore import QTemporaryDir
 
@@ -81,16 +82,17 @@ class Args(object):
         # software informations.
         self.info_main_site = "https://liujiacode.github.io/DigitalPalette/"
         self.info_update_site = "https://github.com/liujiacode/DigitalPalette/releases"
-        self.info_version_zh = "v2.2.8-预览版"
-        self.info_version_en = "v2.2.8-pre"
+        self.info_version_zh = "v2.8.9-x1d1s1-开发版"
+        self.info_version_en = "v2.8.9-x1d1s1-dev"
         self.info_author_zh = "本征喵函数"
         self.info_author_en = "Eigenmiao"
-        self.info_date_zh = "2020年5月3日"
-        self.info_date_en = "May 3, 2020"
+        self.info_date_zh = "2020年8月2日"
+        self.info_date_en = "August 2, 2020"
 
         # init settings.
         self.usr_store = os.sep.join((os.path.expanduser('~'), "Documents", "DigitalPalette"))
         self.resources = resources
+        self.load_settings_failed = 0
 
         self.init_settings()
 
@@ -297,36 +299,55 @@ class Args(object):
         if item in items:
             setattr(self, item, items[item](value))
 
+    def backup_settings(self, settings_file):
+        """
+        Move settings.json as settings.json.old when load settings failed.
+
+        Parameters:
+          settings_file - string. settings file path.
+        """
+
+        if os.path.isfile(settings_file):
+            if os.path.isfile(settings_file + ".old"):
+                os.remove(settings_file + ".old")
+
+            os.rename(settings_file, settings_file + ".old")
+
     def load_settings(self, settings_file):
         """
         Modify default settings by user settings.
 
         Parameters:
-          uss - dict. user settings.
+          settings_file - string. settings file path.
         """
 
         uss = {}
+
         if os.path.isfile(settings_file):
             try:
                 with open(settings_file, "r") as sf:
                     uss = json.load(sf)
 
             except Exception as err:
-                pass
+                self.load_settings_failed = 1
+                self.backup_settings(settings_file)
 
-        if isinstance(uss, dict):
+        if isinstance(uss, dict) and uss:
             if "version" in uss:
-                if not self.check_version(uss["version"]):
+                vid = self.check_version_x(uss["version"])
+
+                if vid == 0 or vid > 1:
+                    self.load_settings_failed = 2
+                    self.backup_settings(settings_file)
                     uss = {}
 
             else:
+                self.load_settings_failed = 3
+                self.backup_settings(settings_file)
                 uss = {}
 
-        else:
-            uss = {}
-
-        for item in uss:
-            self.modify_settings(item, uss[item])
+            for item in uss:
+                self.modify_settings(item, uss[item])
 
     # ---------- ---------- ---------- Classmethods ---------- ---------- ---------- #
 
@@ -468,21 +489,68 @@ class Args(object):
 
         return stab_ucells
 
-    def check_version(self, version):
+    @classmethod
+    def check_version_x(cls, version):
         """
-        Check if version is compatible.
+        Check if settings file version is compatible.
         """
 
         try:
-            for vre in (r"^v2\.[12].*",):
-                if re.match(vre, version):
-                    return True
+            ans = re.match(r"^v.+?-x(\d+)d.+?s.+-.*", version)
+            if ans:
+                return int(ans.group(1))
+
+            elif re.match(r"^v2\.[12].*", version):
+                return 1
+
+            else:
+                return 0
 
         except Exception as err:
-            if self.global_log:
-                print(err)
+            # print(err)
+            return 0
 
-        return False
+    @classmethod
+    def check_version_d(cls, version):
+        """
+        Check if color depot file version is compatible.
+        """
+
+        try:
+            ans = re.match(r"^v.+?-x.+?d(\d+)s.+-.*", version)
+            if ans:
+                return int(ans.group(1))
+
+            elif re.match(r"^v2\.[12].*", version):
+                return 1
+
+            else:
+                return 0
+
+        except Exception as err:
+            # print(err)
+            return 0
+
+    @classmethod
+    def check_version_s(cls, version):
+        """
+        Check if color set file version is compatible.
+        """
+
+        try:
+            ans = re.match(r"^v.+?-x.+?d.+?s(\d+).*-.*", version)
+            if ans:
+                return int(ans.group(1))
+
+            elif re.match(r"^v2\.[12].*", version):
+                return 1
+
+            else:
+                return 0
+
+        except Exception as err:
+            # print(err)
+            return 0
 
     def check_temp_dir(self):
         """
@@ -509,3 +577,127 @@ class Args(object):
             except Exception as err:
                 if self.global_log:
                     print(err)
+
+
+class TestArgs(unittest.TestCase):
+    """
+    Test Args object.
+    """
+
+    def test_check_version_x(self):
+        items = (
+            ("v2.2.8-pre", 1),
+
+            ("v2.3.0-x2d1s1-pre", 2),
+            ("v2.3.0-x1d2s1-pre", 1),
+            ("v2.3.0-x1d1s2-pre", 1),
+            ("v2.3.0-x12d1s1-pre", 12),
+            ("v2.3.0-x1d12s1-pre", 1),
+            ("v2.3.0-x1d1s12-pre", 1),
+            ("v2.3.0-x123d1s1-pre", 123),
+            ("v2.3.0-x1d123s1-pre", 1),
+            ("v2.3.0-x1d1s123-pre", 1),
+
+            ("v2.3.0-x2d1s1k3-pre", 2),
+            ("v2.3.0-x1d2s1k3-pre", 1),
+            ("v2.3.0-x1d1s2k3-pre", 1),
+            ("v2.3.0-x12d1s1k3p4-pre", 12),
+            ("v2.3.0-x1d12s1k3p4-pre", 1),
+            ("v2.3.0-x1d1s12k3p4-pre", 1),
+            ("v2.3.0-x123d1s1r-pre", 123),
+            ("v2.3.0-x1d123s1r-pre", 1),
+            ("v2.3.0-x1d1s123r-pre", 1),
+
+            ("v2.3.0-x2-pre", 0),
+            ("v2.3.0-x1-pre", 0),
+            ("v2.3.0-x1-pre", 0),
+            ("v2.3.0-x12d1-pre", 0),
+            ("v2.3.0-x1d12-pre", 0),
+            ("v2.3.0-x1d1s-pre", 0),
+            ("v2.3.0-x123r-pre", 0),
+            ("v2.3.0-x1d1r-pre", 0),
+            ("v2.3.0-x1d1r-pre", 0),
+        )
+
+        for itm, ans in items:
+            self.assertEqual(Args.check_version_x(itm), ans, msg=itm)
+
+    def test_check_version_d(self):
+        items = (
+            ("v2.2.8-pre", 1),
+
+            ("v2.3.0-x2d1s1-pre", 1),
+            ("v2.3.0-x1d2s1-pre", 2),
+            ("v2.3.0-x1d1s2-pre", 1),
+            ("v2.3.0-x12d1s1-pre", 1),
+            ("v2.3.0-x1d12s1-pre", 12),
+            ("v2.3.0-x1d1s12-pre", 1),
+            ("v2.3.0-x123d1s1-pre", 1),
+            ("v2.3.0-x1d123s1-pre", 123),
+            ("v2.3.0-x1d1s123-pre", 1),
+
+            ("v2.3.0-x2d1s1k3-pre", 1),
+            ("v2.3.0-x1d2s1k3-pre", 2),
+            ("v2.3.0-x1d1s2k3-pre", 1),
+            ("v2.3.0-x12d1s1k3p4-pre", 1),
+            ("v2.3.0-x1d12s1k3p4-pre", 12),
+            ("v2.3.0-x1d1s12k3p4-pre", 1),
+            ("v2.3.0-x123d1s1r-pre", 1),
+            ("v2.3.0-x1d123s1r-pre", 123),
+            ("v2.3.0-x1d1s123r-pre", 1),
+
+            ("v2.3.0-d1-pre", 0),
+            ("v2.3.0-d2-pre", 0),
+            ("v2.3.0-d1-pre", 0),
+            ("v2.3.0-x12d1-pre", 0),
+            ("v2.3.0-x1d12-pre", 0),
+            ("v2.3.0-x1d1s-pre", 0),
+            ("v2.3.0-23d1r-pre", 0),
+            ("v2.3.0-d123r-pre", 0),
+            ("v2.3.0-d1s1r-pre", 0),
+        )
+
+        for itm, ans in items:
+            self.assertEqual(Args.check_version_d(itm), ans, msg=itm)
+
+    def test_check_version_s(self):
+        items = (
+            ("v2.2.8-pre", 1),
+
+            ("v2.3.0-x2d1s1-pre", 1),
+            ("v2.3.0-x1d2s1-pre", 1),
+            ("v2.3.0-x1d1s2-pre", 2),
+            ("v2.3.0-x12d1s1-pre", 1),
+            ("v2.3.0-x1d12s1-pre", 1),
+            ("v2.3.0-x1d1s12-pre", 12),
+            ("v2.3.0-x123d1s1-pre", 1),
+            ("v2.3.0-x1d123s1-pre", 1),
+            ("v2.3.0-x1d1s123-pre", 123),
+
+            ("v2.3.0-x2d1s1k3-pre", 1),
+            ("v2.3.0-x1d2s1k3-pre", 1),
+            ("v2.3.0-x1d1s2k3-pre", 2),
+            ("v2.3.0-x12d1s1k3p4-pre", 1),
+            ("v2.3.0-x1d12s1k3p4-pre", 1),
+            ("v2.3.0-x1d1s12k3p4-pre", 12),
+            ("v2.3.0-x123d1s1r-pre", 1),
+            ("v2.3.0-x1d123s1r-pre", 1),
+            ("v2.3.0-x1d1s123r-pre", 123),
+
+            ("v2.3.0-s1-pre", 0),
+            ("v2.3.0-s1-pre", 0),
+            ("v2.3.0-s2-pre", 0),
+            ("v2.3.0-d1s1-pre", 0),
+            ("v2.3.0-12s1-pre", 0),
+            ("v2.3.0-1s12-pre", 0),
+            ("v2.3.0-d1s1r-pre", 0),
+            ("v2.3.0-23s1r-pre", 0),
+            ("v2.3.0-s123r-pre", 0),
+        )
+
+        for itm, ans in items:
+            self.assertEqual(Args.check_version_s(itm), ans, msg=itm)
+
+
+if __name__ == "__main__":
+    unittest.main()

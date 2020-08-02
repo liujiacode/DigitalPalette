@@ -170,7 +170,9 @@ class Operation(QWidget):
                     return
 
         if "version" in color_dict:
-            if not self._args.check_version(color_dict["version"]):
+            vid = self._args.check_version_d(color_dict["version"])
+
+            if vid == 0 or vid > 1:
                 self.warning(self._operation_errs[3])
                 return
 
@@ -198,12 +200,23 @@ class Operation(QWidget):
         finished_errs = []
 
         try:
-            for color in color_dict:
+            for color_idx in range(len(color_dict)):
+                color = color_dict[color_idx]
                 hsv_set = []
 
                 try:
                     for i in range(5):
-                        hsv_set.append(tuple(Color.fmt_hsv(color["color_{}".format(i)]["hsv"]).tolist()))
+                        if "hsv" in color["color_{}".format(i)]:
+                            hsv_set.append(tuple(Color.fmt_hsv(color["color_{}".format(i)]["hsv"]).tolist()))
+
+                        elif "rgb" in color["color_{}".format(i)]:
+                            hsv_set.append(tuple(Color.rgb2hsv(color["color_{}".format(i)]["rgb"]).tolist()))
+
+                        elif "hex code" in color["color_{}".format(i)]:
+                            hsv_set.append(tuple(Color.hec2hsv(color["color_{}".format(i)]["hex code"]).tolist()))
+
+                        else:
+                            finished_errs.append("[id {}] hsv value is not found.".format(color_idx + 1))
 
                     if "name" in color:
                         cr_name = str(color["name"])
@@ -223,14 +236,22 @@ class Operation(QWidget):
                     else:
                         cr_time = (-1.0, -1.0)
 
-                    if "rule" in color and color["rule"] in self._args.global_hm_rules:
-                        color_list.append((tuple(hsv_set), color["rule"], cr_name, cr_desc, cr_time))
+                    if len(hsv_set) == 5:
+                        if "rule" in color:
+                            if color["rule"] in self._args.global_hm_rules:
+                                color_list.append((tuple(hsv_set), color["rule"], cr_name, cr_desc, cr_time))
+
+                            else:
+                                finished_errs.append("[id {}] unknown rule: {}.".format(color_idx + 1, color["rule"]))
+
+                        else:
+                            finished_errs.append("[id {}] rule value is not found.".format(color_idx + 1))
 
                     else:
-                        finished_errs.append("unknown rule: {}.".format(color["rule"]))
+                        finished_errs.append("[id {}] colors are not complete.".format(color_idx + 1))
 
                 except Exception as err:
-                    finished_errs.append(str(err))
+                    finished_errs.append("[id {}] {}".format(color_idx + 1, str(err)))
 
         except Exception as err:
             self.warning(self._operation_errs[13] + "\n{}\n{}".format(self._operation_errs[17], err))
@@ -349,7 +370,9 @@ class Operation(QWidget):
                     return
 
         if "version" in color_dict:
-            if not self._args.check_version(color_dict["version"]):
+            vid = self._args.check_version_s(color_dict["version"])
+
+            if vid == 0 or vid > 1:
                 self.warning(self._operation_errs[3])
                 return
 
@@ -381,6 +404,24 @@ class Operation(QWidget):
                     try:
                         hsv = color_dict["color_{}".format(i)]["hsv"]
                         color_set.append(Color(hsv, tp="hsv", overflow=self._args.sys_color_set.get_overflow()))
+
+                    except Exception as err:
+                        self.warning(self._operation_errs[5] + "\n{}\n{}".format(self._operation_errs[17], err))
+                        return
+
+                elif "rgb" in color_dict["color_{}".format(i)]:
+                    try:
+                        hsv = color_dict["color_{}".format(i)]["rgb"]
+                        color_set.append(Color(hsv, tp="rgb", overflow=self._args.sys_color_set.get_overflow()))
+
+                    except Exception as err:
+                        self.warning(self._operation_errs[5] + "\n{}\n{}".format(self._operation_errs[17], err))
+                        return
+
+                elif "hex code" in color_dict["color_{}".format(i)]:
+                    try:
+                        hsv = color_dict["color_{}".format(i)]["hex code"]
+                        color_set.append(Color(hsv, tp="hec", overflow=self._args.sys_color_set.get_overflow()))
 
                     except Exception as err:
                         self.warning(self._operation_errs[5] + "\n{}\n{}".format(self._operation_errs[17], err))
@@ -577,4 +618,10 @@ class Operation(QWidget):
             _translate("Operation", "Import color type error. This is a color depot file, please use 'Open'."),
             _translate("Operation", "Detail:"),
             _translate("Operation", "OK"),
+        )
+
+        self.main_errs = (
+            _translate("Operation", "Could not load settings. Settings file is broken. Old settings file has been backed up as 'settings.json.old'."),
+            _translate("Operation", "Could not load settings. Version does not match. Old settings file has been backed up as 'settings.json.old'."),
+            _translate("Operation", "Could not load settings. Version does not exist. Old settings file has been backed up as 'settings.json.old'."),
         )
