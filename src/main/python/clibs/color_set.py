@@ -612,17 +612,37 @@ class ColorSet(object):
             delta_v = 0
 
         elif self.synchronization == 6:
-            if idx < 3:
+            self._color_set[idx].s = pr_color.s
+            self._color_set[idx].v = pr_color.v
+
+            if idx in (1, 2):
                 self._color_set[3].s = self._color_set[1].s
                 self._color_set[4].s = self._color_set[2].s
 
-            else:
+                self._color_set[3].v = self._color_set[1].v
+                self._color_set[4].v = self._color_set[2].v
+
+            elif idx in (3, 4):
                 self._color_set[1].s = self._color_set[3].s
                 self._color_set[2].s = self._color_set[4].s
 
+                self._color_set[1].v = self._color_set[3].v
+                self._color_set[2].v = self._color_set[4].v
+
+            else:
+                self._color_set[1].s = (self._color_set[1].s + self._color_set[3].s) / 2
+                self._color_set[2].s = (self._color_set[2].s + self._color_set[4].s) / 2
+                self._color_set[3].s = self._color_set[1].s
+                self._color_set[4].s = self._color_set[2].s
+
+                self._color_set[1].v = (self._color_set[1].v + self._color_set[3].v) / 2
+                self._color_set[2].v = (self._color_set[2].v + self._color_set[4].v) / 2
+                self._color_set[3].v = self._color_set[1].v
+                self._color_set[4].v = self._color_set[2].v
+
             delta_h = pr_color.h - self._color_set[idx].h
-            delta_s = pr_color.s - self._color_set[idx].s
-            delta_v = pr_color.v - self._color_set[idx].v
+            delta_s = 0
+            delta_v = 0
 
         else:
             raise ValueError("unexpect synchronization code for special rule: {}.".format(self.synchronization))
