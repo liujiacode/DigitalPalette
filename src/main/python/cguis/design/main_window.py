@@ -2,10 +2,9 @@
 
 # Form implementation generated from reading ui file 'src\main\python\cguis\design\main_window.ui'
 #
-# Created by: PyQt5 UI code generator 5.13.2
+# Created by: PyQt5 UI code generator 5.12.1
 #
 # WARNING! All changes made in this file will be lost!
-
 
 from PyQt5 import QtCore, QtGui, QtWidgets
 
@@ -187,11 +186,11 @@ class Ui_MainWindow(object):
         self.actionScript.setObjectName("actionScript")
         self.actionAll = QtWidgets.QAction(MainWindow)
         self.actionAll.setObjectName("actionAll")
-        self.menuFile.addAction(self.actionOpen)
-        self.menuFile.addAction(self.actionSave)
-        self.menuFile.addSeparator()
         self.menuFile.addAction(self.actionImport)
         self.menuFile.addAction(self.actionExport)
+        self.menuFile.addSeparator()
+        self.menuFile.addAction(self.actionOpen)
+        self.menuFile.addAction(self.actionSave)
         self.menuFile.addSeparator()
         self.menuFile.addAction(self.actionQuit)
         self.menuEdit.addAction(self.actionCreate)
@@ -268,3 +267,5 @@ class Ui_MainWindow(object):
         self.actionDepot.setText(_translate("MainWindow", "Depot"))
         self.actionScript.setText(_translate("MainWindow", "Script"))
         self.actionAll.setText(_translate("MainWindow", "All"))
+
+

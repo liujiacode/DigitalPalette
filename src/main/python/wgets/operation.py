@@ -73,19 +73,19 @@ class Operation(QWidget):
         scroll_grid_layout.addWidget(self._file_gbox, 0, 1, 1, 1)
 
         self.open_btn = QPushButton(self._file_gbox)
-        gbox_grid_layout.addWidget(self.open_btn, 0, 1, 1, 1)
+        gbox_grid_layout.addWidget(self.open_btn, 2, 1, 1, 1)
         self.open_btn.clicked.connect(self.exec_open)
 
         self.save_btn = QPushButton(self._file_gbox)
-        gbox_grid_layout.addWidget(self.save_btn, 1, 1, 1, 1)
+        gbox_grid_layout.addWidget(self.save_btn, 3, 1, 1, 1)
         self.save_btn.clicked.connect(self.exec_save)
 
         self.import_btn = QPushButton(self._file_gbox)
-        gbox_grid_layout.addWidget(self.import_btn, 2, 1, 1, 1)
+        gbox_grid_layout.addWidget(self.import_btn, 0, 1, 1, 1)
         self.import_btn.clicked.connect(self.exec_import)
 
         self.export_btn = QPushButton(self._file_gbox)
-        gbox_grid_layout.addWidget(self.export_btn, 3, 1, 1, 1)
+        gbox_grid_layout.addWidget(self.export_btn, 1, 1, 1, 1)
         self.export_btn.clicked.connect(self.exec_export)
 
         spacer = QSpacerItem(5, 5, QSizePolicy.Minimum, QSizePolicy.Expanding)
