@@ -40,7 +40,10 @@ class Image3C(QThread):
         0: rgb or hsv full data.
         1: r or h channel data;
         2: g or s channel data;
-        3: b or v channel data.
+        3: b or v channel data;
+        4: not r or h channel data;
+        5: not g or s channel data;
+        6: not b or v channel data.
 
     Extract type:
         0: bright colorful
@@ -514,6 +517,21 @@ class Image3C(QThread):
         b_chl.save(self._temp_dir.path() + os.sep + "{}_3.png".format(prefix))
         self.ps_finished.emit(prefix * 10 + 3)
 
+        n_r_chl = np.stack((z_chl, rgb_data[:, :, 1], rgb_data[:, :, 2]), axis=2)
+        n_r_chl = QImage(n_r_chl, n_r_chl.shape[1], n_r_chl.shape[0], n_r_chl.shape[1] * 3, QImage.Format_RGB888)
+        n_r_chl.save(self._temp_dir.path() + os.sep + "{}_4.png".format(prefix))
+        self.ps_finished.emit(prefix * 10 + 4)
+
+        n_g_chl = np.stack((rgb_data[:, :, 0], z_chl, rgb_data[:, :, 2]), axis=2)
+        n_g_chl = QImage(n_g_chl, n_g_chl.shape[1], n_g_chl.shape[0], n_g_chl.shape[1] * 3, QImage.Format_RGB888)
+        n_g_chl.save(self._temp_dir.path() + os.sep + "{}_5.png".format(prefix))
+        self.ps_finished.emit(prefix * 10 + 5)
+
+        n_b_chl = np.stack((rgb_data[:, :, 0], rgb_data[:, :, 1], z_chl), axis=2)
+        n_b_chl = QImage(n_b_chl, n_b_chl.shape[1], n_b_chl.shape[0], n_b_chl.shape[1] * 3, QImage.Format_RGB888)
+        n_b_chl.save(self._temp_dir.path() + os.sep + "{}_6.png".format(prefix))
+        self.ps_finished.emit(prefix * 10 + 6)
+
     def save_hsv_chnl_data(self, hsv_data, prefix):
         """
         Save h, s, v channel images.
@@ -536,6 +554,21 @@ class Image3C(QThread):
         v_chl = QImage(v_chl, v_chl.shape[1], v_chl.shape[0], v_chl.shape[1] * 3, QImage.Format_RGB888)
         v_chl.save(self._temp_dir.path() + os.sep + "{}_3.png".format(prefix))
         self.ps_finished.emit(prefix * 10 + 3)
+
+        n_h_chl = Color.hsv2rgb_array(np.stack((zeros, hsv_data[:, :, 1], hsv_data[:, :, 2]), axis=2))
+        n_h_chl = QImage(n_h_chl, n_h_chl.shape[1], n_h_chl.shape[0], n_h_chl.shape[1] * 3, QImage.Format_RGB888)
+        n_h_chl.save(self._temp_dir.path() + os.sep + "{}_4.png".format(prefix))
+        self.ps_finished.emit(prefix * 10 + 4)
+
+        n_s_chl = Color.hsv2rgb_array(np.stack((hsv_data[:, :, 0], ones, hsv_data[:, :, 2]), axis=2))
+        n_s_chl = QImage(n_s_chl, n_s_chl.shape[1], n_s_chl.shape[0], n_s_chl.shape[1] * 3, QImage.Format_RGB888)
+        n_s_chl.save(self._temp_dir.path() + os.sep + "{}_5.png".format(prefix))
+        self.ps_finished.emit(prefix * 10 + 5)
+
+        n_v_chl = Color.hsv2rgb_array(np.stack((hsv_data[:, :, 0], hsv_data[:, :, 1], ones), axis=2))
+        n_v_chl = QImage(n_v_chl, n_v_chl.shape[1], n_v_chl.shape[0], n_v_chl.shape[1] * 3, QImage.Format_RGB888)
+        n_v_chl.save(self._temp_dir.path() + os.sep + "{}_6.png".format(prefix))
+        self.ps_finished.emit(prefix * 10 + 6)
 
     def load_image(self, category, channel):
         """

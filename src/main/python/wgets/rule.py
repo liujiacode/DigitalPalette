@@ -83,7 +83,7 @@ class Rule(QWidget):
         scroll_grid_layout.addWidget(self._synchronization_gbox, 1, 1, 1, 1)
 
         self._synchronization_btns = []
-        for i in range(4):
+        for i in range(7):
             btn = QRadioButton(self._synchronization_gbox)
             gbox_grid_layout.addWidget(btn, i, 0, 1, 1)
 
@@ -91,9 +91,9 @@ class Rule(QWidget):
             self._synchronization_btns.append(btn)
 
         spacer = QSpacerItem(5, 5, QSizePolicy.Minimum, QSizePolicy.Expanding)
-        gbox_grid_layout.addItem(spacer, 4, 0, 1, 1)
+        gbox_grid_layout.addItem(spacer, 7, 0, 1, 1)
         spacer = QSpacerItem(5, 5, QSizePolicy.Expanding, QSizePolicy.Minimum)
-        gbox_grid_layout.addItem(spacer, 4, 1, 1, 1)
+        gbox_grid_layout.addItem(spacer, 7, 1, 1, 1)
 
         self.update_rule()
         self._synchronization_btns[self._args.sys_color_set.synchronization].setChecked(True)
@@ -145,7 +145,7 @@ class Rule(QWidget):
         for i in range(8):
             self._rule_btns[i].setText(self._rule_descs[i])
 
-        for i in range(4):
+        for i in range(7):
             self._synchronization_btns[i].setText(self._synchronization_descs[i])
 
     def _func_tr_(self):
@@ -172,4 +172,7 @@ class Rule(QWidget):
             _translate("Rule", "H Locked"),
             _translate("Rule", "S Locked"),
             _translate("Rule", "Equidistant"),
+            _translate("Rule", "Equal"),
+            _translate("Rule", "Gradual"),
+            _translate("Rule", "Symmetrical"),
         )

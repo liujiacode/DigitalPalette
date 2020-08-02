@@ -103,6 +103,36 @@
         <source>Synchronization</source>
         <translation>Synchro</translation>
     </message>
+    <message>
+        <location filename="../../wgets/channel.py" line="185"/>
+        <source>Not R</source>
+        <translation></translation>
+    </message>
+    <message>
+        <location filename="../../wgets/channel.py" line="185"/>
+        <source>Not G</source>
+        <translation></translation>
+    </message>
+    <message>
+        <location filename="../../wgets/channel.py" line="185"/>
+        <source>Not B</source>
+        <translation></translation>
+    </message>
+    <message>
+        <location filename="../../wgets/channel.py" line="185"/>
+        <source>Not H</source>
+        <translation></translation>
+    </message>
+    <message>
+        <location filename="../../wgets/channel.py" line="185"/>
+        <source>Not S</source>
+        <translation></translation>
+    </message>
+    <message>
+        <location filename="../../wgets/channel.py" line="185"/>
+        <source>Not V</source>
+        <translation></translation>
+    </message>
 </context>
 <context>
     <name>Depot</name>
@@ -638,147 +668,147 @@
 <context>
     <name>Operation</name>
     <message>
-        <location filename="../../wgets/operation.py" line="590"/>
+        <location filename="../../wgets/operation.py" line="601"/>
         <source>Error</source>
         <translation></translation>
     </message>
     <message>
-        <location filename="../../wgets/operation.py" line="590"/>
+        <location filename="../../wgets/operation.py" line="601"/>
         <source>Import color file error. Color file is broken.</source>
         <translation></translation>
     </message>
     <message>
-        <location filename="../../wgets/operation.py" line="590"/>
+        <location filename="../../wgets/operation.py" line="601"/>
         <source>Import color version error. Version does not match.</source>
         <translation></translation>
     </message>
     <message>
-        <location filename="../../wgets/operation.py" line="590"/>
+        <location filename="../../wgets/operation.py" line="601"/>
         <source>Import color version error. Version does not exist.</source>
         <translation></translation>
     </message>
     <message>
-        <location filename="../../wgets/operation.py" line="590"/>
+        <location filename="../../wgets/operation.py" line="601"/>
         <source>Import color set error. Color set is broken.</source>
         <translation></translation>
     </message>
     <message>
-        <location filename="../../wgets/operation.py" line="590"/>
+        <location filename="../../wgets/operation.py" line="601"/>
         <source>Import color set error. HSV tags do not exist.</source>
         <translation></translation>
     </message>
     <message>
-        <location filename="../../wgets/operation.py" line="590"/>
+        <location filename="../../wgets/operation.py" line="601"/>
         <source>Import color set error. Color tags do not exist.</source>
         <translation></translation>
     </message>
     <message>
-        <location filename="../../wgets/operation.py" line="590"/>
+        <location filename="../../wgets/operation.py" line="601"/>
         <source>Import harmony rule error. Rule does not match.</source>
         <translation></translation>
     </message>
     <message>
-        <location filename="../../wgets/operation.py" line="590"/>
+        <location filename="../../wgets/operation.py" line="601"/>
         <source>Import harmony rule error. Rule does not exist.</source>
         <translation></translation>
     </message>
     <message>
-        <location filename="../../wgets/operation.py" line="590"/>
+        <location filename="../../wgets/operation.py" line="601"/>
         <source>Export Color file error. Extension does not match.</source>
         <translation></translation>
     </message>
     <message>
-        <location filename="../../wgets/operation.py" line="590"/>
+        <location filename="../../wgets/operation.py" line="601"/>
         <source>Import color format error. Data is not in dict type.</source>
         <translation></translation>
     </message>
     <message>
-        <location filename="../../wgets/operation.py" line="590"/>
+        <location filename="../../wgets/operation.py" line="601"/>
         <source>Import color type error. Type does not match.</source>
         <translation></translation>
     </message>
     <message>
-        <location filename="../../wgets/operation.py" line="590"/>
+        <location filename="../../wgets/operation.py" line="601"/>
         <source>Import color type error. Type does not exist.</source>
         <translation></translation>
     </message>
     <message>
-        <location filename="../../wgets/operation.py" line="590"/>
+        <location filename="../../wgets/operation.py" line="601"/>
         <source>Import color depot error.</source>
         <translation></translation>
     </message>
     <message>
-        <location filename="../../wgets/operation.py" line="590"/>
+        <location filename="../../wgets/operation.py" line="601"/>
         <source>Import some color sets into depot error. These color sets are discarded.</source>
         <translation></translation>
     </message>
     <message>
-        <location filename="../../wgets/operation.py" line="590"/>
+        <location filename="../../wgets/operation.py" line="601"/>
         <source>Detail:</source>
         <translation></translation>
     </message>
     <message>
-        <location filename="../../wgets/operation.py" line="590"/>
+        <location filename="../../wgets/operation.py" line="601"/>
         <source>Import color type error. This is a color set file, please use &apos;Import&apos;.</source>
         <translation></translation>
     </message>
     <message>
-        <location filename="../../wgets/operation.py" line="590"/>
+        <location filename="../../wgets/operation.py" line="601"/>
         <source>Import color type error. This is a color depot file, please use &apos;Open&apos;.</source>
         <translation></translation>
     </message>
     <message>
-        <location filename="../../wgets/operation.py" line="590"/>
+        <location filename="../../wgets/operation.py" line="601"/>
         <source>OK</source>
         <translation>OK</translation>
     </message>
     <message>
-        <location filename="../../wgets/operation.py" line="580"/>
+        <location filename="../../wgets/operation.py" line="591"/>
         <source>DigiPale Json File</source>
         <translation></translation>
     </message>
     <message>
-        <location filename="../../wgets/operation.py" line="580"/>
+        <location filename="../../wgets/operation.py" line="591"/>
         <source>Plain Text File</source>
         <translation></translation>
     </message>
     <message>
-        <location filename="../../wgets/operation.py" line="580"/>
+        <location filename="../../wgets/operation.py" line="591"/>
         <source>Adobe Swatch File</source>
         <translation></translation>
     </message>
     <message>
-        <location filename="../../wgets/operation.py" line="580"/>
+        <location filename="../../wgets/operation.py" line="591"/>
         <source>DigiPale Set File</source>
         <translation></translation>
     </message>
     <message>
-        <location filename="../../wgets/operation.py" line="580"/>
+        <location filename="../../wgets/operation.py" line="591"/>
         <source>DigiPale Depot File</source>
         <translation></translation>
     </message>
     <message>
-        <location filename="../../wgets/operation.py" line="580"/>
+        <location filename="../../wgets/operation.py" line="591"/>
         <source>GIMP Palette File</source>
         <translation></translation>
     </message>
     <message>
-        <location filename="../../wgets/operation.py" line="580"/>
+        <location filename="../../wgets/operation.py" line="591"/>
         <source>Pencil Palette File</source>
         <translation></translation>
     </message>
     <message>
-        <location filename="../../wgets/operation.py" line="612"/>
+        <location filename="../../wgets/operation.py" line="623"/>
         <source>Could not load settings. Settings file is broken. Old settings file has been backed up as &apos;settings.json.old&apos;.</source>
         <translation></translation>
     </message>
     <message>
-        <location filename="../../wgets/operation.py" line="612"/>
+        <location filename="../../wgets/operation.py" line="623"/>
         <source>Could not load settings. Version does not match. Old settings file has been backed up as &apos;settings.json.old&apos;.</source>
         <translation></translation>
     </message>
     <message>
-        <location filename="../../wgets/operation.py" line="612"/>
+        <location filename="../../wgets/operation.py" line="623"/>
         <source>Could not load settings. Version does not exist. Old settings file has been backed up as &apos;settings.json.old&apos;.</source>
         <translation></translation>
     </message>
@@ -1083,6 +1113,21 @@ Press ESC to cancel.</translation>
         <location filename="../../wgets/rule.py" line="170"/>
         <source>Equidistant</source>
         <translation>Equidistant</translation>
+    </message>
+    <message>
+        <location filename="../../wgets/rule.py" line="170"/>
+        <source>Equal</source>
+        <translation></translation>
+    </message>
+    <message>
+        <location filename="../../wgets/rule.py" line="170"/>
+        <source>Gradual</source>
+        <translation></translation>
+    </message>
+    <message>
+        <location filename="../../wgets/rule.py" line="170"/>
+        <source>Symmetrical</source>
+        <translation></translation>
     </message>
 </context>
 <context>

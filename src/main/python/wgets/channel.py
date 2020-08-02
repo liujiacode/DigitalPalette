@@ -85,7 +85,7 @@ class Channel(QWidget):
         scroll_grid_layout.addWidget(self._channel_gbox, 1, 1, 1, 1)
 
         self._channel_btns = []
-        for i in range(4):
+        for i in range(7):
             btn = QRadioButton(self._channel_gbox)
             gbox_grid_layout.addWidget(btn, i, 0, 1, 1)
 
@@ -93,9 +93,9 @@ class Channel(QWidget):
             self._channel_btns.append(btn)
 
         spacer = QSpacerItem(5, 5, QSizePolicy.Minimum, QSizePolicy.Expanding)
-        gbox_grid_layout.addItem(spacer, 4, 0, 1, 1)
+        gbox_grid_layout.addItem(spacer, 7, 0, 1, 1)
         spacer = QSpacerItem(5, 5, QSizePolicy.Expanding, QSizePolicy.Minimum)
-        gbox_grid_layout.addItem(spacer, 4, 1, 1, 1)
+        gbox_grid_layout.addItem(spacer, 7, 1, 1, 1)
 
         self.reset()
 
@@ -156,12 +156,12 @@ class Channel(QWidget):
             self._category_btns[i].setText(self._category_descs[i])
 
         if self._args.sys_category in range(4):
-            for i in range(4):
+            for i in range(7):
                 self._channel_btns[i].setText(self._channel_descs[i])
 
         else:
-            for i in range(4):
-                self._channel_btns[i].setText(self._channel_descs[i + 4])
+            for i in range(7):
+                self._channel_btns[i].setText(self._channel_descs[i + 7])
 
     def _func_tr_(self):
         _translate = QCoreApplication.translate
@@ -187,8 +187,14 @@ class Channel(QWidget):
             _translate("Channel", "Chnnel R"),
             _translate("Channel", "Chnnel G"),
             _translate("Channel", "Chnnel B"),
+            _translate("Channel", "Not R"),
+            _translate("Channel", "Not G"),
+            _translate("Channel", "Not B"),
             _translate("Channel", "Full HSV"),
             _translate("Channel", "Chnnel H"),
             _translate("Channel", "Chnnel S"),
             _translate("Channel", "Chnnel V"),
+            _translate("Channel", "Not H"),
+            _translate("Channel", "Not S"),
+            _translate("Channel", "Not V"),
         )

@@ -35,7 +35,7 @@ class ColorSet(object):
             overflow (str): method to manipulate overflowed s and v values, in "cutoff", "return" and "repeat".
         """
 
-        # synchronization methods: unlimited, H locked, S locked, equidistant
+        # synchronization methods: Unlimited, H Locked, S Locked, Equidistant, Equal, Gradual, Symmetrical
         self.synchronization = 0
 
         self.set_hsv_ranges(h_range, s_range, v_range)
@@ -269,7 +269,7 @@ class ColorSet(object):
 
         Args:
             idx (int): index in range 0 ~ 4 which indicates the color in color set for modify.
-            color (Color): replace the selected color with this color.
+            pr_color (Color): replace the selected color with this color.
         """
 
         if idx == 0:
@@ -348,7 +348,7 @@ class ColorSet(object):
 
         Args:
             idx (int): index in range 0 ~ 4 which indicates the color in color set for modify.
-            color (Color): replace the selected color with this color.
+            pr_color (Color): replace the selected color with this color.
         """
 
         if idx == 0:
@@ -384,7 +384,7 @@ class ColorSet(object):
 
         Args:
             idx (int): index in range 0 ~ 4 which indicates the color in color set for modify.
-            color (Color): replace the selected color with this color.
+            pr_color (Color): replace the selected color with this color.
         """
 
         if idx == 0:
@@ -411,8 +411,8 @@ class ColorSet(object):
         Create color set in tetrad rule.
         """
 
-        self._color_set[1].h = self._color_set[0].h
-        self._color_set[2].h = self._color_set[0].h - 90
+        self._color_set[1].h = self._color_set[0].h - 90
+        self._color_set[2].h = self._color_set[0].h - 180
         self._color_set[3].h = self._color_set[0].h + 90
         self._color_set[4].h = self._color_set[0].h + 180
 
@@ -422,7 +422,7 @@ class ColorSet(object):
 
         Args:
             idx (int): index in range 0 ~ 4 which indicates the color in color set for modify.
-            color (Color): replace the selected color with this color.
+            pr_color (Color): replace the selected color with this color.
         """
 
         if idx == 0:
@@ -435,13 +435,13 @@ class ColorSet(object):
         else:
             delta_h = pr_color.h - self._color_set[idx].h
 
-            if idx in (1, 4):
+            if idx in (2, 4):
                 self._color_set[0].h += delta_h
-                self._color_set[1].h += delta_h
+                self._color_set[2].h += delta_h
                 self._color_set[4].h += delta_h
 
-            elif idx in (2, 3):
-                self._color_set[2].h += delta_h
+            elif idx in (1, 3):
+                self._color_set[1].h += delta_h
                 self._color_set[3].h += delta_h
 
             else:
@@ -520,7 +520,7 @@ class ColorSet(object):
 
         Args:
             idx (int): index in range 0 ~ 4 which indicates the color in color set for modify.
-            color (Color): replace the selected color with this color.
+            pr_color (Color): replace the selected color with this color.
         """
 
         if idx in range(5):
@@ -535,7 +535,7 @@ class ColorSet(object):
 
         Args:
             idx (int): index in range 0 ~ 4 which indicates the color in color set for modify.
-            color (Color): replace the selected color with this color.
+            pr_color (Color): replace the selected color with this color.
         """
 
         if self.synchronization == 1:
@@ -548,6 +548,78 @@ class ColorSet(object):
             delta_s = delta_v = 0
 
         elif self.synchronization == 3:
+            delta_h = pr_color.h - self._color_set[idx].h
+            delta_s = pr_color.s - self._color_set[idx].s
+            delta_v = pr_color.v - self._color_set[idx].v
+
+        elif self.synchronization == 4:
+            for i in range(5):
+                self._color_set[i].s = pr_color.s
+                self._color_set[i].v = pr_color.v
+
+            delta_h = pr_color.h - self._color_set[idx].h
+            delta_s = 0
+            delta_v = 0
+
+        elif self.synchronization == 5:
+            if idx == 1:
+                self._color_set[1].s = pr_color.s
+                self._color_set[2].s = self._color_set[1].s * 2 - self._color_set[0].s
+                self._color_set[4].s = self._color_set[3].s * 2 - self._color_set[0].s
+
+                self._color_set[1].v = pr_color.v
+                self._color_set[2].v = self._color_set[1].v * 2 - self._color_set[0].v
+                self._color_set[4].v = self._color_set[3].v * 2 - self._color_set[0].v
+
+            elif idx == 3:
+                self._color_set[3].s = pr_color.s
+                self._color_set[2].s = self._color_set[1].s * 2 - self._color_set[0].s
+                self._color_set[4].s = self._color_set[3].s * 2 - self._color_set[0].s
+
+                self._color_set[3].v = pr_color.v
+                self._color_set[2].v = self._color_set[1].v * 2 - self._color_set[0].v
+                self._color_set[4].v = self._color_set[3].v * 2 - self._color_set[0].v
+
+            elif idx == 2:
+                self._color_set[2].s = pr_color.s
+                self._color_set[1].s = (self._color_set[2].s + self._color_set[0].s) / 2
+                self._color_set[3].s = (self._color_set[4].s + self._color_set[0].s) / 2
+
+                self._color_set[2].v = pr_color.v
+                self._color_set[1].v = (self._color_set[2].v + self._color_set[0].v) / 2
+                self._color_set[3].v = (self._color_set[4].v + self._color_set[0].v) / 2
+
+            elif idx == 4:
+                self._color_set[4].s = pr_color.s
+                self._color_set[1].s = (self._color_set[2].s + self._color_set[0].s) / 2
+                self._color_set[3].s = (self._color_set[4].s + self._color_set[0].s) / 2
+
+                self._color_set[4].v = pr_color.v
+                self._color_set[1].v = (self._color_set[2].v + self._color_set[0].v) / 2
+                self._color_set[3].v = (self._color_set[4].v + self._color_set[0].v) / 2
+
+            else:
+                self._color_set[0].s = pr_color.s
+                self._color_set[1].s = (self._color_set[2].s + self._color_set[0].s) / 2
+                self._color_set[3].s = (self._color_set[4].s + self._color_set[0].s) / 2
+
+                self._color_set[0].v = pr_color.v
+                self._color_set[1].v = (self._color_set[2].v + self._color_set[0].v) / 2
+                self._color_set[3].v = (self._color_set[4].v + self._color_set[0].v) / 2
+
+            delta_h = pr_color.h - self._color_set[idx].h
+            delta_s = 0
+            delta_v = 0
+
+        elif self.synchronization == 6:
+            if idx < 3:
+                self._color_set[3].s = self._color_set[1].s
+                self._color_set[4].s = self._color_set[2].s
+
+            else:
+                self._color_set[1].s = self._color_set[3].s
+                self._color_set[2].s = self._color_set[4].s
+
             delta_h = pr_color.h - self._color_set[idx].h
             delta_s = pr_color.s - self._color_set[idx].s
             delta_v = pr_color.v - self._color_set[idx].v

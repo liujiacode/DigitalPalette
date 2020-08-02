@@ -103,6 +103,36 @@
         <source>Synchronization</source>
         <translation>同步</translation>
     </message>
+    <message>
+        <location filename="../../wgets/channel.py" line="185"/>
+        <source>Not R</source>
+        <translation>非 R</translation>
+    </message>
+    <message>
+        <location filename="../../wgets/channel.py" line="185"/>
+        <source>Not G</source>
+        <translation>非 G</translation>
+    </message>
+    <message>
+        <location filename="../../wgets/channel.py" line="185"/>
+        <source>Not B</source>
+        <translation>非 B</translation>
+    </message>
+    <message>
+        <location filename="../../wgets/channel.py" line="185"/>
+        <source>Not H</source>
+        <translation>非 H</translation>
+    </message>
+    <message>
+        <location filename="../../wgets/channel.py" line="185"/>
+        <source>Not S</source>
+        <translation>非 S</translation>
+    </message>
+    <message>
+        <location filename="../../wgets/channel.py" line="185"/>
+        <source>Not V</source>
+        <translation>非 V</translation>
+    </message>
 </context>
 <context>
     <name>Depot</name>
@@ -830,12 +860,12 @@ DigitalPalette 代码仓库中所有图片（包括图标和示例图片等）�
         <translation type="obsolete">定点</translation>
     </message>
     <message>
-        <location filename="../../wgets/operation.py" line="590"/>
+        <location filename="../../wgets/operation.py" line="601"/>
         <source>Error</source>
         <translation>错误</translation>
     </message>
     <message>
-        <location filename="../../wgets/operation.py" line="590"/>
+        <location filename="../../wgets/operation.py" line="601"/>
         <source>Import color file error. Color file is broken.</source>
         <translation>导入色彩文件出错。色彩文件已损坏。</translation>
     </message>
@@ -845,62 +875,62 @@ DigitalPalette 代码仓库中所有图片（包括图标和示例图片等）�
         <translation type="obsolete">导入色彩格式出错。数据不是字典类型。</translation>
     </message>
     <message>
-        <location filename="../../wgets/operation.py" line="590"/>
+        <location filename="../../wgets/operation.py" line="601"/>
         <source>Import color version error. Version does not match.</source>
         <translation>导入色彩的版本出错。版本不匹配。</translation>
     </message>
     <message>
-        <location filename="../../wgets/operation.py" line="590"/>
+        <location filename="../../wgets/operation.py" line="601"/>
         <source>Import color version error. Version does not exist.</source>
         <translation>导入色彩的版本出错。版本不存在。</translation>
     </message>
     <message>
-        <location filename="../../wgets/operation.py" line="590"/>
+        <location filename="../../wgets/operation.py" line="601"/>
         <source>Import color set error. Color set is broken.</source>
         <translation>导入色彩组出错。色彩组已损坏。</translation>
     </message>
     <message>
-        <location filename="../../wgets/operation.py" line="590"/>
+        <location filename="../../wgets/operation.py" line="601"/>
         <source>Import color set error. HSV tags do not exist.</source>
         <translation>导入色彩组出错。HSV 标签不存在。</translation>
     </message>
     <message>
-        <location filename="../../wgets/operation.py" line="590"/>
+        <location filename="../../wgets/operation.py" line="601"/>
         <source>Import color set error. Color tags do not exist.</source>
         <translation>导入色彩组出错。色彩标签不存在。</translation>
     </message>
     <message>
-        <location filename="../../wgets/operation.py" line="590"/>
+        <location filename="../../wgets/operation.py" line="601"/>
         <source>Import harmony rule error. Rule does not match.</source>
         <translation>导入调和规则出错。规则不匹配。</translation>
     </message>
     <message>
-        <location filename="../../wgets/operation.py" line="590"/>
+        <location filename="../../wgets/operation.py" line="601"/>
         <source>Import harmony rule error. Rule does not exist.</source>
         <translation>导入调和规则出错。规则不存在。</translation>
     </message>
     <message>
-        <location filename="../../wgets/operation.py" line="590"/>
+        <location filename="../../wgets/operation.py" line="601"/>
         <source>Export Color file error. Extension does not match.</source>
         <translation>导出色彩文件出错。扩展名不匹配。</translation>
     </message>
     <message>
-        <location filename="../../wgets/operation.py" line="590"/>
+        <location filename="../../wgets/operation.py" line="601"/>
         <source>Import color format error. Data is not in dict type.</source>
         <translation>导入色彩的格式出错。数据不是字典类型。</translation>
     </message>
     <message>
-        <location filename="../../wgets/operation.py" line="590"/>
+        <location filename="../../wgets/operation.py" line="601"/>
         <source>Import color type error. Type does not match.</source>
         <translation>导入色彩类型出错。类型不匹配。</translation>
     </message>
     <message>
-        <location filename="../../wgets/operation.py" line="590"/>
+        <location filename="../../wgets/operation.py" line="601"/>
         <source>Import color type error. Type does not exist.</source>
         <translation>导入色彩类型出错。类型不存在。</translation>
     </message>
     <message>
-        <location filename="../../wgets/operation.py" line="590"/>
+        <location filename="../../wgets/operation.py" line="601"/>
         <source>Import color depot error.</source>
         <translation>导入色彩仓库出错。</translation>
     </message>
@@ -915,7 +945,7 @@ DigitalPalette 代码仓库中所有图片（包括图标和示例图片等）�
         <translation type="obsolete">导入仓库中某些色彩组出错。</translation>
     </message>
     <message>
-        <location filename="../../wgets/operation.py" line="590"/>
+        <location filename="../../wgets/operation.py" line="601"/>
         <source>Import some color sets into depot error. These color sets are discarded.</source>
         <translation>导入某些色彩组至仓库出错。这些色彩组已被舍弃。</translation>
     </message>
@@ -930,57 +960,57 @@ DigitalPalette 代码仓库中所有图片（包括图标和示例图片等）�
         <translation type="obsolete">导入色彩类型出错。这是一个色彩仓库类型的文件，请使用‘打开’。</translation>
     </message>
     <message>
-        <location filename="../../wgets/operation.py" line="590"/>
+        <location filename="../../wgets/operation.py" line="601"/>
         <source>Detail:</source>
         <translation>详情：</translation>
     </message>
     <message>
-        <location filename="../../wgets/operation.py" line="590"/>
+        <location filename="../../wgets/operation.py" line="601"/>
         <source>Import color type error. This is a color set file, please use &apos;Import&apos;.</source>
         <translation>导入色彩类型出错。这是一个色彩组文件，请使用‘导入’。</translation>
     </message>
     <message>
-        <location filename="../../wgets/operation.py" line="590"/>
+        <location filename="../../wgets/operation.py" line="601"/>
         <source>Import color type error. This is a color depot file, please use &apos;Open&apos;.</source>
         <translation>导入色彩类型出错。这是一个色彩仓库文件，请使用‘打开’。</translation>
     </message>
     <message>
-        <location filename="../../wgets/operation.py" line="590"/>
+        <location filename="../../wgets/operation.py" line="601"/>
         <source>OK</source>
         <translation>确定</translation>
     </message>
     <message>
-        <location filename="../../wgets/operation.py" line="580"/>
+        <location filename="../../wgets/operation.py" line="591"/>
         <source>DigiPale Json File</source>
         <translation>DigiPale Json 文档</translation>
     </message>
     <message>
-        <location filename="../../wgets/operation.py" line="580"/>
+        <location filename="../../wgets/operation.py" line="591"/>
         <source>Plain Text File</source>
         <translation>纯文本文档</translation>
     </message>
     <message>
-        <location filename="../../wgets/operation.py" line="580"/>
+        <location filename="../../wgets/operation.py" line="591"/>
         <source>Adobe Swatch File</source>
         <translation>Adobe 样板文档</translation>
     </message>
     <message>
-        <location filename="../../wgets/operation.py" line="580"/>
+        <location filename="../../wgets/operation.py" line="591"/>
         <source>DigiPale Set File</source>
         <translation>DigiPale 色彩组文档</translation>
     </message>
     <message>
-        <location filename="../../wgets/operation.py" line="580"/>
+        <location filename="../../wgets/operation.py" line="591"/>
         <source>DigiPale Depot File</source>
         <translation>DigiPale 色彩仓库文档</translation>
     </message>
     <message>
-        <location filename="../../wgets/operation.py" line="580"/>
+        <location filename="../../wgets/operation.py" line="591"/>
         <source>GIMP Palette File</source>
         <translation>GIMP 色板文档</translation>
     </message>
     <message>
-        <location filename="../../wgets/operation.py" line="580"/>
+        <location filename="../../wgets/operation.py" line="591"/>
         <source>Pencil Palette File</source>
         <translation>Pencil 色板文档</translation>
     </message>
@@ -1015,17 +1045,17 @@ DigitalPalette 代码仓库中所有图片（包括图标和示例图片等）�
         <translation type="obsolete">无法加载设置。版本不存在（旧设置文件已备份为‘settings.json.old’）。</translation>
     </message>
     <message>
-        <location filename="../../wgets/operation.py" line="612"/>
+        <location filename="../../wgets/operation.py" line="623"/>
         <source>Could not load settings. Settings file is broken. Old settings file has been backed up as &apos;settings.json.old&apos;.</source>
         <translation>无法加载设置。设置文件已损坏。原设置文件已备份为‘settings.json.old’。</translation>
     </message>
     <message>
-        <location filename="../../wgets/operation.py" line="612"/>
+        <location filename="../../wgets/operation.py" line="623"/>
         <source>Could not load settings. Version does not match. Old settings file has been backed up as &apos;settings.json.old&apos;.</source>
         <translation>无法加载设置。版本不匹配。原设置文件已备份为‘settings.json.old’。</translation>
     </message>
     <message>
-        <location filename="../../wgets/operation.py" line="612"/>
+        <location filename="../../wgets/operation.py" line="623"/>
         <source>Could not load settings. Version does not exist. Old settings file has been backed up as &apos;settings.json.old&apos;.</source>
         <translation>无法加载设置。版本不存在。原设置文件已备份为‘settings.json.old’。</translation>
     </message>
@@ -1329,7 +1359,22 @@ Press ESC to cancel</source>
     <message>
         <location filename="../../wgets/rule.py" line="170"/>
         <source>Equidistant</source>
-        <translation>等间距</translation>
+        <translation>等距</translation>
+    </message>
+    <message>
+        <location filename="../../wgets/rule.py" line="170"/>
+        <source>Equal</source>
+        <translation>相等</translation>
+    </message>
+    <message>
+        <location filename="../../wgets/rule.py" line="170"/>
+        <source>Gradual</source>
+        <translation>渐进</translation>
+    </message>
+    <message>
+        <location filename="../../wgets/rule.py" line="170"/>
+        <source>Symmetrical</source>
+        <translation>对称</translation>
     </message>
 </context>
 <context>
