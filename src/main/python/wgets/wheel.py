@@ -34,6 +34,7 @@ class Wheel(QWidget):
 
     ps_color_changed = pyqtSignal(bool)
     ps_index_changed = pyqtSignal(bool)
+    ps_status_changed = pyqtSignal(tuple)
     ps_dropped = pyqtSignal(tuple)
 
     def __init__(self, wget, args):
@@ -177,6 +178,8 @@ class Wheel(QWidget):
             painter.drawEllipse(*color_box)
 
         painter.end()
+
+        self.ps_status_changed.emit(Color.sign(self._args.sys_color_set[self._args.sys_activated_idx].hsv))
 
     # ---------- ---------- ---------- Mouse Event Funcs ---------- ---------- ---------- #
 

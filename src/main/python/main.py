@@ -87,10 +87,21 @@ class DigitalPalette(QMainWindow, Ui_MainWindow):
         self._setup_transformation()
         self._setup_settings()
 
+        # set dock window integrations.
         self.tabifyDockWidget(self.script_dock_widget, self.operation_dock_widget)
         self.tabifyDockWidget(self.transformation_dock_widget, self.mode_dock_widget)
         self.tabifyDockWidget(self.channel_dock_widget, self.rule_dock_widget)
 
+        # set dock window visibilities.
+        self.rule_dock_widget.visibilityChanged.connect(lambda x: self.actionRule.setChecked(self.rule_dock_widget.isVisible()))
+        self.channel_dock_widget.visibilityChanged.connect(lambda x: self.actionChannel.setChecked(self.channel_dock_widget.isVisible()))
+        self.operation_dock_widget.visibilityChanged.connect(lambda x: self.actionOperation.setChecked(self.operation_dock_widget.isVisible()))
+        self.script_dock_widget.visibilityChanged.connect(lambda x: self.actionScript.setChecked(self.script_dock_widget.isVisible()))
+        self.mode_dock_widget.visibilityChanged.connect(lambda x: self.actionMode.setChecked(self.mode_dock_widget.isVisible()))
+        self.transformation_dock_widget.visibilityChanged.connect(lambda x: self.actionTransformation.setChecked(self.transformation_dock_widget.isVisible()))
+        self.result_dock_widget.visibilityChanged.connect(lambda x: self.actionResult.setChecked(self.result_dock_widget.isVisible()))
+
+        # set menu actions.
         self.actionOpen.triggered.connect(self._wget_operation.open_btn.click)
         self.actionSave.triggered.connect(self._wget_operation.save_btn.click)
         self.actionImport.triggered.connect(self._wget_operation.import_btn.click)
@@ -119,14 +130,7 @@ class DigitalPalette(QMainWindow, Ui_MainWindow):
         self.actionUpdate.triggered.connect(lambda x: QDesktopServices.openUrl(QUrl(self._args.info_update_site)))
         self.actionAbout.triggered.connect(lambda x: self._show_about())
 
-        self.rule_dock_widget.visibilityChanged.connect(lambda x: self.actionRule.setChecked(self.rule_dock_widget.isVisible()))
-        self.channel_dock_widget.visibilityChanged.connect(lambda x: self.actionChannel.setChecked(self.channel_dock_widget.isVisible()))
-        self.operation_dock_widget.visibilityChanged.connect(lambda x: self.actionOperation.setChecked(self.operation_dock_widget.isVisible()))
-        self.script_dock_widget.visibilityChanged.connect(lambda x: self.actionScript.setChecked(self.script_dock_widget.isVisible()))
-        self.mode_dock_widget.visibilityChanged.connect(lambda x: self.actionMode.setChecked(self.mode_dock_widget.isVisible()))
-        self.transformation_dock_widget.visibilityChanged.connect(lambda x: self.actionTransformation.setChecked(self.transformation_dock_widget.isVisible()))
-        self.result_dock_widget.visibilityChanged.connect(lambda x: self.actionResult.setChecked(self.result_dock_widget.isVisible()))
-
+        # set main window shortcuts.
         shortcut = QShortcut(QKeySequence("Alt+H"), self)
         shortcut.activated.connect(self.actionHomepage.trigger)
         shortcut = QShortcut(QKeySequence("F1"), self)
@@ -187,6 +191,66 @@ class DigitalPalette(QMainWindow, Ui_MainWindow):
         shortcut = QShortcut(QKeySequence("Ctrl+D"), self)
         shortcut.activated.connect(self._wget_operation.attach_btn.click)
 
+        # set cube table shortcuts.
+        shortcut = QShortcut(QKeySequence("Shift+R"), self)
+        shortcut.activated.connect(self._wget_cube_table.clipboard_all("rgb"))
+
+        shortcut = QShortcut(QKeySequence("Shift+H"), self)
+        shortcut.activated.connect(self._wget_cube_table.clipboard_all("hsv"))
+
+        shortcut = QShortcut(QKeySequence("Shift+X"), self)
+        shortcut.activated.connect(self._wget_cube_table.clipboard_all("hec"))
+
+        shortcut = QShortcut(QKeySequence("R"), self)
+        shortcut.activated.connect(self._wget_cube_table.clipboard_act("rgb"))
+
+        shortcut = QShortcut(QKeySequence("H"), self)
+        shortcut.activated.connect(self._wget_cube_table.clipboard_act("hsv"))
+
+        shortcut = QShortcut(QKeySequence("X"), self)
+        shortcut.activated.connect(self._wget_cube_table.clipboard_act("hec"))
+
+        shortcut = QShortcut(QKeySequence("1"), self)
+        shortcut.activated.connect(self._wget_cube_table.active_by_num(2))
+
+        shortcut = QShortcut(QKeySequence("2"), self)
+        shortcut.activated.connect(self._wget_cube_table.active_by_num(1))
+
+        shortcut = QShortcut(QKeySequence("3"), self)
+        shortcut.activated.connect(self._wget_cube_table.active_by_num(0))
+
+        shortcut = QShortcut(QKeySequence("4"), self)
+        shortcut.activated.connect(self._wget_cube_table.active_by_num(3))
+
+        shortcut = QShortcut(QKeySequence("5"), self)
+        shortcut.activated.connect(self._wget_cube_table.active_by_num(4))
+
+        # set transformation shortcuts.
+        shortcut = QShortcut(QKeySequence("Up"), self)
+        shortcut.activated.connect(self._wget_transformation.move_up)
+
+        shortcut = QShortcut(QKeySequence("Down"), self)
+        shortcut.activated.connect(self._wget_transformation.move_down)
+
+        shortcut = QShortcut(QKeySequence("Left"), self)
+        shortcut.activated.connect(self._wget_transformation.move_left)
+
+        shortcut = QShortcut(QKeySequence("Right"), self)
+        shortcut.activated.connect(self._wget_transformation.move_right)
+
+        shortcut = QShortcut(QKeySequence("Home"), self)
+        shortcut.activated.connect(self._wget_transformation.reset_home)
+
+        shortcut = QShortcut(QKeySequence("="), self)
+        shortcut.activated.connect(self._wget_transformation.zoom_in)
+        shortcut = QShortcut(QKeySequence("]"), self)
+        shortcut.activated.connect(self._wget_transformation.zoom_in)
+
+        shortcut = QShortcut(QKeySequence("-"), self)
+        shortcut.activated.connect(self._wget_transformation.zoom_out)
+        shortcut = QShortcut(QKeySequence("["), self)
+        shortcut.activated.connect(self._wget_transformation.zoom_out)
+
         # install translator.
         self._tr = QTranslator()
         self._app = QApplication.instance()
@@ -216,7 +280,7 @@ class DigitalPalette(QMainWindow, Ui_MainWindow):
             except Exception as err:
                 pass
 
-        # show_errors.
+        # show args loading errors.
         if self._args.load_settings_failed:
             self._wget_operation.warning(self._wget_operation.main_errs[self._args.load_settings_failed - 1])
 
@@ -228,8 +292,38 @@ class DigitalPalette(QMainWindow, Ui_MainWindow):
 
     def _setup_workarea(self):
         """
-        Setup workarea (wheel or image).
+        Setup workarea (wheel, image or depot).
         """
+
+        def _wheel_status(value):
+            """
+            Show information about wheel behavior in statusbar.
+            """
+
+            color_sign = self._color_descs[value[0]] + self._color_descs[value[1] + 10]
+            self.statusbar.showMessage(self._status_descs[4].format(color_sign))
+
+        def _image_status(value):
+            """
+            Show information about image behavior in statusbar.
+            """
+
+            if len(value) == 2:
+                self.statusbar.showMessage(self._status_descs[1].format(*value))
+
+            elif len(value) == 4:
+                self.statusbar.showMessage(self._status_descs[2].format(*value))
+
+            else:
+                color_sign = self._color_descs[value[4][0]] + self._color_descs[value[4][1] + 10]
+                self.statusbar.showMessage(self._status_descs[5].format(*value[:4], color_sign))
+
+        def _depot_status(value):
+            """
+            Show information about depot behavior in statusbar.
+            """
+
+            self.statusbar.showMessage(self._status_descs[3].format(*value))
 
         central_widget_grid_layout = QGridLayout(self.central_widget)
         central_widget_grid_layout.setContentsMargins(2, 2, 2, 2)
@@ -238,8 +332,9 @@ class DigitalPalette(QMainWindow, Ui_MainWindow):
         self._wget_image = Image(self.central_widget, self._args)
         self._wget_depot = Depot(self.central_widget, self._args)
 
-        self._wget_image.ps_status_changed.connect(lambda x: self.statusbar.showMessage(self._status_descs[1].format(*x)) if len(x) == 2 else self.statusbar.showMessage(self._status_descs[2].format(*x)))
-        self._wget_depot.ps_status_changed.connect(lambda x: self.statusbar.showMessage(self._status_descs[3].format(*x)))
+        self._wget_wheel.ps_status_changed.connect(_wheel_status)
+        self._wget_image.ps_status_changed.connect(_image_status)
+        self._wget_depot.ps_status_changed.connect(_depot_status)
 
         self._wget_wheel.show()
         self._wget_image.hide()
@@ -400,7 +495,7 @@ class DigitalPalette(QMainWindow, Ui_MainWindow):
                 self._wget_wheel.show()
                 self._wget_image.hide()
                 self._wget_depot.hide()
-                self.statusbar.showMessage(self._status_descs[0])
+                # self.statusbar.showMessage(self._status_descs[0])
 
                 if self._args.press_act and act:
                     self._wget_cube_table.create_set()
@@ -422,7 +517,7 @@ class DigitalPalette(QMainWindow, Ui_MainWindow):
                 self._wget_wheel.hide()
                 self._wget_image.show()
                 self._wget_depot.hide()
-                self.statusbar.showMessage(self._status_descs[0])
+                # self.statusbar.showMessage(self._status_descs[0])
 
                 if self._args.press_act and act:
                     self._wget_image.open_image_dialog()
@@ -444,7 +539,7 @@ class DigitalPalette(QMainWindow, Ui_MainWindow):
                 self._wget_wheel.hide()
                 self._wget_image.hide()
                 self._wget_depot.show()
-                self.statusbar.showMessage(self._status_descs[0])
+                # self.statusbar.showMessage(self._status_descs[0])
 
                 if self._args.press_act and act:
                     self._wget_depot.attach_set()
@@ -475,14 +570,14 @@ class DigitalPalette(QMainWindow, Ui_MainWindow):
         Change hidden wget to shown state and change shown wget to hidden state.
         """
 
-        def _func_(self):
+        def _func_():
             if wget.isVisible():
                 wget.hide()
 
             else:
                 wget.show()
 
-            self.statusbar.showMessage(self._status_descs[0])
+            # self.statusbar.showMessage(self._status_descs[0])
 
         return _func_
 
@@ -509,7 +604,7 @@ class DigitalPalette(QMainWindow, Ui_MainWindow):
             self.transformation_dock_widget.show()
             self.result_dock_widget.show()
 
-        self.statusbar.showMessage(self._status_descs[0])
+        # self.statusbar.showMessage(self._status_descs[0])
 
     def _inner_open(self, depot_file):
         """
@@ -656,6 +751,29 @@ class DigitalPalette(QMainWindow, Ui_MainWindow):
             _translate("DigitalPalette", "Image Size: {} x {}."),
             _translate("DigitalPalette", "Image Size: {} x {}. Position: {} %, {} %."),
             _translate("DigitalPalette", "Depot Volume: Row {}, Col {}; Total {}, Index {}."),
+            _translate("DigitalPalette", "Current Color: {}."),
+            _translate("DigitalPalette", "Image Size: {} x {}. Position: {} %, {} %. Current Color: {}."),
+        )
+
+        self._color_descs = (
+            _translate("DigitalPalette", "Deep "),
+            _translate("DigitalPalette", "Snow "),
+            _translate("DigitalPalette", "Heavy "),
+            _translate("DigitalPalette", "Dull "),
+            _translate("DigitalPalette", "Grey "),
+            _translate("DigitalPalette", "Pale "),
+            _translate("DigitalPalette", "Light "),
+            _translate("DigitalPalette", "Bright "),
+            _translate("DigitalPalette", "Dark "),
+            _translate("DigitalPalette", "Vivid "),
+            _translate("DigitalPalette", "Black"),
+            _translate("DigitalPalette", "White"),
+            _translate("DigitalPalette", "Red"),
+            _translate("DigitalPalette", "Yellow"),
+            _translate("DigitalPalette", "Green"),
+            _translate("DigitalPalette", "Cyan"),
+            _translate("DigitalPalette", "Blue"),
+            _translate("DigitalPalette", "Magenta"),
         )
 
         _QColorDialog = (

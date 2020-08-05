@@ -22,4 +22,4 @@ All images (including logo and sample images, etc.), documents and translations 
 
 # Updates
 * 2020.05.16 (v2.2.8-pre): Release the preview version (2.2.8) of DigitalPalette.
-* 2020.08.02 (v2.2.9-dev): Update version verification methods. Add sync rules and channels. Update operation seq.
+* 2020.08.02 (v2.2.9-dev): Update version verification methods. Add sync rules and channels. Update operation seq. Update image home method. Add color signs. Update shortcuts.

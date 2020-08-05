@@ -13,7 +13,7 @@ infomation about DigitalPalette.
 Copyright © 2019-2020 by Eigenmiao. All Rights Reserved.
 """
 
-from PyQt5.QtWidgets import QWidget, QPushButton, QGridLayout, QScrollArea, QFrame, QGroupBox, QSpacerItem, QSizePolicy, QShortcut, QCheckBox, QLabel, QSlider
+from PyQt5.QtWidgets import QWidget, QPushButton, QGridLayout, QScrollArea, QFrame, QGroupBox, QSpacerItem, QSizePolicy, QCheckBox, QLabel, QSlider
 from PyQt5.QtCore import Qt, pyqtSignal, QSize, QCoreApplication
 from PyQt5.QtGui import QKeySequence
 
@@ -75,18 +75,12 @@ class Transformation(QWidget):
         gbox_grid_layout.addWidget(btn, 0, 2, 1, 1)
         btn.clicked.connect(lambda x: self.move_up())
 
-        shortcut = QShortcut(QKeySequence("Up"), self)
-        shortcut.activated.connect(btn.click)
-
         btn = QPushButton(self._move_gbox)
         btn.setMinimumSize(30, 30)
         btn.setMaximumSize(30, 30)
         btn.setText("↓")
         gbox_grid_layout.addWidget(btn, 2, 2, 1, 1)
         btn.clicked.connect(lambda x: self.move_down())
-
-        shortcut = QShortcut(QKeySequence("Down"), self)
-        shortcut.activated.connect(btn.click)
 
         btn = QPushButton(self._move_gbox)
         btn.setMinimumSize(30, 30)
@@ -95,9 +89,6 @@ class Transformation(QWidget):
         gbox_grid_layout.addWidget(btn, 1, 1, 1, 1)
         btn.clicked.connect(lambda x: self.move_left())
 
-        shortcut = QShortcut(QKeySequence("Left"), self)
-        shortcut.activated.connect(btn.click)
-
         btn = QPushButton(self._move_gbox)
         btn.setMinimumSize(30, 30)
         btn.setMaximumSize(30, 30)
@@ -105,18 +96,12 @@ class Transformation(QWidget):
         gbox_grid_layout.addWidget(btn, 1, 3, 1, 1)
         btn.clicked.connect(lambda x: self.move_right())
 
-        shortcut = QShortcut(QKeySequence("Right"), self)
-        shortcut.activated.connect(btn.click)
-
         btn = QPushButton(self._move_gbox)
         btn.setMinimumSize(30, 30)
         btn.setMaximumSize(30, 30)
         btn.setText("↺")
         gbox_grid_layout.addWidget(btn, 1, 2, 1, 1)
-        btn.clicked.connect(lambda x: self.ps_home.emit(True))
-
-        shortcut = QShortcut(QKeySequence("Home"), self)
-        shortcut.activated.connect(btn.click)
+        btn.clicked.connect(lambda x: self.reset_home())
 
         spacer = QSpacerItem(5, 5, QSizePolicy.Minimum, QSizePolicy.Expanding)
         gbox_grid_layout.addItem(spacer, 3, 2, 1, 1)
@@ -138,26 +123,14 @@ class Transformation(QWidget):
         btn.setMaximumSize(30, 30)
         btn.setText("+")
         gbox_grid_layout.addWidget(btn, 0, 1, 1, 1)
-        btn.clicked.connect(lambda x: self.ps_zoom.emit(self._args.zoom_step))
-
-        shortcut = QShortcut(QKeySequence("="), self)
-        shortcut.activated.connect(btn.click)
-
-        shortcut = QShortcut(QKeySequence("]"), self)
-        shortcut.activated.connect(btn.click)
+        btn.clicked.connect(lambda x: self.zoom_in())
 
         btn = QPushButton(self._zoom_gbox)
         btn.setMinimumSize(30, 30)
         btn.setMaximumSize(30, 30)
         btn.setText("–")
         gbox_grid_layout.addWidget(btn, 0, 3, 1, 1)
-        btn.clicked.connect(lambda x: self.ps_zoom.emit(1 / self._args.zoom_step))
-
-        shortcut = QShortcut(QKeySequence("-"), self)
-        shortcut.activated.connect(btn.click)
-
-        shortcut = QShortcut(QKeySequence("["), self)
-        shortcut.activated.connect(btn.click)
+        btn.clicked.connect(lambda x: self.zoom_out())
 
         spacer = QSpacerItem(5, 5, QSizePolicy.Minimum, QSizePolicy.Expanding)
         gbox_grid_layout.addItem(spacer, 1, 2, 1, 1)
@@ -493,6 +466,15 @@ class Transformation(QWidget):
         """
 
         self.ps_move.emit((self._args.move_step, 0))
+
+    def reset_home(self):
+        self.ps_home.emit(True)
+
+    def zoom_in(self):
+        self.ps_zoom.emit(self._args.zoom_step)
+
+    def zoom_out(self):
+        self.ps_zoom.emit(1 / self._args.zoom_step)
 
     def uncheck_rgb(self, name):
         """

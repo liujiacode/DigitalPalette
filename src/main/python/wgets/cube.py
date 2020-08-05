@@ -13,7 +13,7 @@ infomation about DigitalPalette.
 Copyright © 2019-2020 by Eigenmiao. All Rights Reserved.
 """
 
-from PyQt5.QtWidgets import QWidget, QGridLayout, QHBoxLayout, QScrollArea, QFrame, QColorDialog, QApplication, QShortcut
+from PyQt5.QtWidgets import QWidget, QGridLayout, QHBoxLayout, QScrollArea, QFrame, QColorDialog, QApplication
 from PyQt5.QtCore import Qt, QSize, pyqtSignal, QMimeData
 from PyQt5.QtGui import QPainter, QPen, QColor, QKeySequence
 from cguis.design.scroll_cube import Ui_ScrollCube
@@ -204,39 +204,6 @@ class CubeTable(QWidget):
             self._cubes[idx].le_hec.textChanged.connect(self.modify_color(idx, "direct", "hec"))
 
         self.modify_box_visibility()
-
-        shortcut = QShortcut(QKeySequence("Shift+R"), self)
-        shortcut.activated.connect(self.clipboard_all("rgb"))
-
-        shortcut = QShortcut(QKeySequence("Shift+H"), self)
-        shortcut.activated.connect(self.clipboard_all("hsv"))
-
-        shortcut = QShortcut(QKeySequence("Shift+X"), self)
-        shortcut.activated.connect(self.clipboard_all("hec"))
-
-        shortcut = QShortcut(QKeySequence("R"), self)
-        shortcut.activated.connect(self.clipboard_act("rgb"))
-
-        shortcut = QShortcut(QKeySequence("H"), self)
-        shortcut.activated.connect(self.clipboard_act("hsv"))
-
-        shortcut = QShortcut(QKeySequence("X"), self)
-        shortcut.activated.connect(self.clipboard_act("hec"))
-
-        shortcut = QShortcut(QKeySequence("1"), self)
-        shortcut.activated.connect(self.active_by_num(2))
-
-        shortcut = QShortcut(QKeySequence("2"), self)
-        shortcut.activated.connect(self.active_by_num(1))
-
-        shortcut = QShortcut(QKeySequence("3"), self)
-        shortcut.activated.connect(self.active_by_num(0))
-
-        shortcut = QShortcut(QKeySequence("4"), self)
-        shortcut.activated.connect(self.active_by_num(3))
-
-        shortcut = QShortcut(QKeySequence("5"), self)
-        shortcut.activated.connect(self.active_by_num(4))
 
     def sizeHint(self):
         return QSize(600, 150)

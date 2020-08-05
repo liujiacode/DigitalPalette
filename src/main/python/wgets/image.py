@@ -291,6 +291,7 @@ class Image(QWidget):
         self._is_locating = False
         self._enhance_lock = False
         self._resizing_image = False
+        self._home_image = False
 
         # load translations.
         self._func_tr_()
@@ -381,6 +382,7 @@ class Image(QWidget):
             if self._image3c.display:
                 if not self._move_pos:
                     self.home()
+                    self._home_image = False
 
                 self._move_pos[0] = self.width() - 2 if self._move_pos[0] > self.width() - 2 else self._move_pos[0]
                 self._move_pos[0] = 2 - self._move_pos[2] if self._move_pos[0] < 2 - self._move_pos[2] else self._move_pos[0]
@@ -431,7 +433,7 @@ class Image(QWidget):
                     self.ps_status_changed.emit((self._image3c.rgb_data.shape[1], self._image3c.rgb_data.shape[0], "{:.1f}".format(self.overlabel_display.locating[0] * 100), "{:.1f}".format(self.overlabel_display.locating[1] * 100)))
 
                 elif self.overlabel_display.locations[self._args.sys_activated_idx]:
-                    self.ps_status_changed.emit((self._image3c.rgb_data.shape[1], self._image3c.rgb_data.shape[0], "{:.1f}".format(self.overlabel_display.locations[self._args.sys_activated_idx][0] * 100), "{:.1f}".format(self.overlabel_display.locations[self._args.sys_activated_idx][1] * 100)))
+                    self.ps_status_changed.emit((self._image3c.rgb_data.shape[1], self._image3c.rgb_data.shape[0], "{:.1f}".format(self.overlabel_display.locations[self._args.sys_activated_idx][0] * 100), "{:.1f}".format(self.overlabel_display.locations[self._args.sys_activated_idx][1] * 100), Color.sign(self._args.sys_color_set[self._args.sys_activated_idx].hsv)))
 
                 else:
                     self.ps_status_changed.emit((self._image3c.rgb_data.shape[1], self._image3c.rgb_data.shape[0]))
@@ -628,6 +630,7 @@ class Image(QWidget):
 
         self._move_pos = [int(round(x)), int(round(y)), int(round(wid * ratio)), int(round(hig * ratio))]
         self._resizing_image = True
+        self._home_image = False
 
         self.update()
 
@@ -654,6 +657,7 @@ class Image(QWidget):
 
         self._move_pos = [x, y, wid, hig]
         self._resizing_image = False
+        self._home_image = False
 
         self.update()
 
@@ -661,6 +665,11 @@ class Image(QWidget):
         """
         Home displayed image.
         """
+
+        if self._home_image:
+            self.open_category()
+            self._home_image = False
+            return
 
         if not (self.isVisible() and self.overlabel_display.isVisible() and self._image3c.display):
             return
@@ -676,6 +685,7 @@ class Image(QWidget):
             int(round(img_hig * ratio)),
         ]
         self._resizing_image = True
+        self._home_image = True
 
         self.update()
 

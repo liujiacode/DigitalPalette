@@ -824,6 +824,75 @@ class Color(object):
 
         return hsv
 
+    @classmethod
+    def sign(cls, hsv):
+        """
+        Sign the name of color by dividing colors into different blocks by h, s and v values.
+
+        Diagram:
+            s
+            +---+---+---+---+
+            | 5 | 6 | 7 | 9 |
+            +---+---+---+---+
+            | 4 | 4 | 8 | 8 |
+            +---+---+---+---+
+            | 4 | 3 | 3 | 8 |
+            +---+---+---+---+
+            | 2 | 2 | 2 | 2 |
+            +---+---+---+---+ v
+
+            0 - deep black; 1 - snow white; 2 - heavy; 3 - dull; 4 - grey; 5 - pale, 6 - light; 7 - bright; 8 - dark; 9 - vivid.
+
+        Args:
+            hsv (tuple or list): hsv color.
+
+        Returns:
+            serial number of color name.
+        """
+
+        h, s, v = cls.fmt_hsv(hsv)
+
+        if v < 0.08:
+            return (0, 0)
+
+        if v > 0.95 and s < 0.05:
+            return (1, 1)
+
+        prefix = int((h + 30) // 60 % 6) + 2
+
+        if 0.0 <= v < 0.25:
+            return (2, prefix)
+
+        elif 0.25 <= v < 0.5:
+            if 0 <= s < 0.25:
+                return (4, prefix)
+
+            elif 0.25 <= s < 0.75:
+                return (3, prefix)
+
+            else:
+                return (8, prefix)
+
+        elif 0.5 <= v < 0.75:
+            if 0 <= s < 0.5:
+                return (4, prefix)
+
+            else:
+                return (8, prefix)
+
+        else:
+            if 0 <= s < 0.25:
+                return (5, prefix)
+
+            if 0.25 <= s < 0.5:
+                return (6, prefix)
+
+            if 0.5 <= s < 0.75:
+                return (7, prefix)
+
+            else:
+                return (9, prefix)
+
 
 class TestColor(unittest.TestCase):
     """

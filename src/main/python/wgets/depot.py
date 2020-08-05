@@ -84,19 +84,35 @@ class Info(QDialog, Ui_InfoDialog):
             self.name_ledit.setText(unit_cell.name)
 
         else:
-            self.name_ledit.setText(self._cell_desc[0])
+            self.name_ledit.setText(self._cell_descs[0])
 
-        self.desc_tedit.setText(unit_cell.desc)
+        if unit_cell.desc:
+            self.desc_tedit.setText(unit_cell.desc)
+
+        else:
+            color_signs = []
+
+            for i in (2, 1, 0, 3, 4):
+                if self._unit_cell.color_set[i]:
+                    sign = Color.sign(self._unit_cell.color_set[i].hsv)
+                    color_signs.append(self._color_descs[sign[0]] + self._color_descs[sign[1] + 10])
+
+            if len(color_signs) == 5:
+                self.desc_tedit.setText(self._cell_descs[2].format(*color_signs) + "\n")
+
+            else:
+                self.desc_tedit.setText("")
+
         self.hm_rule_label.setText(self._rule_descs[self._args.global_hm_rules.index(unit_cell.hm_rule)])
 
         if unit_cell.cr_time[0] < 0:
-            time_str = self._cell_desc[1]
+            time_str = self._cell_descs[1]
 
         else:
             time_str = time.strftime("%Y-%m-%d %H:%M:%S", time.localtime(unit_cell.cr_time[0]))
 
         if unit_cell.cr_time[1] < 0:
-            time_str += "\n{}".format(self._cell_desc[1])
+            time_str += "\n{}".format(self._cell_descs[1])
 
         else:
             time_str += "\n{}".format(time.strftime("%Y-%m-%d %H:%M:%S", time.localtime(unit_cell.cr_time[1])))
@@ -117,24 +133,25 @@ class Info(QDialog, Ui_InfoDialog):
     # ---------- ---------- ---------- Translations ---------- ---------- ---------- #
 
     def update_text(self):
-        self.setWindowTitle(self._dialog_desc[0])
-        self._btn_1.setText(self._dialog_desc[1])
-        self._btn_2.setText(self._dialog_desc[2])
+        self.setWindowTitle(self._dialog_descs[0])
+        self._btn_1.setText(self._dialog_descs[1])
+        self._btn_2.setText(self._dialog_descs[2])
 
         self.retranslateUi(self)
 
     def _func_tr_(self):
         _translate = QCoreApplication.translate
 
-        self._dialog_desc = (
+        self._dialog_descs = (
             _translate("Info", "Information"),
             _translate("Info", "OK"),
             _translate("Info", "Cancel"),
         )
 
-        self._cell_desc = (
+        self._cell_descs = (
             _translate("Info", "DigiPale Color Set"),
             _translate("Info", "Unknown"),
+            _translate("Info", "This color set includes: {}, {}, {}, {} and {}."),
         )
 
         self._rule_descs = (
@@ -146,6 +163,27 @@ class Info(QDialog, Ui_InfoDialog):
             _translate("Rule", "Complementary"),
             _translate("Rule", "Shades"),
             _translate("Rule", "Custom"),
+        )
+
+        self._color_descs = (
+            _translate("DigitalPalette", "Deep "),
+            _translate("DigitalPalette", "Snow "),
+            _translate("DigitalPalette", "Heavy "),
+            _translate("DigitalPalette", "Dull "),
+            _translate("DigitalPalette", "Grey "),
+            _translate("DigitalPalette", "Pale "),
+            _translate("DigitalPalette", "Light "),
+            _translate("DigitalPalette", "Bright "),
+            _translate("DigitalPalette", "Dark "),
+            _translate("DigitalPalette", "Vivid "),
+            _translate("DigitalPalette", "Black"),
+            _translate("DigitalPalette", "White"),
+            _translate("DigitalPalette", "Red"),
+            _translate("DigitalPalette", "Yellow"),
+            _translate("DigitalPalette", "Green"),
+            _translate("DigitalPalette", "Cyan"),
+            _translate("DigitalPalette", "Blue"),
+            _translate("DigitalPalette", "Magenta"),
         )
 
 
@@ -228,12 +266,12 @@ class UnitCell(QWidget):
             self.setToolTip(self.name)
 
         else:
-            self.setToolTip(self._cell_desc[0])
+            self.setToolTip(self._cell_descs[0])
 
     def _func_tr_(self):
         _translate = QCoreApplication.translate
 
-        self._cell_desc = (
+        self._cell_descs = (
             _translate("Info", "DigiPale Color Set"),
         )
 
