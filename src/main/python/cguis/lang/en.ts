@@ -137,27 +137,27 @@
 <context>
     <name>Depot</name>
     <message>
-        <location filename="../../wgets/depot.py" line="1114"/>
+        <location filename="../../wgets/depot.py" line="1117"/>
         <source>Import</source>
         <translation></translation>
     </message>
     <message>
-        <location filename="../../wgets/depot.py" line="1114"/>
+        <location filename="../../wgets/depot.py" line="1117"/>
         <source>Export</source>
         <translation></translation>
     </message>
     <message>
-        <location filename="../../wgets/depot.py" line="1114"/>
+        <location filename="../../wgets/depot.py" line="1117"/>
         <source>Delete</source>
         <translation></translation>
     </message>
     <message>
-        <location filename="../../wgets/depot.py" line="1114"/>
+        <location filename="../../wgets/depot.py" line="1117"/>
         <source>Detail</source>
         <translation></translation>
     </message>
     <message>
-        <location filename="../../wgets/depot.py" line="1114"/>
+        <location filename="../../wgets/depot.py" line="1117"/>
         <source>Attach</source>
         <translation></translation>
     </message>
@@ -343,122 +343,122 @@
 <context>
     <name>Image</name>
     <message>
-        <location filename="../../wgets/image.py" line="1192"/>
+        <location filename="../../wgets/image.py" line="1197"/>
         <source>Double click here to open an image.</source>
         <translation></translation>
     </message>
     <message>
-        <location filename="../../wgets/image.py" line="1199"/>
+        <location filename="../../wgets/image.py" line="1204"/>
         <source>Error</source>
         <translation></translation>
     </message>
     <message>
-        <location filename="../../wgets/image.py" line="1199"/>
+        <location filename="../../wgets/image.py" line="1204"/>
         <source>Could not create temporary dir. Dir is not created.</source>
         <translation></translation>
     </message>
     <message>
-        <location filename="../../wgets/image.py" line="1210"/>
+        <location filename="../../wgets/image.py" line="1215"/>
         <source>Finishing.</source>
         <translation></translation>
     </message>
     <message>
-        <location filename="../../wgets/image.py" line="1210"/>
+        <location filename="../../wgets/image.py" line="1215"/>
         <source>Loading RGB data.</source>
         <translation></translation>
     </message>
     <message>
-        <location filename="../../wgets/image.py" line="1210"/>
+        <location filename="../../wgets/image.py" line="1215"/>
         <source>Saving RGB data.</source>
         <translation></translation>
     </message>
     <message>
-        <location filename="../../wgets/image.py" line="1210"/>
+        <location filename="../../wgets/image.py" line="1215"/>
         <source>Loading HSV data.</source>
         <translation></translation>
     </message>
     <message>
-        <location filename="../../wgets/image.py" line="1210"/>
+        <location filename="../../wgets/image.py" line="1215"/>
         <source>Saving HSV data.</source>
         <translation></translation>
     </message>
     <message>
-        <location filename="../../wgets/image.py" line="1210"/>
+        <location filename="../../wgets/image.py" line="1215"/>
         <source>Loading RGB vertical edge data.</source>
         <translation>Loading RGB space vertical edge data.</translation>
     </message>
     <message>
-        <location filename="../../wgets/image.py" line="1210"/>
+        <location filename="../../wgets/image.py" line="1215"/>
         <source>Saving RGB vertical edge data.</source>
         <translation>Saving RGB space vertical edge data.</translation>
     </message>
     <message>
-        <location filename="../../wgets/image.py" line="1210"/>
+        <location filename="../../wgets/image.py" line="1215"/>
         <source>Loading RGB horizontal edge data.</source>
         <translation>Loading RGB space horizontal edge data.</translation>
     </message>
     <message>
-        <location filename="../../wgets/image.py" line="1210"/>
+        <location filename="../../wgets/image.py" line="1215"/>
         <source>Saving RGB horizontal edge data.</source>
         <translation>Saving RGB space horizontal edge data.</translation>
     </message>
     <message>
-        <location filename="../../wgets/image.py" line="1210"/>
+        <location filename="../../wgets/image.py" line="1215"/>
         <source>Loading RGB final edge data.</source>
         <translation>Loading RGB space compositive edge data.</translation>
     </message>
     <message>
-        <location filename="../../wgets/image.py" line="1210"/>
+        <location filename="../../wgets/image.py" line="1215"/>
         <source>Saving RGB final edge data.</source>
         <translation>Saving RGB space compositive edge data.</translation>
     </message>
     <message>
-        <location filename="../../wgets/image.py" line="1210"/>
+        <location filename="../../wgets/image.py" line="1215"/>
         <source>Loading HSV vertical edge data.</source>
         <translation>Loading HSV space vertical edge data.</translation>
     </message>
     <message>
-        <location filename="../../wgets/image.py" line="1210"/>
+        <location filename="../../wgets/image.py" line="1215"/>
         <source>Saving HSV vertical edge data.</source>
         <translation>Saving HSV space vertical edge data.</translation>
     </message>
     <message>
-        <location filename="../../wgets/image.py" line="1210"/>
+        <location filename="../../wgets/image.py" line="1215"/>
         <source>Loading HSV horizontal edge data.</source>
         <translation>Loading HSV space horizontal edge data.</translation>
     </message>
     <message>
-        <location filename="../../wgets/image.py" line="1210"/>
+        <location filename="../../wgets/image.py" line="1215"/>
         <source>Saving HSV horizontal edge data.</source>
         <translation>Saving HSV space horizontal edge data.</translation>
     </message>
     <message>
-        <location filename="../../wgets/image.py" line="1210"/>
+        <location filename="../../wgets/image.py" line="1215"/>
         <source>Loading HSV final edge data.</source>
         <translation>Loading HSV space compositive edge data.</translation>
     </message>
     <message>
-        <location filename="../../wgets/image.py" line="1210"/>
+        <location filename="../../wgets/image.py" line="1215"/>
         <source>Saving HSV final edge data.</source>
         <translation>Saving HSV space compositive edge data.</translation>
     </message>
     <message>
-        <location filename="../../wgets/image.py" line="1192"/>
+        <location filename="../../wgets/image.py" line="1197"/>
         <source>Open</source>
         <translation></translation>
     </message>
     <message>
-        <location filename="../../wgets/image.py" line="1199"/>
+        <location filename="../../wgets/image.py" line="1204"/>
         <source>OK</source>
         <translation>OK</translation>
     </message>
     <message>
-        <location filename="../../wgets/image.py" line="1210"/>
+        <location filename="../../wgets/image.py" line="1215"/>
         <source>Applying filter to image data.</source>
         <translation>Pre-processing image data.</translation>
     </message>
     <message>
-        <location filename="../../wgets/image.py" line="1199"/>
+        <location filename="../../wgets/image.py" line="1204"/>
         <source>Could not process image. There is a process of image not finished.</source>
         <translation></translation>
     </message>
@@ -468,17 +468,17 @@
         <translation type="obsolete">Image Size: {} × {}.</translation>
     </message>
     <message>
-        <location filename="../../wgets/image.py" line="1199"/>
+        <location filename="../../wgets/image.py" line="1204"/>
         <source>Could not open image. This image is broken.</source>
         <translation></translation>
     </message>
     <message>
-        <location filename="../../wgets/image.py" line="1192"/>
+        <location filename="../../wgets/image.py" line="1197"/>
         <source>Print</source>
         <translation></translation>
     </message>
     <message>
-        <location filename="../../wgets/image.py" line="1199"/>
+        <location filename="../../wgets/image.py" line="1204"/>
         <source>Could not process image. Translation is not completed.</source>
         <translation></translation>
     </message>
@@ -508,17 +508,17 @@
         <translation></translation>
     </message>
     <message>
-        <location filename="../../wgets/image.py" line="1199"/>
+        <location filename="../../wgets/image.py" line="1204"/>
         <source>Could not process image. The size of image is not suitable.</source>
         <translation></translation>
     </message>
     <message>
-        <location filename="../../wgets/image.py" line="1199"/>
+        <location filename="../../wgets/image.py" line="1204"/>
         <source>Could not process image. This image is invalid.</source>
         <translation></translation>
     </message>
     <message>
-        <location filename="../../wgets/image.py" line="1192"/>
+        <location filename="../../wgets/image.py" line="1197"/>
         <source>Cover</source>
         <translation></translation>
     </message>
@@ -1794,17 +1794,17 @@ Press ESC to cancel.</translation>
         <translation type="obsolete">Work Space</translation>
     </message>
     <message>
-        <location filename="../design/settings_dialog.py" line="1098"/>
+        <location filename="../design/settings_dialog.py" line="1093"/>
         <source>Import</source>
         <translation></translation>
     </message>
     <message>
-        <location filename="../design/settings_dialog.py" line="1095"/>
+        <location filename="../design/settings_dialog.py" line="1094"/>
         <source>Export</source>
         <translation></translation>
     </message>
     <message>
-        <location filename="../design/settings_dialog.py" line="1103"/>
+        <location filename="../design/settings_dialog.py" line="1099"/>
         <source>Create</source>
         <translation></translation>
     </message>
@@ -1814,12 +1814,12 @@ Press ESC to cancel.</translation>
         <translation></translation>
     </message>
     <message>
-        <location filename="../design/settings_dialog.py" line="1104"/>
+        <location filename="../design/settings_dialog.py" line="1095"/>
         <source>Quit</source>
         <translation>Quit</translation>
     </message>
     <message>
-        <location filename="../design/settings_dialog.py" line="1099"/>
+        <location filename="../design/settings_dialog.py" line="1098"/>
         <source>Settings</source>
         <translation>Settings</translation>
     </message>
@@ -1869,17 +1869,17 @@ Press ESC to cancel.</translation>
         <translation>Clean Up</translation>
     </message>
     <message>
-        <location filename="../design/settings_dialog.py" line="1093"/>
+        <location filename="../design/settings_dialog.py" line="1096"/>
         <source>Open</source>
         <translation></translation>
     </message>
     <message>
-        <location filename="../design/settings_dialog.py" line="1094"/>
+        <location filename="../design/settings_dialog.py" line="1097"/>
         <source>Save</source>
         <translation></translation>
     </message>
     <message>
-        <location filename="../design/settings_dialog.py" line="1102"/>
+        <location filename="../design/settings_dialog.py" line="1101"/>
         <source>Attach</source>
         <translation></translation>
     </message>
@@ -1894,17 +1894,17 @@ Press ESC to cancel.</translation>
         <translation>Clean Up All Stored Color Sets</translation>
     </message>
     <message>
-        <location filename="../design/settings_dialog.py" line="1096"/>
+        <location filename="../design/settings_dialog.py" line="1102"/>
         <source>Homepage</source>
         <translation>Homepage</translation>
     </message>
     <message>
-        <location filename="../design/settings_dialog.py" line="1101"/>
+        <location filename="../design/settings_dialog.py" line="1103"/>
         <source>Update</source>
         <translation>Update</translation>
     </message>
     <message>
-        <location filename="../design/settings_dialog.py" line="1097"/>
+        <location filename="../design/settings_dialog.py" line="1104"/>
         <source>About</source>
         <translation>About</translation>
     </message>

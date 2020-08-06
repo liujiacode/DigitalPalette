@@ -137,27 +137,27 @@
 <context>
     <name>Depot</name>
     <message>
-        <location filename="../../wgets/depot.py" line="1114"/>
+        <location filename="../../wgets/depot.py" line="1117"/>
         <source>Import</source>
         <translation>导入</translation>
     </message>
     <message>
-        <location filename="../../wgets/depot.py" line="1114"/>
+        <location filename="../../wgets/depot.py" line="1117"/>
         <source>Export</source>
         <translation>导出</translation>
     </message>
     <message>
-        <location filename="../../wgets/depot.py" line="1114"/>
+        <location filename="../../wgets/depot.py" line="1117"/>
         <source>Delete</source>
         <translation>删除</translation>
     </message>
     <message>
-        <location filename="../../wgets/depot.py" line="1114"/>
+        <location filename="../../wgets/depot.py" line="1117"/>
         <source>Detail</source>
         <translation>详情</translation>
     </message>
     <message>
-        <location filename="../../wgets/depot.py" line="1114"/>
+        <location filename="../../wgets/depot.py" line="1117"/>
         <source>Attach</source>
         <translation>添加</translation>
     </message>
@@ -430,7 +430,7 @@ DigitalPalette 代码仓库中所有图片（包括图标和示例图片等）�
 <context>
     <name>Image</name>
     <message>
-        <location filename="../../wgets/image.py" line="1192"/>
+        <location filename="../../wgets/image.py" line="1197"/>
         <source>Double click here to open an image.</source>
         <translation>双击此处打开一张图片。</translation>
     </message>
@@ -440,7 +440,7 @@ DigitalPalette 代码仓库中所有图片（包括图标和示例图片等）�
         <translation type="obsolete">打开</translation>
     </message>
     <message>
-        <location filename="../../wgets/image.py" line="1199"/>
+        <location filename="../../wgets/image.py" line="1204"/>
         <source>Error</source>
         <translation>错误</translation>
     </message>
@@ -450,7 +450,7 @@ DigitalPalette 代码仓库中所有图片（包括图标和示例图片等）�
         <translation type="obsolete">无法打开图片。有一张图片的处理还未结束。</translation>
     </message>
     <message>
-        <location filename="../../wgets/image.py" line="1199"/>
+        <location filename="../../wgets/image.py" line="1204"/>
         <source>Could not create temporary dir. Dir is not created.</source>
         <translation>无法创建临时文件夹。文件夹未被创建。</translation>
     </message>
@@ -460,97 +460,97 @@ DigitalPalette 代码仓库中所有图片（包括图标和示例图片等）�
         <translation type="obsolete">无法处理图片。类目不匹配。</translation>
     </message>
     <message>
-        <location filename="../../wgets/image.py" line="1210"/>
+        <location filename="../../wgets/image.py" line="1215"/>
         <source>Finishing.</source>
         <translation>正在完成。</translation>
     </message>
     <message>
-        <location filename="../../wgets/image.py" line="1210"/>
+        <location filename="../../wgets/image.py" line="1215"/>
         <source>Loading RGB data.</source>
         <translation>正在加载 RGB 数据。</translation>
     </message>
     <message>
-        <location filename="../../wgets/image.py" line="1210"/>
+        <location filename="../../wgets/image.py" line="1215"/>
         <source>Saving RGB data.</source>
         <translation>正在保存 RGB 数据。</translation>
     </message>
     <message>
-        <location filename="../../wgets/image.py" line="1210"/>
+        <location filename="../../wgets/image.py" line="1215"/>
         <source>Loading HSV data.</source>
         <translation>正在加载 HSV 数据。</translation>
     </message>
     <message>
-        <location filename="../../wgets/image.py" line="1210"/>
+        <location filename="../../wgets/image.py" line="1215"/>
         <source>Saving HSV data.</source>
         <translation>正在保存 HSV 数据。</translation>
     </message>
     <message>
-        <location filename="../../wgets/image.py" line="1210"/>
+        <location filename="../../wgets/image.py" line="1215"/>
         <source>Loading RGB vertical edge data.</source>
         <translation>正在加载 RGB 空间的垂直边缘数据。</translation>
     </message>
     <message>
-        <location filename="../../wgets/image.py" line="1210"/>
+        <location filename="../../wgets/image.py" line="1215"/>
         <source>Saving RGB vertical edge data.</source>
         <translation>正在保存 RGB 空间的垂直边缘数据。</translation>
     </message>
     <message>
-        <location filename="../../wgets/image.py" line="1210"/>
+        <location filename="../../wgets/image.py" line="1215"/>
         <source>Loading RGB horizontal edge data.</source>
         <translation>正在加载 RGB 空间的水平边缘数据。</translation>
     </message>
     <message>
-        <location filename="../../wgets/image.py" line="1210"/>
+        <location filename="../../wgets/image.py" line="1215"/>
         <source>Saving RGB horizontal edge data.</source>
         <translation>正在保存 RGB 空间的水平边缘数据。</translation>
     </message>
     <message>
-        <location filename="../../wgets/image.py" line="1210"/>
+        <location filename="../../wgets/image.py" line="1215"/>
         <source>Loading RGB final edge data.</source>
         <translation>正在加载 RGB 空间的综合边缘数据。</translation>
     </message>
     <message>
-        <location filename="../../wgets/image.py" line="1210"/>
+        <location filename="../../wgets/image.py" line="1215"/>
         <source>Saving RGB final edge data.</source>
         <translation>正在保存 RGB 空间的综合边缘数据。</translation>
     </message>
     <message>
-        <location filename="../../wgets/image.py" line="1210"/>
+        <location filename="../../wgets/image.py" line="1215"/>
         <source>Loading HSV vertical edge data.</source>
         <translation>正在加载 HSV 空间的垂直边缘数据。</translation>
     </message>
     <message>
-        <location filename="../../wgets/image.py" line="1210"/>
+        <location filename="../../wgets/image.py" line="1215"/>
         <source>Saving HSV vertical edge data.</source>
         <translation>正在保存 HSV 空间的垂直边缘数据。</translation>
     </message>
     <message>
-        <location filename="../../wgets/image.py" line="1210"/>
+        <location filename="../../wgets/image.py" line="1215"/>
         <source>Loading HSV horizontal edge data.</source>
         <translation>正在加载 HSV 空间的水平边缘数据。</translation>
     </message>
     <message>
-        <location filename="../../wgets/image.py" line="1210"/>
+        <location filename="../../wgets/image.py" line="1215"/>
         <source>Saving HSV horizontal edge data.</source>
         <translation>正在保存 HSV 空间的水平边缘数据。</translation>
     </message>
     <message>
-        <location filename="../../wgets/image.py" line="1210"/>
+        <location filename="../../wgets/image.py" line="1215"/>
         <source>Loading HSV final edge data.</source>
         <translation>正在加载 HSV 空间的综合边缘数据。</translation>
     </message>
     <message>
-        <location filename="../../wgets/image.py" line="1210"/>
+        <location filename="../../wgets/image.py" line="1215"/>
         <source>Saving HSV final edge data.</source>
         <translation>正在保存 HSV 空间的综合边缘数据。</translation>
     </message>
     <message>
-        <location filename="../../wgets/image.py" line="1192"/>
+        <location filename="../../wgets/image.py" line="1197"/>
         <source>Open</source>
         <translation>打开</translation>
     </message>
     <message>
-        <location filename="../../wgets/image.py" line="1199"/>
+        <location filename="../../wgets/image.py" line="1204"/>
         <source>OK</source>
         <translation>确定</translation>
     </message>
@@ -565,12 +565,12 @@ DigitalPalette 代码仓库中所有图片（包括图标和示例图片等）�
         <translation type="obsolete">无法处理图像。有一张图像的处理还未结束。</translation>
     </message>
     <message>
-        <location filename="../../wgets/image.py" line="1210"/>
+        <location filename="../../wgets/image.py" line="1215"/>
         <source>Applying filter to image data.</source>
         <translation>正在预处理图像。</translation>
     </message>
     <message>
-        <location filename="../../wgets/image.py" line="1199"/>
+        <location filename="../../wgets/image.py" line="1204"/>
         <source>Could not process image. There is a process of image not finished.</source>
         <translation>无法处理图像。有一张图像的处理还未结束。</translation>
     </message>
@@ -580,17 +580,17 @@ DigitalPalette 代码仓库中所有图片（包括图标和示例图片等）�
         <translation type="obsolete">图像尺寸：{} × {}。</translation>
     </message>
     <message>
-        <location filename="../../wgets/image.py" line="1199"/>
+        <location filename="../../wgets/image.py" line="1204"/>
         <source>Could not open image. This image is broken.</source>
         <translation>无法打开图像。此图像已损坏。</translation>
     </message>
     <message>
-        <location filename="../../wgets/image.py" line="1192"/>
+        <location filename="../../wgets/image.py" line="1197"/>
         <source>Print</source>
         <translation>打印</translation>
     </message>
     <message>
-        <location filename="../../wgets/image.py" line="1199"/>
+        <location filename="../../wgets/image.py" line="1204"/>
         <source>Could not process image. Translation is not completed.</source>
         <translation>无法处理图像。转换未完成。</translation>
     </message>
@@ -620,17 +620,17 @@ DigitalPalette 代码仓库中所有图片（包括图标和示例图片等）�
         <translation>TIF 图像</translation>
     </message>
     <message>
-        <location filename="../../wgets/image.py" line="1199"/>
+        <location filename="../../wgets/image.py" line="1204"/>
         <source>Could not process image. The size of image is not suitable.</source>
         <translation>无法处理图像。图像尺寸不合适。</translation>
     </message>
     <message>
-        <location filename="../../wgets/image.py" line="1199"/>
+        <location filename="../../wgets/image.py" line="1204"/>
         <source>Could not process image. This image is invalid.</source>
         <translation>无法处理图像。此图像无效。</translation>
     </message>
     <message>
-        <location filename="../../wgets/image.py" line="1192"/>
+        <location filename="../../wgets/image.py" line="1197"/>
         <source>Cover</source>
         <translation>覆盖</translation>
     </message>
@@ -2096,17 +2096,17 @@ Press ESC to cancel</source>
         <translation>软件</translation>
     </message>
     <message>
-        <location filename="../design/settings_dialog.py" line="1098"/>
+        <location filename="../design/settings_dialog.py" line="1093"/>
         <source>Import</source>
         <translation>导入</translation>
     </message>
     <message>
-        <location filename="../design/settings_dialog.py" line="1095"/>
+        <location filename="../design/settings_dialog.py" line="1094"/>
         <source>Export</source>
         <translation>导出</translation>
     </message>
     <message>
-        <location filename="../design/settings_dialog.py" line="1103"/>
+        <location filename="../design/settings_dialog.py" line="1099"/>
         <source>Create</source>
         <translation>创建</translation>
     </message>
@@ -2116,12 +2116,12 @@ Press ESC to cancel</source>
         <translation>定位</translation>
     </message>
     <message>
-        <location filename="../design/settings_dialog.py" line="1104"/>
+        <location filename="../design/settings_dialog.py" line="1095"/>
         <source>Quit</source>
         <translation>退出</translation>
     </message>
     <message>
-        <location filename="../design/settings_dialog.py" line="1099"/>
+        <location filename="../design/settings_dialog.py" line="1098"/>
         <source>Settings</source>
         <translation>设置</translation>
     </message>
@@ -2206,17 +2206,17 @@ Press ESC to cancel</source>
         <translation>清除</translation>
     </message>
     <message>
-        <location filename="../design/settings_dialog.py" line="1093"/>
+        <location filename="../design/settings_dialog.py" line="1096"/>
         <source>Open</source>
         <translation>打开</translation>
     </message>
     <message>
-        <location filename="../design/settings_dialog.py" line="1094"/>
+        <location filename="../design/settings_dialog.py" line="1097"/>
         <source>Save</source>
         <translation>保存</translation>
     </message>
     <message>
-        <location filename="../design/settings_dialog.py" line="1102"/>
+        <location filename="../design/settings_dialog.py" line="1101"/>
         <source>Attach</source>
         <translation>添加</translation>
     </message>
@@ -2251,17 +2251,17 @@ Press ESC to cancel</source>
         <translation type="obsolete">结果和仓库</translation>
     </message>
     <message>
-        <location filename="../design/settings_dialog.py" line="1096"/>
+        <location filename="../design/settings_dialog.py" line="1102"/>
         <source>Homepage</source>
         <translation>主页</translation>
     </message>
     <message>
-        <location filename="../design/settings_dialog.py" line="1101"/>
+        <location filename="../design/settings_dialog.py" line="1103"/>
         <source>Update</source>
         <translation>更新</translation>
     </message>
     <message>
-        <location filename="../design/settings_dialog.py" line="1097"/>
+        <location filename="../design/settings_dialog.py" line="1104"/>
         <source>About</source>
         <translation>关于</translation>
     </message>
