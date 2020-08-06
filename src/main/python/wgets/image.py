@@ -45,6 +45,7 @@ class OverLabel(QLabel):
         self._args = args
         self._pressed = False
 
+        self.keying = False
         self.croping = False
         self.locating = False
         self.locations = [None, None, None, None, None]
@@ -127,7 +128,7 @@ class OverLabel(QLabel):
     # ---------- ---------- ---------- Mouse Event Funcs ---------- ---------- ---------- #
 
     def mousePressEvent(self, event):
-        if self.croping or self.locating:
+        if self.keying or self.croping or self.locating:
             event.ignore()
             return
 
@@ -292,6 +293,7 @@ class Image(QWidget):
         self._enhance_lock = False
         self._resizing_image = False
         self._home_image = False
+        self._press_key = 0
 
         # load translations.
         self._func_tr_()
@@ -440,6 +442,25 @@ class Image(QWidget):
 
     # ---------- ---------- ---------- Mouse Event Funcs ---------- ---------- ---------- #
 
+    def keyPressEvent(self, event):
+        if event.key() == Qt.Key_Space and self.overlabel_display.isVisible():
+            self._press_key = 3
+            self.overlabel_display.keying = True
+            self.setCursor(QCursor(Qt.ClosedHandCursor))
+            event.accept()
+
+        else:
+            self._press_key = 0
+            self.overlabel_display.keying = True
+            self.setCursor(QCursor(Qt.ArrowCursor))
+            event.ignore()
+
+    def keyReleaseEvent(self, event):
+        self._press_key = 0
+        self.overlabel_display.keying = False
+        self.setCursor(QCursor(Qt.ArrowCursor))
+        event.ignore()
+
     def mouseDoubleClickEvent(self, event):
         if not self._image3c.img_data and event.button() == Qt.LeftButton:
             p_x = event.x()
@@ -501,8 +522,10 @@ class Image(QWidget):
 
     def mousePressEvent(self, event):
         if self.overlabel_display.isVisible() and self._image3c.display:
-            if event.button() == Qt.MidButton:
-                self.setCursor(QCursor(Qt.ClosedHandCursor))
+            if event.button() == Qt.MidButton or (self._press_key == 3 and event.button() == Qt.LeftButton):
+                if event.button() == Qt.MidButton:
+                    self.setCursor(QCursor(Qt.ClosedHandCursor))
+
                 self._start_pt = (event.x(), event.y())
 
                 event.accept()
@@ -591,6 +614,7 @@ class Image(QWidget):
 
     def mouseReleaseEvent(self, event):
         self.setCursor(QCursor(Qt.ArrowCursor))
+        self._press_key = 0
         self._start_pt = None
 
         if self._is_croping:
@@ -625,10 +649,37 @@ class Image(QWidget):
         wid = self.overlabel_display.width()
         hig = self.overlabel_display.height()
 
-        x = (x - center[0]) * ratio + center[0]
-        y = (y - center[1]) * ratio + center[1]
+        img_wid = self._image3c.display.size().width()
+        img_hig = self._image3c.display.size().height()
 
-        self._move_pos = [int(round(x)), int(round(y)), int(round(wid * ratio)), int(round(hig * ratio))]
+        if img_wid < self.width() and img_hig < self.height():
+            max_wid = self.width() * 2
+            max_hig = self.height() * 2
+
+        elif img_wid < self.width() * 4 and img_hig < self.height() * 4:
+            max_wid = self.width() * 6
+            max_hig = self.height() * 6
+
+        else:
+            max_wid = img_wid
+            max_hig = img_hig
+
+        # min_wid = 24
+        # min_hig = 24
+
+        if wid * ratio > max_wid or hig * ratio > max_hig:
+            norm_ratio = min(max_wid / wid, max_hig / hig)
+
+        elif wid * ratio < 24 or hig * ratio < 24:
+            norm_ratio = max(24 / wid, 24 / hig)
+
+        else:
+            norm_ratio = ratio
+
+        x = (x - center[0]) * norm_ratio + center[0]
+        y = (y - center[1]) * norm_ratio + center[1]
+
+        self._move_pos = [int(round(x)), int(round(y)), int(round(wid * norm_ratio)), int(round(hig * norm_ratio))]
         self._resizing_image = True
         self._home_image = False
 

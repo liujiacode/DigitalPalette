@@ -17,6 +17,10 @@
 !define MUI_ICON "..\..\src\main\icons\Icon.ico"
 !define MUI_UNICON "..\..\src\main\icons\Icon.ico"
 
+; MUI Welcome Images
+!define MUI_WELCOMEFINISHPAGE_BITMAP "..\..\src\main\icons\wizard.bmp"
+!define MUI_UNWELCOMEFINISHPAGE_BITMAP "..\..\src\main\icons\wizard.bmp"
+
 ; Language Selection Dialog Settings
 !define MUI_LANGDLL_REGISTRY_ROOT "${PRODUCT_UNINST_ROOT_KEY}"
 !define MUI_LANGDLL_REGISTRY_KEY "${PRODUCT_UNINST_KEY}"

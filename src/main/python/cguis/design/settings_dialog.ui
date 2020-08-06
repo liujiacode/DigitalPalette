@@ -1865,7 +1865,114 @@
               <string>Work Area</string>
              </property>
              <layout class="QGridLayout" name="gridLayout_10">
-              <item row="3" column="2">
+              <item row="0" column="0">
+               <widget class="QLabel" name="label_st_import">
+                <property name="minimumSize">
+                 <size>
+                  <width>0</width>
+                  <height>22</height>
+                 </size>
+                </property>
+                <property name="maximumSize">
+                 <size>
+                  <width>16777215</width>
+                  <height>50</height>
+                 </size>
+                </property>
+                <property name="text">
+                 <string>Import</string>
+                </property>
+               </widget>
+              </item>
+              <item row="0" column="1">
+               <widget class="QLabel" name="label_st_export">
+                <property name="minimumSize">
+                 <size>
+                  <width>0</width>
+                  <height>22</height>
+                 </size>
+                </property>
+                <property name="maximumSize">
+                 <size>
+                  <width>16777215</width>
+                  <height>50</height>
+                 </size>
+                </property>
+                <property name="text">
+                 <string>Export</string>
+                </property>
+               </widget>
+              </item>
+              <item row="0" column="2">
+               <widget class="QLabel" name="label_st_quit">
+                <property name="minimumSize">
+                 <size>
+                  <width>0</width>
+                  <height>22</height>
+                 </size>
+                </property>
+                <property name="maximumSize">
+                 <size>
+                  <width>16777215</width>
+                  <height>50</height>
+                 </size>
+                </property>
+                <property name="text">
+                 <string>Quit</string>
+                </property>
+               </widget>
+              </item>
+              <item row="1" column="0">
+               <widget class="QLabel" name="label_rt_import">
+                <property name="minimumSize">
+                 <size>
+                  <width>0</width>
+                  <height>22</height>
+                 </size>
+                </property>
+                <property name="maximumSize">
+                 <size>
+                  <width>16777215</width>
+                  <height>50</height>
+                 </size>
+                </property>
+                <property name="font">
+                 <font>
+                  <family>Consolas</family>
+                  <strikeout>false</strikeout>
+                 </font>
+                </property>
+                <property name="text">
+                 <string notr="true">Alt+I; Ctrl+I</string>
+                </property>
+               </widget>
+              </item>
+              <item row="1" column="1">
+               <widget class="QLabel" name="label_rt_export">
+                <property name="minimumSize">
+                 <size>
+                  <width>0</width>
+                  <height>22</height>
+                 </size>
+                </property>
+                <property name="maximumSize">
+                 <size>
+                  <width>16777215</width>
+                  <height>50</height>
+                 </size>
+                </property>
+                <property name="font">
+                 <font>
+                  <family>Consolas</family>
+                  <strikeout>false</strikeout>
+                 </font>
+                </property>
+                <property name="text">
+                 <string notr="true">Alt+E; Ctrl+E</string>
+                </property>
+               </widget>
+              </item>
+              <item row="1" column="2">
                <widget class="QLabel" name="label_rt_quit">
                 <property name="minimumSize">
                  <size>
@@ -1887,6 +1994,195 @@
                 </property>
                 <property name="text">
                  <string notr="true">Alt+Q; Esc</string>
+                </property>
+               </widget>
+              </item>
+              <item row="2" column="0">
+               <widget class="QLabel" name="label_st_open">
+                <property name="minimumSize">
+                 <size>
+                  <width>0</width>
+                  <height>22</height>
+                 </size>
+                </property>
+                <property name="maximumSize">
+                 <size>
+                  <width>16777215</width>
+                  <height>50</height>
+                 </size>
+                </property>
+                <property name="text">
+                 <string>Open</string>
+                </property>
+               </widget>
+              </item>
+              <item row="2" column="1">
+               <widget class="QLabel" name="label_st_save">
+                <property name="minimumSize">
+                 <size>
+                  <width>0</width>
+                  <height>22</height>
+                 </size>
+                </property>
+                <property name="maximumSize">
+                 <size>
+                  <width>16777215</width>
+                  <height>50</height>
+                 </size>
+                </property>
+                <property name="text">
+                 <string>Save</string>
+                </property>
+               </widget>
+              </item>
+              <item row="2" column="2">
+               <widget class="QLabel" name="label_st_settings">
+                <property name="minimumSize">
+                 <size>
+                  <width>0</width>
+                  <height>22</height>
+                 </size>
+                </property>
+                <property name="maximumSize">
+                 <size>
+                  <width>16777215</width>
+                  <height>50</height>
+                 </size>
+                </property>
+                <property name="text">
+                 <string>Settings</string>
+                </property>
+               </widget>
+              </item>
+              <item row="3" column="0">
+               <widget class="QLabel" name="label_rt_open">
+                <property name="minimumSize">
+                 <size>
+                  <width>0</width>
+                  <height>22</height>
+                 </size>
+                </property>
+                <property name="maximumSize">
+                 <size>
+                  <width>16777215</width>
+                  <height>50</height>
+                 </size>
+                </property>
+                <property name="font">
+                 <font>
+                  <family>Consolas</family>
+                  <strikeout>false</strikeout>
+                 </font>
+                </property>
+                <property name="text">
+                 <string notr="true">Alt+O; Ctrl+O</string>
+                </property>
+               </widget>
+              </item>
+              <item row="3" column="1">
+               <widget class="QLabel" name="label_rt_save">
+                <property name="minimumSize">
+                 <size>
+                  <width>0</width>
+                  <height>22</height>
+                 </size>
+                </property>
+                <property name="maximumSize">
+                 <size>
+                  <width>16777215</width>
+                  <height>50</height>
+                 </size>
+                </property>
+                <property name="font">
+                 <font>
+                  <family>Consolas</family>
+                  <strikeout>false</strikeout>
+                 </font>
+                </property>
+                <property name="text">
+                 <string notr="true">Alt+S; Ctrl+S</string>
+                </property>
+               </widget>
+              </item>
+              <item row="3" column="2">
+               <widget class="QLabel" name="label_rt_settings">
+                <property name="minimumSize">
+                 <size>
+                  <width>0</width>
+                  <height>22</height>
+                 </size>
+                </property>
+                <property name="maximumSize">
+                 <size>
+                  <width>16777215</width>
+                  <height>50</height>
+                 </size>
+                </property>
+                <property name="font">
+                 <font>
+                  <family>Consolas</family>
+                  <strikeout>false</strikeout>
+                 </font>
+                </property>
+                <property name="text">
+                 <string notr="true">Alt+T; `</string>
+                </property>
+               </widget>
+              </item>
+              <item row="4" column="0">
+               <widget class="QLabel" name="label_st_create">
+                <property name="minimumSize">
+                 <size>
+                  <width>0</width>
+                  <height>22</height>
+                 </size>
+                </property>
+                <property name="maximumSize">
+                 <size>
+                  <width>16777215</width>
+                  <height>50</height>
+                 </size>
+                </property>
+                <property name="text">
+                 <string>Create</string>
+                </property>
+               </widget>
+              </item>
+              <item row="4" column="1">
+               <widget class="QLabel" name="label_st_locate">
+                <property name="minimumSize">
+                 <size>
+                  <width>0</width>
+                  <height>22</height>
+                 </size>
+                </property>
+                <property name="maximumSize">
+                 <size>
+                  <width>16777215</width>
+                  <height>50</height>
+                 </size>
+                </property>
+                <property name="text">
+                 <string>Locate</string>
+                </property>
+               </widget>
+              </item>
+              <item row="4" column="2">
+               <widget class="QLabel" name="label_st_attach">
+                <property name="minimumSize">
+                 <size>
+                  <width>0</width>
+                  <height>22</height>
+                 </size>
+                </property>
+                <property name="maximumSize">
+                 <size>
+                  <width>16777215</width>
+                  <height>50</height>
+                 </size>
+                </property>
+                <property name="text">
+                 <string>Attach</string>
                 </property>
                </widget>
               </item>
@@ -1915,264 +2211,6 @@
                 </property>
                </widget>
               </item>
-              <item row="7" column="2">
-               <widget class="QLabel" name="label_rt_about">
-                <property name="minimumSize">
-                 <size>
-                  <width>0</width>
-                  <height>22</height>
-                 </size>
-                </property>
-                <property name="maximumSize">
-                 <size>
-                  <width>16777215</width>
-                  <height>50</height>
-                 </size>
-                </property>
-                <property name="font">
-                 <font>
-                  <family>Consolas</family>
-                  <strikeout>false</strikeout>
-                 </font>
-                </property>
-                <property name="text">
-                 <string notr="true">Alt+B; F3</string>
-                </property>
-               </widget>
-              </item>
-              <item row="1" column="1">
-               <widget class="QLabel" name="label_rt_save">
-                <property name="minimumSize">
-                 <size>
-                  <width>0</width>
-                  <height>22</height>
-                 </size>
-                </property>
-                <property name="maximumSize">
-                 <size>
-                  <width>16777215</width>
-                  <height>50</height>
-                 </size>
-                </property>
-                <property name="font">
-                 <font>
-                  <family>Consolas</family>
-                  <strikeout>false</strikeout>
-                 </font>
-                </property>
-                <property name="text">
-                 <string notr="true">Alt+S; Ctrl+S</string>
-                </property>
-               </widget>
-              </item>
-              <item row="3" column="0">
-               <widget class="QLabel" name="label_rt_import">
-                <property name="minimumSize">
-                 <size>
-                  <width>0</width>
-                  <height>22</height>
-                 </size>
-                </property>
-                <property name="maximumSize">
-                 <size>
-                  <width>16777215</width>
-                  <height>50</height>
-                 </size>
-                </property>
-                <property name="font">
-                 <font>
-                  <family>Consolas</family>
-                  <strikeout>false</strikeout>
-                 </font>
-                </property>
-                <property name="text">
-                 <string notr="true">Alt+I; Ctrl+I</string>
-                </property>
-               </widget>
-              </item>
-              <item row="0" column="0">
-               <widget class="QLabel" name="label_st_open">
-                <property name="minimumSize">
-                 <size>
-                  <width>0</width>
-                  <height>22</height>
-                 </size>
-                </property>
-                <property name="maximumSize">
-                 <size>
-                  <width>16777215</width>
-                  <height>50</height>
-                 </size>
-                </property>
-                <property name="text">
-                 <string>Open</string>
-                </property>
-               </widget>
-              </item>
-              <item row="0" column="1">
-               <widget class="QLabel" name="label_st_save">
-                <property name="minimumSize">
-                 <size>
-                  <width>0</width>
-                  <height>22</height>
-                 </size>
-                </property>
-                <property name="maximumSize">
-                 <size>
-                  <width>16777215</width>
-                  <height>50</height>
-                 </size>
-                </property>
-                <property name="text">
-                 <string>Save</string>
-                </property>
-               </widget>
-              </item>
-              <item row="2" column="1">
-               <widget class="QLabel" name="label_st_export">
-                <property name="minimumSize">
-                 <size>
-                  <width>0</width>
-                  <height>22</height>
-                 </size>
-                </property>
-                <property name="maximumSize">
-                 <size>
-                  <width>16777215</width>
-                  <height>50</height>
-                 </size>
-                </property>
-                <property name="text">
-                 <string>Export</string>
-                </property>
-               </widget>
-              </item>
-              <item row="6" column="0">
-               <widget class="QLabel" name="label_st_homepage">
-                <property name="minimumSize">
-                 <size>
-                  <width>0</width>
-                  <height>22</height>
-                 </size>
-                </property>
-                <property name="maximumSize">
-                 <size>
-                  <width>16777215</width>
-                  <height>50</height>
-                 </size>
-                </property>
-                <property name="text">
-                 <string>Homepage</string>
-                </property>
-               </widget>
-              </item>
-              <item row="1" column="0">
-               <widget class="QLabel" name="label_rt_open">
-                <property name="minimumSize">
-                 <size>
-                  <width>0</width>
-                  <height>22</height>
-                 </size>
-                </property>
-                <property name="maximumSize">
-                 <size>
-                  <width>16777215</width>
-                  <height>50</height>
-                 </size>
-                </property>
-                <property name="font">
-                 <font>
-                  <family>Consolas</family>
-                  <strikeout>false</strikeout>
-                 </font>
-                </property>
-                <property name="text">
-                 <string notr="true">Alt+O; Ctrl+O</string>
-                </property>
-               </widget>
-              </item>
-              <item row="6" column="2">
-               <widget class="QLabel" name="label_st_about">
-                <property name="minimumSize">
-                 <size>
-                  <width>0</width>
-                  <height>22</height>
-                 </size>
-                </property>
-                <property name="maximumSize">
-                 <size>
-                  <width>16777215</width>
-                  <height>50</height>
-                 </size>
-                </property>
-                <property name="text">
-                 <string>About</string>
-                </property>
-               </widget>
-              </item>
-              <item row="1" column="2">
-               <widget class="QLabel" name="label_rt_settings">
-                <property name="minimumSize">
-                 <size>
-                  <width>0</width>
-                  <height>22</height>
-                 </size>
-                </property>
-                <property name="maximumSize">
-                 <size>
-                  <width>16777215</width>
-                  <height>50</height>
-                 </size>
-                </property>
-                <property name="font">
-                 <font>
-                  <family>Consolas</family>
-                  <strikeout>false</strikeout>
-                 </font>
-                </property>
-                <property name="text">
-                 <string notr="true">Alt+T; `</string>
-                </property>
-               </widget>
-              </item>
-              <item row="2" column="0">
-               <widget class="QLabel" name="label_st_import">
-                <property name="minimumSize">
-                 <size>
-                  <width>0</width>
-                  <height>22</height>
-                 </size>
-                </property>
-                <property name="maximumSize">
-                 <size>
-                  <width>16777215</width>
-                  <height>50</height>
-                 </size>
-                </property>
-                <property name="text">
-                 <string>Import</string>
-                </property>
-               </widget>
-              </item>
-              <item row="0" column="2">
-               <widget class="QLabel" name="label_st_settings">
-                <property name="minimumSize">
-                 <size>
-                  <width>0</width>
-                  <height>22</height>
-                 </size>
-                </property>
-                <property name="maximumSize">
-                 <size>
-                  <width>16777215</width>
-                  <height>50</height>
-                 </size>
-                </property>
-                <property name="text">
-                 <string>Settings</string>
-                </property>
-               </widget>
-              </item>
               <item row="5" column="1">
                <widget class="QLabel" name="label_rt_locate">
                 <property name="minimumSize">
@@ -2198,8 +2236,33 @@
                 </property>
                </widget>
               </item>
-              <item row="4" column="1">
-               <widget class="QLabel" name="label_st_locate">
+              <item row="5" column="2">
+               <widget class="QLabel" name="label_rt_attach">
+                <property name="minimumSize">
+                 <size>
+                  <width>0</width>
+                  <height>22</height>
+                 </size>
+                </property>
+                <property name="maximumSize">
+                 <size>
+                  <width>16777215</width>
+                  <height>50</height>
+                 </size>
+                </property>
+                <property name="font">
+                 <font>
+                  <family>Consolas</family>
+                  <strikeout>false</strikeout>
+                 </font>
+                </property>
+                <property name="text">
+                 <string notr="true">Alt+A; Ctrl+D</string>
+                </property>
+               </widget>
+              </item>
+              <item row="6" column="0">
+               <widget class="QLabel" name="label_st_homepage">
                 <property name="minimumSize">
                  <size>
                   <width>0</width>
@@ -2213,7 +2276,7 @@
                  </size>
                 </property>
                 <property name="text">
-                 <string>Locate</string>
+                 <string>Homepage</string>
                 </property>
                </widget>
               </item>
@@ -2236,8 +2299,8 @@
                 </property>
                </widget>
               </item>
-              <item row="4" column="2">
-               <widget class="QLabel" name="label_st_attach">
+              <item row="6" column="2">
+               <widget class="QLabel" name="label_st_about">
                 <property name="minimumSize">
                  <size>
                   <width>0</width>
@@ -2251,32 +2314,7 @@
                  </size>
                 </property>
                 <property name="text">
-                 <string>Attach</string>
-                </property>
-               </widget>
-              </item>
-              <item row="3" column="1">
-               <widget class="QLabel" name="label_rt_export">
-                <property name="minimumSize">
-                 <size>
-                  <width>0</width>
-                  <height>22</height>
-                 </size>
-                </property>
-                <property name="maximumSize">
-                 <size>
-                  <width>16777215</width>
-                  <height>50</height>
-                 </size>
-                </property>
-                <property name="font">
-                 <font>
-                  <family>Consolas</family>
-                  <strikeout>false</strikeout>
-                 </font>
-                </property>
-                <property name="text">
-                 <string notr="true">Alt+E; Ctrl+E</string>
+                 <string>About</string>
                 </property>
                </widget>
               </item>
@@ -2305,44 +2343,6 @@
                 </property>
                </widget>
               </item>
-              <item row="4" column="0">
-               <widget class="QLabel" name="label_st_create">
-                <property name="minimumSize">
-                 <size>
-                  <width>0</width>
-                  <height>22</height>
-                 </size>
-                </property>
-                <property name="maximumSize">
-                 <size>
-                  <width>16777215</width>
-                  <height>50</height>
-                 </size>
-                </property>
-                <property name="text">
-                 <string>Create</string>
-                </property>
-               </widget>
-              </item>
-              <item row="2" column="2">
-               <widget class="QLabel" name="label_st_quit">
-                <property name="minimumSize">
-                 <size>
-                  <width>0</width>
-                  <height>22</height>
-                 </size>
-                </property>
-                <property name="maximumSize">
-                 <size>
-                  <width>16777215</width>
-                  <height>50</height>
-                 </size>
-                </property>
-                <property name="text">
-                 <string>Quit</string>
-                </property>
-               </widget>
-              </item>
               <item row="7" column="1">
                <widget class="QLabel" name="label_rt_update">
                 <property name="minimumSize">
@@ -2368,8 +2368,8 @@
                 </property>
                </widget>
               </item>
-              <item row="5" column="2">
-               <widget class="QLabel" name="label_rt_attach">
+              <item row="7" column="2">
+               <widget class="QLabel" name="label_rt_about">
                 <property name="minimumSize">
                  <size>
                   <width>0</width>
@@ -2389,7 +2389,7 @@
                  </font>
                 </property>
                 <property name="text">
-                 <string notr="true">Alt+A; Ctrl+D</string>
+                 <string notr="true">Alt+B; F3</string>
                 </property>
                </widget>
               </item>
@@ -2706,7 +2706,7 @@
                  </font>
                 </property>
                 <property name="text">
-                 <string notr="true">1; 2; 3; 4; 5</string>
+                 <string notr="true">1 ~ 5; 6 ~ 0</string>
                 </property>
                </widget>
               </item>
@@ -2889,6 +2889,25 @@
                 </property>
                </widget>
               </item>
+              <item row="2" column="2">
+               <widget class="QLabel" name="label_st_sdi">
+                <property name="minimumSize">
+                 <size>
+                  <width>0</width>
+                  <height>22</height>
+                 </size>
+                </property>
+                <property name="maximumSize">
+                 <size>
+                  <width>16777215</width>
+                  <height>50</height>
+                 </size>
+                </property>
+                <property name="text">
+                 <string>Show Detail Info</string>
+                </property>
+               </widget>
+              </item>
               <item row="3" column="0">
                <widget class="QLabel" name="label_rt_did">
                 <property name="minimumSize">
@@ -2936,6 +2955,31 @@
                 </property>
                 <property name="text">
                  <string notr="true">Insert; I</string>
+                </property>
+               </widget>
+              </item>
+              <item row="3" column="2">
+               <widget class="QLabel" name="label_rt_sdi">
+                <property name="minimumSize">
+                 <size>
+                  <width>0</width>
+                  <height>22</height>
+                 </size>
+                </property>
+                <property name="maximumSize">
+                 <size>
+                  <width>16777215</width>
+                  <height>50</height>
+                 </size>
+                </property>
+                <property name="font">
+                 <font>
+                  <family>Consolas</family>
+                  <strikeout>false</strikeout>
+                 </font>
+                </property>
+                <property name="text">
+                 <string notr="true">Enter; F</string>
                 </property>
                </widget>
               </item>
@@ -3076,7 +3120,7 @@
                  </font>
                 </property>
                 <property name="text">
-                 <string notr="true">=; -; [; ]</string>
+                 <string notr="true">-; =; _; +; /; *</string>
                 </property>
                </widget>
               </item>

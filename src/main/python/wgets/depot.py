@@ -296,15 +296,14 @@ class Depot(QWidget):
         # load args.
         self._args = args
         self._drop_file = None
-
         self._left_click = False
         self._drag_file = False
         self._start_hig = None
         self._start_pt = None
         self._current_idx = None
         self._fetched_cell = None
-        self._press_key = None
- 
+        self._press_key = 0
+
         # load translations.
         self._func_tr_()
 
@@ -345,6 +344,11 @@ class Depot(QWidget):
         shortcut.activated.connect(self.insert_set)
         shortcut = QShortcut(QKeySequence("I"), self)
         shortcut.activated.connect(self.insert_set)
+
+        shortcut = QShortcut(QKeySequence("Enter"), self)
+        shortcut.activated.connect(self.detail_set)
+        shortcut = QShortcut(QKeySequence("F"), self)
+        shortcut.activated.connect(self.detail_set)
 
         shortcut = QShortcut(QKeySequence("Ctrl+R"), self)
         shortcut.activated.connect(self.clipboard_cur("rgb"))
@@ -401,18 +405,27 @@ class Depot(QWidget):
     def keyPressEvent(self, event):
         if event.key() == Qt.Key_Shift:
             self._press_key = 1
+            self.setCursor(QCursor(Qt.PointingHandCursor))
             event.accept()
 
         elif event.key() == Qt.Key_Control:
             self._press_key = 2
+            self.setCursor(QCursor(Qt.PointingHandCursor))
+            event.accept()
+
+        elif event.key() == Qt.Key_Space:
+            self._press_key = 3
+            self.setCursor(QCursor(Qt.ClosedHandCursor))
             event.accept()
 
         else:
             self._press_key = 0
+            self.setCursor(QCursor(Qt.ArrowCursor))
             event.ignore()
 
     def keyReleaseEvent(self, event):
         self._press_key = 0
+        self.setCursor(QCursor(Qt.ArrowCursor))
         event.ignore()
 
     def mousePressEvent(self, event):
@@ -433,7 +446,7 @@ class Depot(QWidget):
             color_path = os.sep.join((self._args.global_temp_dir.path(), "DigiPale_Depot_{}.dpc".format(abs(hash(str(color_dict))))))
 
             with open(color_path, "w", encoding='utf-8') as f:
-                json.dump(color_dict, f, indent=4)
+                json.dump(color_dict, f, indent=4, ensure_ascii=False)
 
             self._drag_file = True
 
@@ -448,12 +461,15 @@ class Depot(QWidget):
 
             self._drag_file = False
             self._press_key = 0
+            self.setCursor(QCursor(Qt.ArrowCursor))
 
         elif col <= self._args.stab_column:
             idx = self._args.stab_column * row + col
 
-            if event.button() == Qt.MidButton:
-                self.setCursor(QCursor(Qt.ClosedHandCursor))
+            if event.button() == Qt.MidButton or (self._press_key == 3 and event.button() == Qt.LeftButton):
+                if event.button() == Qt.MidButton:
+                    self.setCursor(QCursor(Qt.ClosedHandCursor))
+
                 self._start_hig = self._scroll_bar.value() + event.y()
 
             elif idx < len(self._args.stab_ucells):
@@ -467,9 +483,6 @@ class Depot(QWidget):
                     self._args.stab_ucells[self._current_idx] = None
 
                     self._fetched_cell.raise_()
-
-                elif event.button() == Qt.RightButton and idx < len(self._args.stab_ucells) - 1:
-                    self._info.clone_cell(self._args.stab_ucells[idx])
 
             else:
                 self.activate_idx(None)
@@ -486,7 +499,7 @@ class Depot(QWidget):
             color_path = os.sep.join((self._args.global_temp_dir.path(), "DigiPale_Set_{}.dps".format(abs(hash(str(color_dict))))))
 
             with open(color_path, "w", encoding='utf-8') as f:
-                json.dump(color_dict, f, indent=4)
+                json.dump(color_dict, f, indent=4, ensure_ascii=False)
 
             self._drag_file = True
 
@@ -507,6 +520,7 @@ class Depot(QWidget):
 
             self._drag_file = False
             self._press_key = 0
+            self.setCursor(QCursor(Qt.ArrowCursor))
 
             self.update()
             event.accept()
@@ -556,6 +570,7 @@ class Depot(QWidget):
 
     def mouseReleaseEvent(self, event):
         self.setCursor(QCursor(Qt.ArrowCursor))
+        self._press_key = 0
         self._start_hig = None
 
         if self._left_click:
@@ -682,7 +697,7 @@ class Depot(QWidget):
         self._menu.addAction(self._action_delete)
 
         self._action_detail = QAction(self)
-        self._action_detail.triggered.connect(self._info.show)
+        self._action_detail.triggered.connect(self.detail_set)
         self._menu.addAction(self._action_detail)
 
         self._action_attach = QAction(self)
@@ -719,19 +734,24 @@ class Depot(QWidget):
 
     def activate_idx(self, idx):
         """
-        Activate current idx unit cell.
+        Activate unit cell at idx and set current idx to idx.
         """
 
+        # current idx is None if all unit cells are not selected.
+        # current idx is a serial number in range len(self._args.stab_ucells) if any unit cell is selected.
+        # firstly deactivate old unit cell at current idx.
         if self._current_idx != None and isinstance(self._args.stab_ucells[self._current_idx], UnitCell):
             self._args.stab_ucells[self._current_idx].activated = False
             self._args.stab_ucells[self._current_idx].update()
 
+        # then change current idx to given idx.
         self._current_idx = idx
 
         if self._current_idx != None:
             self._current_idx = self._current_idx if self._current_idx > 0 else 0
             self._current_idx = self._current_idx if self._current_idx < len(self._args.stab_ucells) -1 else len(self._args.stab_ucells) - 1
 
+        # finally activate new unit cell at current idx.
         if self._current_idx != None and isinstance(self._args.stab_ucells[self._current_idx], UnitCell):
             self._args.stab_ucells[self._current_idx].activated = True
             self._args.stab_ucells[self._current_idx].update()
@@ -743,6 +763,8 @@ class Depot(QWidget):
                 self._scroll_bar.setValue(self._args.stab_ucells[self._current_idx].y())
 
             elif low_pos >= self._scroll_area.height():
+                # similar to the expression in func page_end.
+                # please modify synchronously if necessary.
                 self._scroll_bar.setValue(self._args.stab_ucells[self._current_idx].y() + self._pl_wid - self._scroll_area.height())
 
         status_idx = self._current_idx
@@ -757,7 +779,7 @@ class Depot(QWidget):
 
     def move(self, shift_x, shift_y):
         """
-        Select unitcell around current idx unitcell.
+        Select unit cell around current idx unit cell (leftward, rightward, uppward and downward).
         """
 
         if not self.isVisible():
@@ -798,9 +820,10 @@ class Depot(QWidget):
 
         self.update()
 
+    '''
     def home(self):
         """
-        Locate current unitcell.
+        Locate current unit cell.
         """
 
         if not self.isVisible():
@@ -812,11 +835,31 @@ class Depot(QWidget):
 
         else:
             self.activate_idx(self._current_idx)
+        '''
+
+    def home(self):
+        """
+        Home scroll page.
+        """
+
+        if not self.isVisible():
+            return
+
+        if self._scroll_bar.value() < self._pl_wid:
+            self.activate_idx(0)
+
+        else:
+            self._scroll_bar.setValue(0)
+
+        self.update()
 
     def page_up(self):
         """
         Up scroll page.
         """
+
+        if not self.isVisible():
+            return
 
         self._scroll_bar.setValue(self._scroll_bar.value() - self._scroll_area.height())
         self.update()
@@ -826,6 +869,9 @@ class Depot(QWidget):
         Down scroll page.
         """
 
+        if not self.isVisible():
+            return
+
         self._scroll_bar.setValue(self._scroll_bar.value() + self._scroll_area.height())
         self.update()
 
@@ -834,24 +880,28 @@ class Depot(QWidget):
         End scroll page.
         """
 
-        self._scroll_bar.setValue(self._scroll_contents.height())
+        if not self.isVisible():
+            return
+
+        # similar to the expression in func activate_idx.
+        # please modify synchronously if necessary.
+        if self._scroll_bar.value() > self._args.stab_ucells[len(self._args.stab_ucells) - 1].y() - self._scroll_area.height():
+            self.activate_idx(len(self._args.stab_ucells) - 1)
+
+        else:
+            self._scroll_bar.setValue(self._scroll_contents.height())
+
         self.update()
 
     def insert_set(self):
         """
-        Insert current color set.
+        Insert current color set (combine attach_set and import_set funcs).
         """
 
-        if not self.isVisible():
-            return
-
-        if self._current_idx == None:
-            return
-
-        elif self._current_idx == len(self._args.stab_ucells) - 1:
+        if self._current_idx == len(self._args.stab_ucells) - 1:
             self.attach_set()
 
-        elif self._current_idx < len(self._args.stab_ucells) - 1:
+        else:
             self.import_set()
 
     def delete_set(self):
@@ -866,6 +916,7 @@ class Depot(QWidget):
             return
 
         if isinstance(self._args.stab_ucells[self._current_idx], UnitCell):
+            self.activate_idx(self._current_idx)
             self._args.stab_ucells[self._current_idx].close()
             self._args.stab_ucells.pop(self._current_idx)
 
@@ -884,6 +935,7 @@ class Depot(QWidget):
             return
 
         if isinstance(self._args.stab_ucells[self._current_idx], UnitCell):
+            self.activate_idx(self._current_idx)
             self._args.sys_color_set.import_color_set(self._args.stab_ucells[self._current_idx].color_set)
             self._args.hm_rule = self._args.stab_ucells[self._current_idx].hm_rule
 
@@ -901,7 +953,24 @@ class Depot(QWidget):
             return
 
         if isinstance(self._args.stab_ucells[self._current_idx], UnitCell):
+            self.activate_idx(self._current_idx)
             self.ps_export.emit(self._current_idx)
+
+    def detail_set(self):
+        """
+        Show info of color set (unit cell) at current idx.
+        """
+
+        if not self.isVisible():
+            return
+
+        if self._current_idx == None or self._current_idx > len(self._args.stab_ucells) - 2:
+            return
+
+        if isinstance(self._args.stab_ucells[self._current_idx], UnitCell):
+            self.activate_idx(self._current_idx)
+            self._info.clone_cell(self._args.stab_ucells[self._current_idx])
+            self._info.show()
 
     def attach_set(self):
         """
@@ -964,7 +1033,7 @@ class Depot(QWidget):
 
         else:
             try:
-                color_dict = json.loads(clipboard.text())
+                color_dict = json.loads(clipboard.text(), encoding='utf-8')
 
             except Exception as err:
                 return

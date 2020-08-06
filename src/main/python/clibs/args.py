@@ -82,8 +82,8 @@ class Args(object):
         # software informations.
         self.info_main_site = "https://liujiacode.github.io/DigitalPalette/"
         self.info_update_site = "https://github.com/liujiacode/DigitalPalette/releases"
-        self.info_version_zh = "v2.8.9-x1d1s1-开发版"
-        self.info_version_en = "v2.8.9-x1d1s1-dev"
+        self.info_version_zh = "v2.2.9-x1d1s1-开发版"
+        self.info_version_en = "v2.2.9-x1d1s1-dev"
         self.info_author_zh = "本征喵函数"
         self.info_author_en = "Eigenmiao"
         self.info_date_zh = "2020年8月2日"
@@ -131,7 +131,7 @@ class Args(object):
 
         if os.path.isfile(os.sep.join((self.resources, "settings.json"))):
             try:
-                with open(os.sep.join((self.resources, "settings.json")), "r") as sf:
+                with open(os.sep.join((self.resources, "settings.json")), "r", encoding='utf-8') as sf:
                     uss = json.load(sf)
 
                     if isinstance(uss, dict) and "store_loc" in uss:
@@ -239,8 +239,8 @@ class Args(object):
         # storing.
         if self.store_loc:
             try:
-                with open(os.sep.join((self.resources, "settings.json")), "w") as sf:
-                    json.dump(settings, sf, indent=4)
+                with open(os.sep.join((self.resources, "settings.json")), "w", encoding='utf-8') as sf:
+                    json.dump(settings, sf, indent=4, ensure_ascii=False)
 
             except Exception as err:
                 if self.global_log:
@@ -250,11 +250,11 @@ class Args(object):
 
         if not self.store_loc:
             try:
-                with open(os.sep.join((self.usr_store, "settings.json")), "w") as sf:
-                    json.dump(settings, sf, indent=4)
+                with open(os.sep.join((self.usr_store, "settings.json")), "w", encoding='utf-8') as sf:
+                    json.dump(settings, sf, indent=4, ensure_ascii=False)
 
-                with open(os.sep.join((self.resources, "settings.json")), "w") as sf:
-                    json.dump({"store_loc": False}, sf, indent=4)
+                with open(os.sep.join((self.resources, "settings.json")), "w", encoding='utf-8') as sf:
+                    json.dump({"store_loc": False}, sf, indent=4, ensure_ascii=False)
 
             except Exception as err:
                 if self.global_log:
@@ -325,7 +325,7 @@ class Args(object):
 
         if os.path.isfile(settings_file):
             try:
-                with open(settings_file, "r") as sf:
+                with open(settings_file, "r", encoding='utf-8') as sf:
                     uss = json.load(sf)
 
             except Exception as err:

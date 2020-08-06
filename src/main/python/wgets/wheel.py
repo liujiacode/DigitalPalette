@@ -20,7 +20,7 @@ import time
 import numpy as np
 from PyQt5.QtWidgets import QWidget, QShortcut, QApplication
 from PyQt5.QtCore import Qt, QPoint, pyqtSignal, QSize, pyqtSignal, QMimeData, QPoint, QUrl
-from PyQt5.QtGui import QPainter, QPen, QBrush, QColor, QConicalGradient, QRadialGradient, QLinearGradient, QKeySequence, QDrag, QPixmap
+from PyQt5.QtGui import QPainter, QPen, QBrush, QColor, QConicalGradient, QRadialGradient, QLinearGradient, QKeySequence, QDrag, QPixmap, QCursor
 from cguis.resource import view_rc
 from clibs.transpt import get_outer_box, rotate_point_center, get_theta_center
 from clibs.color import Color
@@ -49,7 +49,7 @@ class Wheel(QWidget):
         self._backup = self._args.sys_color_set.backup()
         self._drag_file = False
         self._drop_file = None
-        self._press_key = None
+        self._press_key = 0
 
         # init global args.
         self._pressed_in_wheel = False
@@ -186,14 +186,17 @@ class Wheel(QWidget):
     def keyPressEvent(self, event):
         if event.key() == Qt.Key_Shift:
             self._press_key = 1
+            self.setCursor(QCursor(Qt.PointingHandCursor))
             event.accept()
 
         else:
             self._press_key = 0
+            self.setCursor(QCursor(Qt.ArrowCursor))
             event.ignore()
 
     def keyReleaseEvent(self, event):
         self._press_key = 0
+        self.setCursor(QCursor(Qt.ArrowCursor))
         event.ignore()
 
     def mousePressEvent(self, event):
@@ -203,7 +206,7 @@ class Wheel(QWidget):
             color_path = os.sep.join((self._args.global_temp_dir.path(), "DigiPale_Set_{}.dps".format(abs(hash(str(color_dict))))))
 
             with open(color_path, "w", encoding='utf-8') as f:
-                json.dump(color_dict, f, indent=4)
+                json.dump(color_dict, f, indent=4, ensure_ascii=False)
 
             self._drag_file = True
 
@@ -218,6 +221,7 @@ class Wheel(QWidget):
 
             self._drag_file = False
             self._press_key = 0
+            self.setCursor(QCursor(Qt.ArrowCursor))
 
             event.accept()
 
@@ -337,6 +341,9 @@ class Wheel(QWidget):
             event.ignore()
 
     def mouseReleaseEvent(self, event):
+        self.setCursor(QCursor(Qt.ArrowCursor))
+        self._press_key = 0
+
         if self._pressed_in_wheel or self._pressed_in_bar_1 or self._pressed_in_bar_2:
             self._pressed_in_wheel = False
             self._pressed_in_bar_1 = False
@@ -395,7 +402,7 @@ class Wheel(QWidget):
 
         else:
             try:
-                color_dict = json.loads(clipboard.text())
+                color_dict = json.loads(clipboard.text(), encoding='utf-8')
 
             except Exception as err:
                 return

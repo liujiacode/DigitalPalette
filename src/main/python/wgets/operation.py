@@ -304,7 +304,7 @@ class Operation(QWidget):
             color_dict["palettes"] = export_list(color_list)
 
             with open(depot_file, "w", encoding='utf-8') as f:
-                json.dump(color_dict, f, indent=4)
+                json.dump(color_dict, f, indent=4, ensure_ascii=False)
 
         elif depot_file.split(".")[-1].lower() == "txt":
             with open(depot_file, "w") as f:
@@ -501,7 +501,7 @@ class Operation(QWidget):
             color_dict["palettes"] = export_list(color_list)
 
             with open(set_file, "w", encoding='utf-8') as f:
-                json.dump(color_dict, f, indent=4)
+                json.dump(color_dict, f, indent=4, ensure_ascii=False)
 
         elif set_file.split(".")[-1].lower() == "txt":
             with open(set_file, "w") as f:

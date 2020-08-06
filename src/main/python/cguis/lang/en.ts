@@ -137,27 +137,27 @@
 <context>
     <name>Depot</name>
     <message>
-        <location filename="../../wgets/depot.py" line="1048"/>
+        <location filename="../../wgets/depot.py" line="1114"/>
         <source>Import</source>
         <translation></translation>
     </message>
     <message>
-        <location filename="../../wgets/depot.py" line="1048"/>
+        <location filename="../../wgets/depot.py" line="1114"/>
         <source>Export</source>
         <translation></translation>
     </message>
     <message>
-        <location filename="../../wgets/depot.py" line="1048"/>
+        <location filename="../../wgets/depot.py" line="1114"/>
         <source>Delete</source>
         <translation></translation>
     </message>
     <message>
-        <location filename="../../wgets/depot.py" line="1048"/>
+        <location filename="../../wgets/depot.py" line="1114"/>
         <source>Detail</source>
         <translation></translation>
     </message>
     <message>
-        <location filename="../../wgets/depot.py" line="1048"/>
+        <location filename="../../wgets/depot.py" line="1114"/>
         <source>Attach</source>
         <translation></translation>
     </message>
@@ -165,72 +165,72 @@
 <context>
     <name>DigitalPalette</name>
     <message>
-        <location filename="../../main.py" line="738"/>
+        <location filename="../../main.py" line="750"/>
         <source>About</source>
         <translation></translation>
     </message>
     <message>
-        <location filename="../../main.py" line="738"/>
+        <location filename="../../main.py" line="750"/>
         <source>OK</source>
         <translation>OK</translation>
     </message>
     <message>
-        <location filename="../../main.py" line="751"/>
+        <location filename="../../main.py" line="763"/>
         <source>Ready.</source>
         <translation></translation>
     </message>
     <message>
-        <location filename="../../main.py" line="738"/>
+        <location filename="../../main.py" line="750"/>
         <source>Visit Website</source>
         <translation></translation>
     </message>
     <message>
-        <location filename="../../main.py" line="738"/>
+        <location filename="../../main.py" line="750"/>
         <source>Version: {}</source>
         <translation></translation>
     </message>
     <message>
-        <location filename="../../main.py" line="738"/>
+        <location filename="../../main.py" line="750"/>
         <source>Author: {}</source>
         <translation></translation>
     </message>
     <message>
-        <location filename="../../main.py" line="738"/>
+        <location filename="../../main.py" line="750"/>
         <source>Update: {}</source>
         <translation></translation>
     </message>
     <message>
-        <location filename="../../main.py" line="738"/>
+        <location filename="../../main.py" line="750"/>
         <source>All Rights Reserved.</source>
         <translation>Copyright © 2019-2020. All Rights Reserved.</translation>
     </message>
     <message>
-        <location filename="../../main.py" line="751"/>
+        <location filename="../../main.py" line="763"/>
         <source>Image Size: {} x {}.</source>
         <translation>Image Size: {} × {}.</translation>
     </message>
     <message>
-        <location filename="../../main.py" line="751"/>
+        <location filename="../../main.py" line="763"/>
         <source>Image Size: {} x {}. Position: {} %, {} %.</source>
         <translation>Image Size: {} × {}. Position: {}% × {}%.</translation>
     </message>
     <message>
-        <location filename="../../main.py" line="751"/>
+        <location filename="../../main.py" line="763"/>
         <source>Depot Volume: Row {}, Col {}; Total {}, Index {}.</source>
         <translation>Depot Volume: Row {}, Col {}; Total {}, Index {}.</translation>
     </message>
     <message>
-        <location filename="../../main.py" line="738"/>
+        <location filename="../../main.py" line="750"/>
         <source>DigitalPalette uses Qt version {} (PyQt version {}) licensed under GNU General Public License. Please see qt.io/licensing for an overview of Qt licensing.</source>
         <translation></translation>
     </message>
     <message>
-        <location filename="../../main.py" line="738"/>
+        <location filename="../../main.py" line="750"/>
         <source>DigitalPalette is a free software, which is distributed in the hope that it will be useful, but without any warranty. You can redistribute it and/or modify it under the terms of the GNU General Public License as published by the Free Software Foundation. See the GNU General Public License 3.0 (GPL 3.0) for more details.</source>
         <translation></translation>
     </message>
     <message>
-        <location filename="../../main.py" line="738"/>
+        <location filename="../../main.py" line="750"/>
         <source>All images (including logo and sample images, etc.), documents and translations in DigitalPalette code repository are licensed under Creative Commons Attribution-NonCommercial-ShareAlike License 4.0 (CC BY-NC-SA 4.0) unless stating additionally.</source>
         <translation></translation>
     </message>
@@ -330,12 +330,12 @@
         <translation type="obsolete">Image Size: {} × {}. Position: {}% × {}%. Color Sign: {}.</translation>
     </message>
     <message>
-        <location filename="../../main.py" line="751"/>
+        <location filename="../../main.py" line="763"/>
         <source>Image Size: {} x {}. Position: {} %, {} %. Current Color: {}.</source>
         <translation>Image Size: {} × {}. Position: {}% × {}%. Current Color: {}.</translation>
     </message>
     <message>
-        <location filename="../../main.py" line="751"/>
+        <location filename="../../main.py" line="763"/>
         <source>Current Color: {}.</source>
         <translation></translation>
     </message>
@@ -343,122 +343,122 @@
 <context>
     <name>Image</name>
     <message>
-        <location filename="../../wgets/image.py" line="1146"/>
+        <location filename="../../wgets/image.py" line="1192"/>
         <source>Double click here to open an image.</source>
         <translation></translation>
     </message>
     <message>
-        <location filename="../../wgets/image.py" line="1153"/>
+        <location filename="../../wgets/image.py" line="1199"/>
         <source>Error</source>
         <translation></translation>
     </message>
     <message>
-        <location filename="../../wgets/image.py" line="1153"/>
+        <location filename="../../wgets/image.py" line="1199"/>
         <source>Could not create temporary dir. Dir is not created.</source>
         <translation></translation>
     </message>
     <message>
-        <location filename="../../wgets/image.py" line="1164"/>
+        <location filename="../../wgets/image.py" line="1210"/>
         <source>Finishing.</source>
         <translation></translation>
     </message>
     <message>
-        <location filename="../../wgets/image.py" line="1164"/>
+        <location filename="../../wgets/image.py" line="1210"/>
         <source>Loading RGB data.</source>
         <translation></translation>
     </message>
     <message>
-        <location filename="../../wgets/image.py" line="1164"/>
+        <location filename="../../wgets/image.py" line="1210"/>
         <source>Saving RGB data.</source>
         <translation></translation>
     </message>
     <message>
-        <location filename="../../wgets/image.py" line="1164"/>
+        <location filename="../../wgets/image.py" line="1210"/>
         <source>Loading HSV data.</source>
         <translation></translation>
     </message>
     <message>
-        <location filename="../../wgets/image.py" line="1164"/>
+        <location filename="../../wgets/image.py" line="1210"/>
         <source>Saving HSV data.</source>
         <translation></translation>
     </message>
     <message>
-        <location filename="../../wgets/image.py" line="1164"/>
+        <location filename="../../wgets/image.py" line="1210"/>
         <source>Loading RGB vertical edge data.</source>
         <translation>Loading RGB space vertical edge data.</translation>
     </message>
     <message>
-        <location filename="../../wgets/image.py" line="1164"/>
+        <location filename="../../wgets/image.py" line="1210"/>
         <source>Saving RGB vertical edge data.</source>
         <translation>Saving RGB space vertical edge data.</translation>
     </message>
     <message>
-        <location filename="../../wgets/image.py" line="1164"/>
+        <location filename="../../wgets/image.py" line="1210"/>
         <source>Loading RGB horizontal edge data.</source>
         <translation>Loading RGB space horizontal edge data.</translation>
     </message>
     <message>
-        <location filename="../../wgets/image.py" line="1164"/>
+        <location filename="../../wgets/image.py" line="1210"/>
         <source>Saving RGB horizontal edge data.</source>
         <translation>Saving RGB space horizontal edge data.</translation>
     </message>
     <message>
-        <location filename="../../wgets/image.py" line="1164"/>
+        <location filename="../../wgets/image.py" line="1210"/>
         <source>Loading RGB final edge data.</source>
         <translation>Loading RGB space compositive edge data.</translation>
     </message>
     <message>
-        <location filename="../../wgets/image.py" line="1164"/>
+        <location filename="../../wgets/image.py" line="1210"/>
         <source>Saving RGB final edge data.</source>
         <translation>Saving RGB space compositive edge data.</translation>
     </message>
     <message>
-        <location filename="../../wgets/image.py" line="1164"/>
+        <location filename="../../wgets/image.py" line="1210"/>
         <source>Loading HSV vertical edge data.</source>
         <translation>Loading HSV space vertical edge data.</translation>
     </message>
     <message>
-        <location filename="../../wgets/image.py" line="1164"/>
+        <location filename="../../wgets/image.py" line="1210"/>
         <source>Saving HSV vertical edge data.</source>
         <translation>Saving HSV space vertical edge data.</translation>
     </message>
     <message>
-        <location filename="../../wgets/image.py" line="1164"/>
+        <location filename="../../wgets/image.py" line="1210"/>
         <source>Loading HSV horizontal edge data.</source>
         <translation>Loading HSV space horizontal edge data.</translation>
     </message>
     <message>
-        <location filename="../../wgets/image.py" line="1164"/>
+        <location filename="../../wgets/image.py" line="1210"/>
         <source>Saving HSV horizontal edge data.</source>
         <translation>Saving HSV space horizontal edge data.</translation>
     </message>
     <message>
-        <location filename="../../wgets/image.py" line="1164"/>
+        <location filename="../../wgets/image.py" line="1210"/>
         <source>Loading HSV final edge data.</source>
         <translation>Loading HSV space compositive edge data.</translation>
     </message>
     <message>
-        <location filename="../../wgets/image.py" line="1164"/>
+        <location filename="../../wgets/image.py" line="1210"/>
         <source>Saving HSV final edge data.</source>
         <translation>Saving HSV space compositive edge data.</translation>
     </message>
     <message>
-        <location filename="../../wgets/image.py" line="1146"/>
+        <location filename="../../wgets/image.py" line="1192"/>
         <source>Open</source>
         <translation></translation>
     </message>
     <message>
-        <location filename="../../wgets/image.py" line="1153"/>
+        <location filename="../../wgets/image.py" line="1199"/>
         <source>OK</source>
         <translation>OK</translation>
     </message>
     <message>
-        <location filename="../../wgets/image.py" line="1164"/>
+        <location filename="../../wgets/image.py" line="1210"/>
         <source>Applying filter to image data.</source>
         <translation>Pre-processing image data.</translation>
     </message>
     <message>
-        <location filename="../../wgets/image.py" line="1153"/>
+        <location filename="../../wgets/image.py" line="1199"/>
         <source>Could not process image. There is a process of image not finished.</source>
         <translation></translation>
     </message>
@@ -468,17 +468,17 @@
         <translation type="obsolete">Image Size: {} × {}.</translation>
     </message>
     <message>
-        <location filename="../../wgets/image.py" line="1153"/>
+        <location filename="../../wgets/image.py" line="1199"/>
         <source>Could not open image. This image is broken.</source>
         <translation></translation>
     </message>
     <message>
-        <location filename="../../wgets/image.py" line="1146"/>
+        <location filename="../../wgets/image.py" line="1192"/>
         <source>Print</source>
         <translation></translation>
     </message>
     <message>
-        <location filename="../../wgets/image.py" line="1153"/>
+        <location filename="../../wgets/image.py" line="1199"/>
         <source>Could not process image. Translation is not completed.</source>
         <translation></translation>
     </message>
@@ -508,17 +508,17 @@
         <translation></translation>
     </message>
     <message>
-        <location filename="../../wgets/image.py" line="1153"/>
+        <location filename="../../wgets/image.py" line="1199"/>
         <source>Could not process image. The size of image is not suitable.</source>
         <translation></translation>
     </message>
     <message>
-        <location filename="../../wgets/image.py" line="1153"/>
+        <location filename="../../wgets/image.py" line="1199"/>
         <source>Could not process image. This image is invalid.</source>
         <translation></translation>
     </message>
     <message>
-        <location filename="../../wgets/image.py" line="1146"/>
+        <location filename="../../wgets/image.py" line="1192"/>
         <source>Cover</source>
         <translation></translation>
     </message>
@@ -926,17 +926,17 @@
 <context>
     <name>QAbstractSpinBox</name>
     <message>
-        <location filename="../../main.py" line="829"/>
+        <location filename="../../main.py" line="841"/>
         <source>&amp;Select All</source>
         <translation></translation>
     </message>
     <message>
-        <location filename="../../main.py" line="829"/>
+        <location filename="../../main.py" line="841"/>
         <source>&amp;Step up</source>
         <translation></translation>
     </message>
     <message>
-        <location filename="../../main.py" line="829"/>
+        <location filename="../../main.py" line="841"/>
         <source>Step &amp;down</source>
         <translation></translation>
     </message>
@@ -944,74 +944,74 @@
 <context>
     <name>QColorDialog</name>
     <message>
-        <location filename="../../main.py" line="781"/>
+        <location filename="../../main.py" line="793"/>
         <source>Hu&amp;e:</source>
         <translation>H: </translation>
     </message>
     <message>
-        <location filename="../../main.py" line="781"/>
+        <location filename="../../main.py" line="793"/>
         <source>&amp;Sat:</source>
         <translation>S: </translation>
     </message>
     <message>
-        <location filename="../../main.py" line="781"/>
+        <location filename="../../main.py" line="793"/>
         <source>&amp;Val:</source>
         <translation>V: </translation>
     </message>
     <message>
-        <location filename="../../main.py" line="781"/>
+        <location filename="../../main.py" line="793"/>
         <source>&amp;Red:</source>
         <translation>R: </translation>
     </message>
     <message>
-        <location filename="../../main.py" line="781"/>
+        <location filename="../../main.py" line="793"/>
         <source>&amp;Green:</source>
         <translation>G: </translation>
     </message>
     <message>
-        <location filename="../../main.py" line="781"/>
+        <location filename="../../main.py" line="793"/>
         <source>Bl&amp;ue:</source>
         <translation>B: </translation>
     </message>
     <message>
-        <location filename="../../main.py" line="781"/>
+        <location filename="../../main.py" line="793"/>
         <source>A&amp;lpha channel:</source>
         <translation>A: </translation>
     </message>
     <message>
-        <location filename="../../main.py" line="781"/>
+        <location filename="../../main.py" line="793"/>
         <source>&amp;HTML:</source>
         <translation>HTML: </translation>
     </message>
     <message>
-        <location filename="../../main.py" line="781"/>
+        <location filename="../../main.py" line="793"/>
         <source>Cursor at %1, %2
 Press ESC to cancel</source>
         <translation>Cursor at: %1 x %2.
 Press ESC to cancel.</translation>
     </message>
     <message>
-        <location filename="../../main.py" line="781"/>
+        <location filename="../../main.py" line="793"/>
         <source>Select Color</source>
         <translation>Select Color</translation>
     </message>
     <message>
-        <location filename="../../main.py" line="781"/>
+        <location filename="../../main.py" line="793"/>
         <source>&amp;Pick Screen Color</source>
         <translation>Pick Screen Color</translation>
     </message>
     <message>
-        <location filename="../../main.py" line="781"/>
+        <location filename="../../main.py" line="793"/>
         <source>&amp;Basic colors</source>
         <translation>Basic Colors</translation>
     </message>
     <message>
-        <location filename="../../main.py" line="781"/>
+        <location filename="../../main.py" line="793"/>
         <source>&amp;Custom colors</source>
         <translation>Custom Colors</translation>
     </message>
     <message>
-        <location filename="../../main.py" line="781"/>
+        <location filename="../../main.py" line="793"/>
         <source>&amp;Add to Custom Colors</source>
         <translation>Add to Custom Colors</translation>
     </message>
@@ -1019,37 +1019,37 @@ Press ESC to cancel.</translation>
 <context>
     <name>QLineEdit</name>
     <message>
-        <location filename="../../main.py" line="819"/>
+        <location filename="../../main.py" line="831"/>
         <source>&amp;Undo</source>
         <translation></translation>
     </message>
     <message>
-        <location filename="../../main.py" line="819"/>
+        <location filename="../../main.py" line="831"/>
         <source>&amp;Redo</source>
         <translation></translation>
     </message>
     <message>
-        <location filename="../../main.py" line="819"/>
+        <location filename="../../main.py" line="831"/>
         <source>Cu&amp;t</source>
         <translation></translation>
     </message>
     <message>
-        <location filename="../../main.py" line="819"/>
+        <location filename="../../main.py" line="831"/>
         <source>&amp;Copy</source>
         <translation></translation>
     </message>
     <message>
-        <location filename="../../main.py" line="819"/>
+        <location filename="../../main.py" line="831"/>
         <source>&amp;Paste</source>
         <translation></translation>
     </message>
     <message>
-        <location filename="../../main.py" line="819"/>
+        <location filename="../../main.py" line="831"/>
         <source>Delete</source>
         <translation></translation>
     </message>
     <message>
-        <location filename="../../main.py" line="819"/>
+        <location filename="../../main.py" line="831"/>
         <source>Select All</source>
         <translation></translation>
     </message>
@@ -1057,92 +1057,92 @@ Press ESC to cancel.</translation>
 <context>
     <name>QPlatformTheme</name>
     <message>
-        <location filename="../../main.py" line="798"/>
+        <location filename="../../main.py" line="810"/>
         <source>OK</source>
         <translation>OK</translation>
     </message>
     <message>
-        <location filename="../../main.py" line="798"/>
+        <location filename="../../main.py" line="810"/>
         <source>Save</source>
         <translation></translation>
     </message>
     <message>
-        <location filename="../../main.py" line="798"/>
+        <location filename="../../main.py" line="810"/>
         <source>Save All</source>
         <translation></translation>
     </message>
     <message>
-        <location filename="../../main.py" line="798"/>
+        <location filename="../../main.py" line="810"/>
         <source>Open</source>
         <translation></translation>
     </message>
     <message>
-        <location filename="../../main.py" line="798"/>
+        <location filename="../../main.py" line="810"/>
         <source>&amp;Yes</source>
         <translation></translation>
     </message>
     <message>
-        <location filename="../../main.py" line="798"/>
+        <location filename="../../main.py" line="810"/>
         <source>Yes to &amp;All</source>
         <translation></translation>
     </message>
     <message>
-        <location filename="../../main.py" line="798"/>
+        <location filename="../../main.py" line="810"/>
         <source>&amp;No</source>
         <translation></translation>
     </message>
     <message>
-        <location filename="../../main.py" line="798"/>
+        <location filename="../../main.py" line="810"/>
         <source>N&amp;o to All</source>
         <translation></translation>
     </message>
     <message>
-        <location filename="../../main.py" line="798"/>
+        <location filename="../../main.py" line="810"/>
         <source>Abort</source>
         <translation></translation>
     </message>
     <message>
-        <location filename="../../main.py" line="798"/>
+        <location filename="../../main.py" line="810"/>
         <source>Retry</source>
         <translation></translation>
     </message>
     <message>
-        <location filename="../../main.py" line="798"/>
+        <location filename="../../main.py" line="810"/>
         <source>Ignore</source>
         <translation></translation>
     </message>
     <message>
-        <location filename="../../main.py" line="798"/>
+        <location filename="../../main.py" line="810"/>
         <source>Close</source>
         <translation></translation>
     </message>
     <message>
-        <location filename="../../main.py" line="798"/>
+        <location filename="../../main.py" line="810"/>
         <source>Cancel</source>
         <translation>Cancel</translation>
     </message>
     <message>
-        <location filename="../../main.py" line="798"/>
+        <location filename="../../main.py" line="810"/>
         <source>Discard</source>
         <translation></translation>
     </message>
     <message>
-        <location filename="../../main.py" line="798"/>
+        <location filename="../../main.py" line="810"/>
         <source>Help</source>
         <translation>Help</translation>
     </message>
     <message>
-        <location filename="../../main.py" line="798"/>
+        <location filename="../../main.py" line="810"/>
         <source>Apply</source>
         <translation>Apply</translation>
     </message>
     <message>
-        <location filename="../../main.py" line="798"/>
+        <location filename="../../main.py" line="810"/>
         <source>Reset</source>
         <translation>Reset</translation>
     </message>
     <message>
-        <location filename="../../main.py" line="798"/>
+        <location filename="../../main.py" line="810"/>
         <source>Restore Defaults</source>
         <translation></translation>
     </message>
@@ -1614,7 +1614,7 @@ Press ESC to cancel.</translation>
         <translation type="obsolete">Color Square</translation>
     </message>
     <message>
-        <location filename="../design/settings_dialog.py" line="1031"/>
+        <location filename="../design/settings_dialog.py" line="1046"/>
         <source>cubic ratio</source>
         <translation>Cubic Width Ratio</translation>
     </message>
@@ -1624,52 +1624,52 @@ Press ESC to cancel.</translation>
         <translation type="obsolete">Color wheel</translation>
     </message>
     <message>
-        <location filename="../design/settings_dialog.py" line="1032"/>
+        <location filename="../design/settings_dialog.py" line="1047"/>
         <source>wheel ratio</source>
         <translation>Wheel Width Ratio</translation>
     </message>
     <message>
-        <location filename="../design/settings_dialog.py" line="1033"/>
+        <location filename="../design/settings_dialog.py" line="1048"/>
         <source>volum ratio</source>
         <translation>Volume Height Ratio</translation>
     </message>
     <message>
-        <location filename="../design/settings_dialog.py" line="1034"/>
+        <location filename="../design/settings_dialog.py" line="1049"/>
         <source>s tag radius</source>
         <translation>Tag Radius Ratio in Wheel</translation>
     </message>
     <message>
-        <location filename="../design/settings_dialog.py" line="1035"/>
+        <location filename="../design/settings_dialog.py" line="1050"/>
         <source>v tag radius</source>
         <translation>Tag Radius Ratio in Volume</translation>
     </message>
     <message>
-        <location filename="../design/settings_dialog.py" line="1036"/>
+        <location filename="../design/settings_dialog.py" line="1051"/>
         <source>wheel ed wid</source>
         <translation>Wheel Edge Width</translation>
     </message>
     <message>
-        <location filename="../design/settings_dialog.py" line="1037"/>
+        <location filename="../design/settings_dialog.py" line="1052"/>
         <source>positive wid</source>
         <translation>Positive Tag Edge Width</translation>
     </message>
     <message>
-        <location filename="../design/settings_dialog.py" line="1038"/>
+        <location filename="../design/settings_dialog.py" line="1053"/>
         <source>negative wid</source>
         <translation>Negative Tag Edge Width</translation>
     </message>
     <message>
-        <location filename="../design/settings_dialog.py" line="1039"/>
+        <location filename="../design/settings_dialog.py" line="1054"/>
         <source>wheel ed color</source>
         <translation>Wheel Edge Color</translation>
     </message>
     <message>
-        <location filename="../design/settings_dialog.py" line="1040"/>
+        <location filename="../design/settings_dialog.py" line="1055"/>
         <source>positive color</source>
         <translation>Positive Tag Edge Color</translation>
     </message>
     <message>
-        <location filename="../design/settings_dialog.py" line="1041"/>
+        <location filename="../design/settings_dialog.py" line="1056"/>
         <source>negative color</source>
         <translation>Negative Tag Edge Color</translation>
     </message>
@@ -1679,32 +1679,32 @@ Press ESC to cancel.</translation>
         <translation type="obsolete">Image view</translation>
     </message>
     <message>
-        <location filename="../design/settings_dialog.py" line="1043"/>
+        <location filename="../design/settings_dialog.py" line="1058"/>
         <source>circle dist</source>
         <translation>Circle Tag Radius</translation>
     </message>
     <message>
-        <location filename="../design/settings_dialog.py" line="1046"/>
+        <location filename="../design/settings_dialog.py" line="1061"/>
         <source>Interface</source>
         <translation>Interface</translation>
     </message>
     <message>
-        <location filename="../design/settings_dialog.py" line="1058"/>
+        <location filename="../design/settings_dialog.py" line="1073"/>
         <source>show hsv</source>
         <translation>Display HSV Sliders in Result Area</translation>
     </message>
     <message>
-        <location filename="../design/settings_dialog.py" line="1057"/>
+        <location filename="../design/settings_dialog.py" line="1072"/>
         <source>show rgb</source>
         <translation>Display RGB Sliders in Result Area</translation>
     </message>
     <message>
-        <location filename="../design/settings_dialog.py" line="1048"/>
+        <location filename="../design/settings_dialog.py" line="1063"/>
         <source>h range</source>
         <translation>H Value Ranges from</translation>
     </message>
     <message>
-        <location filename="../design/settings_dialog.py" line="1053"/>
+        <location filename="../design/settings_dialog.py" line="1068"/>
         <source>to</source>
         <translation>to</translation>
     </message>
@@ -1719,32 +1719,32 @@ Press ESC to cancel.</translation>
         <translation type="obsolete">V Value Ranges from</translation>
     </message>
     <message>
-        <location filename="../design/settings_dialog.py" line="1054"/>
+        <location filename="../design/settings_dialog.py" line="1069"/>
         <source>hm rule</source>
         <translation>Harmony Rule</translation>
     </message>
     <message>
-        <location filename="../design/settings_dialog.py" line="1055"/>
+        <location filename="../design/settings_dialog.py" line="1070"/>
         <source>overflow</source>
         <translation>Overflow Method</translation>
     </message>
     <message>
-        <location filename="../design/settings_dialog.py" line="1056"/>
+        <location filename="../design/settings_dialog.py" line="1071"/>
         <source>press move</source>
         <translation>Press and Move Tag Instantly</translation>
     </message>
     <message>
-        <location filename="../design/settings_dialog.py" line="1060"/>
+        <location filename="../design/settings_dialog.py" line="1075"/>
         <source>zoom step</source>
         <translation>Zoom Ratio per Step</translation>
     </message>
     <message>
-        <location filename="../design/settings_dialog.py" line="1061"/>
+        <location filename="../design/settings_dialog.py" line="1076"/>
         <source>move step</source>
         <translation>Move Distance per Step</translation>
     </message>
     <message>
-        <location filename="../design/settings_dialog.py" line="1066"/>
+        <location filename="../design/settings_dialog.py" line="1081"/>
         <source>Rule</source>
         <translation>Rule</translation>
     </message>
@@ -1754,32 +1754,32 @@ Press ESC to cancel.</translation>
         <translation type="obsolete">Work Space</translation>
     </message>
     <message>
-        <location filename="../design/settings_dialog.py" line="1068"/>
+        <location filename="../design/settings_dialog.py" line="1083"/>
         <source>lang</source>
         <translation>Language</translation>
     </message>
     <message>
-        <location filename="../design/settings_dialog.py" line="1069"/>
+        <location filename="../design/settings_dialog.py" line="1084"/>
         <source>usr color</source>
         <translation>Color Directory</translation>
     </message>
     <message>
-        <location filename="../design/settings_dialog.py" line="1070"/>
+        <location filename="../design/settings_dialog.py" line="1085"/>
         <source>usr image</source>
         <translation>Image Directory</translation>
     </message>
     <message>
-        <location filename="../design/settings_dialog.py" line="1071"/>
+        <location filename="../design/settings_dialog.py" line="1086"/>
         <source>store loc</source>
         <translation>Store Settings Locally</translation>
     </message>
     <message>
-        <location filename="../design/settings_dialog.py" line="1076"/>
+        <location filename="../design/settings_dialog.py" line="1091"/>
         <source>System</source>
         <translation>Software</translation>
     </message>
     <message>
-        <location filename="../design/settings_dialog.py" line="1047"/>
+        <location filename="../design/settings_dialog.py" line="1062"/>
         <source>Color Wheel</source>
         <translation>Color Wheel</translation>
     </message>
@@ -1794,32 +1794,32 @@ Press ESC to cancel.</translation>
         <translation type="obsolete">Work Space</translation>
     </message>
     <message>
-        <location filename="../design/settings_dialog.py" line="1083"/>
+        <location filename="../design/settings_dialog.py" line="1098"/>
         <source>Import</source>
         <translation></translation>
     </message>
     <message>
-        <location filename="../design/settings_dialog.py" line="1080"/>
+        <location filename="../design/settings_dialog.py" line="1095"/>
         <source>Export</source>
         <translation></translation>
     </message>
     <message>
-        <location filename="../design/settings_dialog.py" line="1088"/>
+        <location filename="../design/settings_dialog.py" line="1103"/>
         <source>Create</source>
         <translation></translation>
     </message>
     <message>
-        <location filename="../design/settings_dialog.py" line="1085"/>
+        <location filename="../design/settings_dialog.py" line="1100"/>
         <source>Locate</source>
         <translation></translation>
     </message>
     <message>
-        <location filename="../design/settings_dialog.py" line="1089"/>
+        <location filename="../design/settings_dialog.py" line="1104"/>
         <source>Quit</source>
         <translation>Quit</translation>
     </message>
     <message>
-        <location filename="../design/settings_dialog.py" line="1084"/>
+        <location filename="../design/settings_dialog.py" line="1099"/>
         <source>Settings</source>
         <translation>Settings</translation>
     </message>
@@ -1834,22 +1834,22 @@ Press ESC to cancel.</translation>
         <translation type="obsolete">Activate Color</translation>
     </message>
     <message>
-        <location filename="../design/settings_dialog.py" line="1104"/>
+        <location filename="../design/settings_dialog.py" line="1120"/>
         <source>Transformation</source>
         <translation>Move Actions</translation>
     </message>
     <message>
-        <location filename="../design/settings_dialog.py" line="1105"/>
+        <location filename="../design/settings_dialog.py" line="1121"/>
         <source>Move</source>
         <translation></translation>
     </message>
     <message>
-        <location filename="../design/settings_dialog.py" line="1106"/>
+        <location filename="../design/settings_dialog.py" line="1122"/>
         <source>Zoom</source>
         <translation></translation>
     </message>
     <message>
-        <location filename="../design/settings_dialog.py" line="1107"/>
+        <location filename="../design/settings_dialog.py" line="1123"/>
         <source>Reset</source>
         <translation>Reset</translation>
     </message>
@@ -1864,147 +1864,147 @@ Press ESC to cancel.</translation>
         <translation type="obsolete">Column Number</translation>
     </message>
     <message>
-        <location filename="../design/settings_dialog.py" line="1075"/>
+        <location filename="../design/settings_dialog.py" line="1090"/>
         <source>clean up</source>
         <translation>Clean Up</translation>
     </message>
     <message>
-        <location filename="../design/settings_dialog.py" line="1078"/>
+        <location filename="../design/settings_dialog.py" line="1093"/>
         <source>Open</source>
         <translation></translation>
     </message>
     <message>
-        <location filename="../design/settings_dialog.py" line="1079"/>
+        <location filename="../design/settings_dialog.py" line="1094"/>
         <source>Save</source>
         <translation></translation>
     </message>
     <message>
-        <location filename="../design/settings_dialog.py" line="1087"/>
+        <location filename="../design/settings_dialog.py" line="1102"/>
         <source>Attach</source>
         <translation></translation>
     </message>
     <message>
-        <location filename="../design/settings_dialog.py" line="1097"/>
+        <location filename="../design/settings_dialog.py" line="1112"/>
         <source>Activate tag</source>
         <translation>Activate Tag</translation>
     </message>
     <message>
-        <location filename="../design/settings_dialog.py" line="1074"/>
+        <location filename="../design/settings_dialog.py" line="1089"/>
         <source>clean up all color sets</source>
         <translation>Clean Up All Stored Color Sets</translation>
     </message>
     <message>
-        <location filename="../design/settings_dialog.py" line="1081"/>
+        <location filename="../design/settings_dialog.py" line="1096"/>
         <source>Homepage</source>
         <translation>Homepage</translation>
     </message>
     <message>
-        <location filename="../design/settings_dialog.py" line="1086"/>
+        <location filename="../design/settings_dialog.py" line="1101"/>
         <source>Update</source>
         <translation>Update</translation>
     </message>
     <message>
-        <location filename="../design/settings_dialog.py" line="1082"/>
+        <location filename="../design/settings_dialog.py" line="1097"/>
         <source>About</source>
         <translation>About</translation>
     </message>
     <message>
-        <location filename="../design/settings_dialog.py" line="1091"/>
+        <location filename="../design/settings_dialog.py" line="1106"/>
         <source>Copy Tagged RGB</source>
         <translation></translation>
     </message>
     <message>
-        <location filename="../design/settings_dialog.py" line="1092"/>
+        <location filename="../design/settings_dialog.py" line="1107"/>
         <source>Copy Tagged HSV</source>
         <translation></translation>
     </message>
     <message>
-        <location filename="../design/settings_dialog.py" line="1093"/>
+        <location filename="../design/settings_dialog.py" line="1108"/>
         <source>Copy Tagged Hex</source>
         <translation></translation>
     </message>
     <message>
-        <location filename="../design/settings_dialog.py" line="1094"/>
+        <location filename="../design/settings_dialog.py" line="1109"/>
         <source>Copy RGB Result</source>
         <translation></translation>
     </message>
     <message>
-        <location filename="../design/settings_dialog.py" line="1095"/>
+        <location filename="../design/settings_dialog.py" line="1110"/>
         <source>Copy HSV Result</source>
         <translation></translation>
     </message>
     <message>
-        <location filename="../design/settings_dialog.py" line="1096"/>
+        <location filename="../design/settings_dialog.py" line="1111"/>
         <source>Copy Hex Result</source>
         <translation></translation>
     </message>
     <message>
-        <location filename="../design/settings_dialog.py" line="1099"/>
+        <location filename="../design/settings_dialog.py" line="1114"/>
         <source>Copy Current RGB</source>
         <translation></translation>
     </message>
     <message>
-        <location filename="../design/settings_dialog.py" line="1100"/>
+        <location filename="../design/settings_dialog.py" line="1115"/>
         <source>Copy Current HSV</source>
         <translation></translation>
     </message>
     <message>
-        <location filename="../design/settings_dialog.py" line="1101"/>
+        <location filename="../design/settings_dialog.py" line="1116"/>
         <source>Copy Current Hex</source>
         <translation></translation>
     </message>
     <message>
-        <location filename="../design/settings_dialog.py" line="1102"/>
+        <location filename="../design/settings_dialog.py" line="1117"/>
         <source>Delete from depot</source>
         <translation>Delete from Depot</translation>
     </message>
     <message>
-        <location filename="../design/settings_dialog.py" line="1103"/>
+        <location filename="../design/settings_dialog.py" line="1118"/>
         <source>Insert into depot</source>
         <translation>Insert into Depot</translation>
     </message>
     <message>
-        <location filename="../design/settings_dialog.py" line="1077"/>
+        <location filename="../design/settings_dialog.py" line="1092"/>
         <source>Work Area</source>
         <translation></translation>
     </message>
     <message>
-        <location filename="../design/settings_dialog.py" line="1098"/>
+        <location filename="../design/settings_dialog.py" line="1113"/>
         <source>Depot Area</source>
         <translation></translation>
     </message>
     <message>
-        <location filename="../design/settings_dialog.py" line="1090"/>
+        <location filename="../design/settings_dialog.py" line="1105"/>
         <source>Result Area</source>
         <translation></translation>
     </message>
     <message>
-        <location filename="../design/settings_dialog.py" line="1108"/>
+        <location filename="../design/settings_dialog.py" line="1124"/>
         <source>Shortcuts</source>
         <translation></translation>
     </message>
     <message>
-        <location filename="../design/settings_dialog.py" line="1059"/>
+        <location filename="../design/settings_dialog.py" line="1074"/>
         <source>Color Image</source>
         <translation></translation>
     </message>
     <message>
-        <location filename="../design/settings_dialog.py" line="1064"/>
+        <location filename="../design/settings_dialog.py" line="1079"/>
         <source>Color Depot</source>
         <translation></translation>
     </message>
     <message>
-        <location filename="../design/settings_dialog.py" line="1072"/>
+        <location filename="../design/settings_dialog.py" line="1087"/>
         <source>press act</source>
         <translation>Press and Execute View Operation Instantly</translation>
     </message>
     <message>
-        <location filename="../design/settings_dialog.py" line="1045"/>
+        <location filename="../design/settings_dialog.py" line="1060"/>
         <source>coset ratio</source>
         <translation>Color Set Width Ratio</translation>
     </message>
     <message>
-        <location filename="../design/settings_dialog.py" line="1065"/>
+        <location filename="../design/settings_dialog.py" line="1080"/>
         <source>stab column</source>
         <translation>Column Number</translation>
     </message>
@@ -2014,24 +2014,29 @@ Press ESC to cancel.</translation>
         <translation type="obsolete">Reverse Moving Directions</translation>
     </message>
     <message>
-        <location filename="../design/settings_dialog.py" line="1062"/>
+        <location filename="../design/settings_dialog.py" line="1077"/>
         <source>rand num</source>
         <translation>Number of Random Points</translation>
     </message>
     <message>
-        <location filename="../design/settings_dialog.py" line="1050"/>
+        <location filename="../design/settings_dialog.py" line="1065"/>
         <source>s range</source>
         <translation>S Value Ranges from</translation>
     </message>
     <message>
-        <location filename="../design/settings_dialog.py" line="1052"/>
+        <location filename="../design/settings_dialog.py" line="1067"/>
         <source>v range</source>
         <translation>V Value Ranges from</translation>
     </message>
     <message>
-        <location filename="../design/settings_dialog.py" line="1063"/>
+        <location filename="../design/settings_dialog.py" line="1078"/>
         <source>rev direct</source>
         <translation>Reverse Moving Directions</translation>
+    </message>
+    <message>
+        <location filename="../design/settings_dialog.py" line="1119"/>
+        <source>Show Detail Info</source>
+        <translation>Show Detail Info</translation>
     </message>
 </context>
 <context>

@@ -17,7 +17,7 @@ https://github.com/liujiacode/DigitalPalette
 """
 
 __VERSION__ = """
-v2.8.9-x1d1s1-dev
+v2.2.9-x1d1s1-dev
 """
 
 __AUTHOR__ = """
@@ -212,17 +212,27 @@ class DigitalPalette(QMainWindow, Ui_MainWindow):
 
         shortcut = QShortcut(QKeySequence("1"), self)
         shortcut.activated.connect(self._wget_cube_table.active_by_num(2))
+        shortcut = QShortcut(QKeySequence("6"), self)
+        shortcut.activated.connect(self._wget_cube_table.active_by_num(2))
 
         shortcut = QShortcut(QKeySequence("2"), self)
+        shortcut.activated.connect(self._wget_cube_table.active_by_num(1))
+        shortcut = QShortcut(QKeySequence("7"), self)
         shortcut.activated.connect(self._wget_cube_table.active_by_num(1))
 
         shortcut = QShortcut(QKeySequence("3"), self)
         shortcut.activated.connect(self._wget_cube_table.active_by_num(0))
+        shortcut = QShortcut(QKeySequence("8"), self)
+        shortcut.activated.connect(self._wget_cube_table.active_by_num(0))
 
         shortcut = QShortcut(QKeySequence("4"), self)
         shortcut.activated.connect(self._wget_cube_table.active_by_num(3))
+        shortcut = QShortcut(QKeySequence("9"), self)
+        shortcut.activated.connect(self._wget_cube_table.active_by_num(3))
 
         shortcut = QShortcut(QKeySequence("5"), self)
+        shortcut.activated.connect(self._wget_cube_table.active_by_num(4))
+        shortcut = QShortcut(QKeySequence("0"), self)
         shortcut.activated.connect(self._wget_cube_table.active_by_num(4))
 
         # set transformation shortcuts.
@@ -243,12 +253,16 @@ class DigitalPalette(QMainWindow, Ui_MainWindow):
 
         shortcut = QShortcut(QKeySequence("="), self)
         shortcut.activated.connect(self._wget_transformation.zoom_in)
-        shortcut = QShortcut(QKeySequence("]"), self)
+        shortcut = QShortcut(QKeySequence("+"), self)
+        shortcut.activated.connect(self._wget_transformation.zoom_in)
+        shortcut = QShortcut(QKeySequence("*"), self)
         shortcut.activated.connect(self._wget_transformation.zoom_in)
 
         shortcut = QShortcut(QKeySequence("-"), self)
         shortcut.activated.connect(self._wget_transformation.zoom_out)
-        shortcut = QShortcut(QKeySequence("["), self)
+        shortcut = QShortcut(QKeySequence("_"), self)
+        shortcut.activated.connect(self._wget_transformation.zoom_out)
+        shortcut = QShortcut(QKeySequence("/"), self)
         shortcut.activated.connect(self._wget_transformation.zoom_out)
 
         # install translator.
