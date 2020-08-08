@@ -65,6 +65,20 @@ class OverLabel(QLabel):
         for idx in idx_seq:
             if self.locations[idx]:
                 pt_xy = np.array((self.locations[idx][0] * self.width(), self.locations[idx][1] * self.height()))
+                pt_rgb = self._args.sys_color_set[idx].rgb
+
+                pt_box = get_outer_box(pt_xy, self._args.circle_dist + (self._args.positive_wid + self._args.negative_wid) * 2)
+
+                if idx == self._args.sys_activated_idx:
+                    painter.setPen(QPen(QColor(255 - pt_rgb[0], 255 - pt_rgb[1], 255 - pt_rgb[2]), self._args.positive_wid))
+                    painter.setBrush(QColor(255 - pt_rgb[0], 255 - pt_rgb[1], 255 - pt_rgb[2], 128))
+
+                else:
+                    painter.setPen(QPen(QColor(255 - pt_rgb[0], 255 - pt_rgb[1], 255 - pt_rgb[2], 128), Qt.PenStyle(Qt.DashLine), self._args.negative_wid))
+                    painter.setBrush(QColor(255 - pt_rgb[0], 255 - pt_rgb[1], 255 - pt_rgb[2], 64))
+
+                painter.drawEllipse(*pt_box)
+
                 pt_box = get_outer_box(pt_xy, self._args.circle_dist)
 
                 if idx == self._args.sys_activated_idx:
@@ -73,7 +87,7 @@ class OverLabel(QLabel):
                 else:
                     painter.setPen(QPen(QColor(*self._args.negative_color), self._args.negative_wid))
 
-                painter.setBrush(QColor(*self._args.sys_color_set[idx].rgb))
+                painter.setBrush(QColor(*pt_rgb))
                 painter.drawEllipse(*pt_box)
 
         if isinstance(self.croping, tuple):
@@ -136,7 +150,7 @@ class OverLabel(QLabel):
         already_accepted = False
 
         for idx in range(5):
-            if self.locations[idx] and np.linalg.norm(point - np.array(self.locations[idx]) * np.array((self.width(), self.height()))) < self._args.circle_dist:
+            if self.locations[idx] and np.linalg.norm(point - np.array(self.locations[idx]) * np.array((self.width(), self.height()))) < self._args.circle_dist + (self._args.positive_wid + self._args.negative_wid) * 2:
                 self._args.sys_activated_idx = idx
                 already_accepted = True
 
@@ -660,6 +674,10 @@ class Image(QWidget):
             max_wid = self.width() * 6
             max_hig = self.height() * 6
 
+        elif img_wid < self.width() * 8 and img_hig < self.height() * 8:
+            max_wid = self.width() * 10
+            max_hig = self.height() * 10
+
         else:
             max_wid = img_wid
             max_hig = img_hig
@@ -717,13 +735,11 @@ class Image(QWidget):
         Home displayed image.
         """
 
-        if self._home_image:
-            self.open_category()
-            self._home_image = False
-            return
-
         if not (self.isVisible() and self.overlabel_display.isVisible() and self._image3c.display):
             return
+
+        if self._home_image:
+            self._image3c.load_image(self._args.sys_category, self._args.sys_channel)
 
         img_wid = self._image3c.display.size().width()
         img_hig = self._image3c.display.size().height()
@@ -736,7 +752,12 @@ class Image(QWidget):
             int(round(img_hig * ratio)),
         ]
         self._resizing_image = True
-        self._home_image = True
+
+        if self._home_image:
+            self._home_image = False
+
+        else:
+            self._home_image = True
 
         self.update()
 
@@ -1029,9 +1050,11 @@ class Image(QWidget):
         """
 
         self._categories.add(idx)
+
         self.overlabel_display.croping = False
         self.overlabel_display.locating = False
         self._resizing_image = True
+        self._home_image = False
 
         self.update()
 
@@ -1056,6 +1079,8 @@ class Image(QWidget):
         # update_color_loc() is completed by 
         # self._wget_image.ps_color_changed.connect(lambda x: self._wget_cube_table.update_color()) in main.py.
 
+        self._home_image = False
+
         self.update()
 
     def enhance_finished(self, idx):
@@ -1072,6 +1097,7 @@ class Image(QWidget):
         self._enhance_lock = False
         self._resizing_image = True
         self.overlabel_display.locating = False
+        self._home_image = False
 
         self.update()
 

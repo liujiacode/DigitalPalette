@@ -189,6 +189,9 @@ class Args(object):
         self.negative_color = (245, 245, 245)
         self.wheel_ed_color = (200, 200, 200)
 
+        self.main_win_state = ""
+        self.main_win_geometry = ""
+
     def save_settings(self):
         """
         Save settings to file.
@@ -208,7 +211,7 @@ class Args(object):
             "rev_direct", "s_tag_radius", "v_tag_radius", "zoom_step", "move_step", "rand_num", "circle_dist",
             "positive_wid", "negative_wid", "wheel_ed_wid",
             "positive_color", "negative_color", "wheel_ed_color",
-            "stab_column",
+            "stab_column", "main_win_state", "main_win_geometry",
         )
 
         for item in items:
@@ -294,6 +297,8 @@ class Args(object):
             "wheel_ed_color": lambda vl: self.pfmt_rgb_color(vl, self.wheel_ed_color),
             "stab_column": lambda vl: self.pfmt_num_in_scope(vl, (1, 12), int, self.stab_column),
             "stab_ucells": lambda vl: self.pfmt_stab_ucells(vl),
+            "main_win_state": lambda vl: self.pfmt_value(vl, str, ""),
+            "main_win_geometry": lambda vl: self.pfmt_value(vl, str, ""),
         }
 
         if item in items:

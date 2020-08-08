@@ -30,6 +30,7 @@ class Settings(QDialog, Ui_SettingsDialog):
     ps_lang_changed = pyqtSignal(bool)
     ps_settings_changed = pyqtSignal(bool)
     ps_clean_up = pyqtSignal(bool)
+    ps_restore_layout = pyqtSignal(bool)
 
     def __init__(self, wget, args):
         """
@@ -62,6 +63,7 @@ class Settings(QDialog, Ui_SettingsDialog):
 
         # init clean up button.
         self.clean_up_btn.clicked.connect(lambda x: self.ps_clean_up.emit(True))
+        self.restore_original_btn.clicked.connect(lambda x: self.ps_restore_layout.emit(True))
 
         # init buttons.
         self.buttonBox.clear()
@@ -244,11 +246,11 @@ class Settings(QDialog, Ui_SettingsDialog):
     # ---------- ---------- ---------- Translations ---------- ---------- ---------- #
 
     def update_text(self):
-        self.setWindowTitle(self._dialog_desc[0])
-        self._btn_1.setText(self._dialog_desc[1])
-        self._btn_2.setText(self._dialog_desc[2])
-        self._btn_3.setText(self._dialog_desc[3])
-        self._btn_4.setText(self._dialog_desc[4])
+        self.setWindowTitle(self._dialog_descs[0])
+        self._btn_1.setText(self._dialog_descs[1])
+        self._btn_2.setText(self._dialog_descs[2])
+        self._btn_3.setText(self._dialog_descs[3])
+        self._btn_4.setText(self._dialog_descs[4])
 
         for idx in range(len(self._args.usr_langs)):
             lang = self._args.usr_langs[idx]
@@ -263,7 +265,7 @@ class Settings(QDialog, Ui_SettingsDialog):
     def _func_tr_(self):
         _translate = QCoreApplication.translate
 
-        self._dialog_desc = (
+        self._dialog_descs = (
             _translate("Settings", "Settings"),
             _translate("Settings", "OK"),
             _translate("Settings", "Cancel"),

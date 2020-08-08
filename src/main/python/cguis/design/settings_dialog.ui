@@ -1602,7 +1602,7 @@
              <property name="title">
               <string>Work Area</string>
              </property>
-             <layout class="QGridLayout" name="gridLayout_15">
+             <layout class="QGridLayout" name="gridLayout_12">
               <item row="0" column="0">
                <widget class="QLabel" name="lang_label">
                 <property name="minimumSize">
@@ -1622,31 +1622,31 @@
                 </property>
                </widget>
               </item>
-              <item row="0" column="1">
+              <item row="0" column="1" colspan="2">
                <widget class="QComboBox" name="lang_comb">
                 <property name="minimumSize">
                  <size>
-                  <width>160</width>
+                  <width>120</width>
                   <height>0</height>
                  </size>
                 </property>
                 <property name="maximumSize">
                  <size>
-                  <width>200</width>
+                  <width>360</width>
                   <height>16777215</height>
                  </size>
                 </property>
                </widget>
               </item>
-              <item row="0" column="2">
-               <spacer name="hsp_7">
+              <item row="0" column="3" rowspan="2">
+               <spacer name="hsp_11">
                 <property name="orientation">
                  <enum>Qt::Horizontal</enum>
                 </property>
                 <property name="sizeHint" stdset="0">
                  <size>
-                  <width>10</width>
-                  <height>20</height>
+                  <width>24</width>
+                  <height>68</height>
                  </size>
                 </property>
                </spacer>
@@ -1670,8 +1670,21 @@
                 </property>
                </widget>
               </item>
-              <item row="1" column="1">
-               <widget class="QLineEdit" name="usr_color_ledit"/>
+              <item row="1" column="1" colspan="2">
+               <widget class="QLineEdit" name="usr_color_ledit">
+                <property name="minimumSize">
+                 <size>
+                  <width>120</width>
+                  <height>0</height>
+                 </size>
+                </property>
+                <property name="maximumSize">
+                 <size>
+                  <width>360</width>
+                  <height>16777215</height>
+                 </size>
+                </property>
+               </widget>
               </item>
               <item row="2" column="0">
                <widget class="QLabel" name="usr_image_label">
@@ -1692,11 +1705,24 @@
                 </property>
                </widget>
               </item>
-              <item row="2" column="1">
-               <widget class="QLineEdit" name="usr_image_ledit"/>
+              <item row="2" column="1" colspan="2">
+               <widget class="QLineEdit" name="usr_image_ledit">
+                <property name="minimumSize">
+                 <size>
+                  <width>120</width>
+                  <height>0</height>
+                 </size>
+                </property>
+                <property name="maximumSize">
+                 <size>
+                  <width>360</width>
+                  <height>16777215</height>
+                 </size>
+                </property>
+               </widget>
               </item>
-              <item row="3" column="0" colspan="3">
-               <widget class="QWidget" name="work_space_inner_space" native="true">
+              <item row="3" column="0" colspan="4">
+               <widget class="QWidget" name="work_space_inner_space_1" native="true">
                 <property name="minimumSize">
                  <size>
                   <width>0</width>
@@ -1711,7 +1737,7 @@
                 </property>
                </widget>
               </item>
-              <item row="4" column="0" colspan="2">
+              <item row="4" column="0" colspan="3">
                <widget class="QCheckBox" name="store_loc_cbox">
                 <property name="minimumSize">
                  <size>
@@ -1733,7 +1759,7 @@
                 </property>
                </widget>
               </item>
-              <item row="5" column="0" colspan="2">
+              <item row="5" column="0" colspan="3">
                <widget class="QCheckBox" name="press_act_cbox">
                 <property name="minimumSize">
                  <size>
@@ -1755,59 +1781,99 @@
                 </property>
                </widget>
               </item>
-             </layout>
-            </widget>
-           </item>
-           <item>
-            <widget class="QGroupBox" name="system_depot_area_gbox">
-             <property name="minimumSize">
-              <size>
-               <width>0</width>
-               <height>0</height>
-              </size>
-             </property>
-             <property name="title">
-              <string>Depot Area</string>
-             </property>
-             <layout class="QGridLayout" name="gridLayout_12">
-              <item row="0" column="2">
+              <item row="6" column="0" colspan="4">
+               <widget class="QWidget" name="work_space_inner_space_2" native="true">
+                <property name="minimumSize">
+                 <size>
+                  <width>0</width>
+                  <height>20</height>
+                 </size>
+                </property>
+                <property name="maximumSize">
+                 <size>
+                  <width>16777215</width>
+                  <height>20</height>
+                 </size>
+                </property>
+               </widget>
+              </item>
+              <item row="7" column="0" colspan="2">
+               <widget class="QLabel" name="restore_original_label">
+                <property name="minimumSize">
+                 <size>
+                  <width>350</width>
+                  <height>20</height>
+                 </size>
+                </property>
+                <property name="maximumSize">
+                 <size>
+                  <width>350</width>
+                  <height>20</height>
+                 </size>
+                </property>
+                <property name="text">
+                 <string>restore to original layout</string>
+                </property>
+               </widget>
+              </item>
+              <item row="7" column="2">
+               <widget class="QPushButton" name="restore_original_btn">
+                <property name="text">
+                 <string>restore</string>
+                </property>
+               </widget>
+              </item>
+              <item row="7" column="3">
+               <spacer name="hsp_12">
+                <property name="orientation">
+                 <enum>Qt::Horizontal</enum>
+                </property>
+                <property name="sizeHint" stdset="0">
+                 <size>
+                  <width>24</width>
+                  <height>25</height>
+                 </size>
+                </property>
+               </spacer>
+              </item>
+              <item row="8" column="0" colspan="2">
+               <widget class="QLabel" name="clean_up_label">
+                <property name="minimumSize">
+                 <size>
+                  <width>350</width>
+                  <height>20</height>
+                 </size>
+                </property>
+                <property name="maximumSize">
+                 <size>
+                  <width>350</width>
+                  <height>20</height>
+                 </size>
+                </property>
+                <property name="text">
+                 <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;clean up all color sets (&lt;span style=&quot; font-weight:600; color:#ff0000;&quot;&gt;irrecoverable&lt;/span&gt;)&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+                </property>
+               </widget>
+              </item>
+              <item row="8" column="2">
+               <widget class="QPushButton" name="clean_up_btn">
+                <property name="text">
+                 <string>clean up</string>
+                </property>
+               </widget>
+              </item>
+              <item row="8" column="3">
                <spacer name="hsp_10">
                 <property name="orientation">
                  <enum>Qt::Horizontal</enum>
                 </property>
                 <property name="sizeHint" stdset="0">
                  <size>
-                  <width>98</width>
-                  <height>20</height>
+                  <width>24</width>
+                  <height>25</height>
                  </size>
                 </property>
                </spacer>
-              </item>
-              <item row="0" column="0">
-               <widget class="QLabel" name="clean_up_label">
-                <property name="minimumSize">
-                 <size>
-                  <width>200</width>
-                  <height>20</height>
-                 </size>
-                </property>
-                <property name="maximumSize">
-                 <size>
-                  <width>200</width>
-                  <height>20</height>
-                 </size>
-                </property>
-                <property name="text">
-                 <string>clean up all color sets</string>
-                </property>
-               </widget>
-              </item>
-              <item row="0" column="1">
-               <widget class="QPushButton" name="clean_up_btn">
-                <property name="text">
-                 <string>clean up</string>
-                </property>
-               </widget>
               </item>
              </layout>
             </widget>

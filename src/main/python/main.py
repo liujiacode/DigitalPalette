@@ -33,7 +33,7 @@ import sys
 import json
 from fbs_runtime.application_context.PyQt5 import ApplicationContext
 from PyQt5.QtWidgets import QMainWindow, QApplication, QGridLayout, QMessageBox, QShortcut, QPushButton
-from PyQt5.QtCore import QCoreApplication, QUrl, QTranslator, QT_VERSION_STR
+from PyQt5.QtCore import QCoreApplication, QUrl, QTranslator, QByteArray, QT_VERSION_STR
 from PyQt5.Qt import PYQT_VERSION_STR
 from PyQt5.QtGui import QIcon, QPixmap, QDesktopServices, QKeySequence
 from cguis.design.main_window import Ui_MainWindow
@@ -298,6 +298,29 @@ class DigitalPalette(QMainWindow, Ui_MainWindow):
         if self._args.load_settings_failed:
             self._wget_operation.warning(self._wget_operation.main_errs[self._args.load_settings_failed - 1])
 
+        # restore main window state.
+        self._default_state = self.saveState()
+        self._default_size = self.size()
+
+        if self._args.main_win_state and self._args.main_win_geometry:
+            try:
+                state = QByteArray.fromBase64(bytes(self._args.main_win_state, 'ascii'))
+                self.restoreState(state)
+
+                geometry = QByteArray.fromBase64(bytes(self._args.main_win_geometry, 'ascii'))
+                self.restoreGeometry(geometry)
+
+            except Exception as err:
+                pass
+
+        self.actionRule.setChecked(self.rule_dock_widget.isVisible())
+        self.actionChannel.setChecked(self.channel_dock_widget.isVisible())
+        self.actionOperation.setChecked(self.operation_dock_widget.isVisible())
+        self.actionScript.setChecked(self.script_dock_widget.isVisible())
+        self.actionMode.setChecked(self.mode_dock_widget.isVisible())
+        self.actionTransformation.setChecked(self.transformation_dock_widget.isVisible())
+        self.actionResult.setChecked(self.result_dock_widget.isVisible())
+
         # install stylesheet.
         """
         with open(os.sep.join((resources, "styles", "dark", "style.qss"))) as qf:
@@ -489,12 +512,21 @@ class DigitalPalette(QMainWindow, Ui_MainWindow):
         Setup settings.
         """
 
+        def _restore_layout(value):
+            """
+            Restore to original layout.
+            """
+
+            self.restoreState(self._default_state)
+            self.resize(self._default_size)
+
         self._wget_settings = Settings(self, self._args)
 
         self._wget_settings.ps_rule_changed.connect(lambda x: self._wget_cube_table.modify_rule())
         self._wget_settings.ps_lang_changed.connect(lambda x: self._install_translator())
         self._wget_settings.ps_settings_changed.connect(lambda x: self._inner_update())
         self._wget_settings.ps_clean_up.connect(lambda x: self._wget_depot.clean_up())
+        self._wget_settings.ps_restore_layout.connect(_restore_layout)
 
     def _inner_create(self, act):
         """
@@ -732,6 +764,9 @@ class DigitalPalette(QMainWindow, Ui_MainWindow):
         """
         Actions before close DigitalPalette.
         """
+
+        self._args.main_win_state = bytes(self.saveState().toBase64()).decode("ascii")
+        self._args.main_win_geometry = bytes(self.saveGeometry().toBase64()).decode("ascii")
 
         self._args.save_settings()
         self._args.remove_temp_dir()
