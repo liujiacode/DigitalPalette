@@ -35,7 +35,7 @@ class ColorSet(object):
             overflow (str): method to manipulate overflowed s and v values, in "cutoff", "return" and "repeat".
         """
 
-        # synchronization methods: Unlimited, H Locked, S Locked, Equidistant, Equal, Gradual, Symmetrical
+        # synchronization methods: Unlimited, H Locked, S Locked, Equidistant, Equal, Gradual, Symmetrical.
         self.synchronization = 0
 
         self.set_hsv_ranges(h_range, s_range, v_range)
@@ -192,7 +192,7 @@ class ColorSet(object):
         else:
             raise ValueError("expect harmony rule in list 'analogous', 'monochromatic', etc.: {}.".format(harmony_rule))
 
-    def modify(self, harmony_rule, idx, color):
+    def modify(self, harmony_rule, idx, color, do_sync=True):
         """
         Modify color set under a selected harmony rule.
 
@@ -200,9 +200,10 @@ class ColorSet(object):
             harmony_rule (str): rule, in "analogous", "monochromatic", "triad", "tetrad", "pentad", "complementary", "shades" and "custom".
             idx (int): index in range 0 ~ 4 which indicates the color in color set for modify.
             color (Color): replace the selected color with this color.
+            do_sync (bool): if run synchronization.
         """
 
-        if self.synchronization:
+        if do_sync and self.synchronization:
             self._sync_modify(idx, color)
 
         else:

@@ -45,7 +45,7 @@ class Image3C(QThread):
         5: not g or s channel data;
         6: not b or v channel data.
 
-    Extract type:
+    Extract types:
         0: bright colorful
         1: light colorful
         2: dark colorful
@@ -229,6 +229,9 @@ class Image3C(QThread):
     def run_1(self, process_scope):
         """
         Run vertical rgb space edge data.
+
+        Args:
+            process_scope (tuple or list): in format (start point, total length), e.g. (0, 100).
         """
 
         if not isinstance(self.rgb_data, np.ndarray):
@@ -265,6 +268,9 @@ class Image3C(QThread):
     def run_2(self, process_scope):
         """
         Run horizontal rgb space edge data.
+
+        Args:
+            process_scope (tuple or list): in format (start point, total length), e.g. (0, 100).
         """
 
         if not isinstance(self.rgb_data, np.ndarray):
@@ -301,6 +307,9 @@ class Image3C(QThread):
     def run_3(self, process_scope):
         """
         Run final rgb space edge data.
+
+        Args:
+            process_scope (tuple or list): in format (start point, total length), e.g. (0, 100).
         """
 
         if not isinstance(self._rgb_vtl_data, np.ndarray):
@@ -336,6 +345,9 @@ class Image3C(QThread):
     def run_5(self, process_scope):
         """
         Run vertical hsv space edge data.
+
+        Args:
+            process_scope (tuple or list): in format (start point, total length), e.g. (0, 100).
         """
 
         if not isinstance(self.hsv_data, np.ndarray):
@@ -380,6 +392,9 @@ class Image3C(QThread):
     def run_6(self, process_scope):
         """
         Run horizontal hsv space edge data.
+
+        Args:
+            process_scope (tuple or list): in format (start point, total length), e.g. (0, 100).
         """
 
         if not isinstance(self.hsv_data, np.ndarray):
@@ -424,6 +439,9 @@ class Image3C(QThread):
     def run_7(self, process_scope):
         """
         Run final hsv space edge data.
+
+        Args:
+            process_scope (tuple or list): in format (start point, total length), e.g. (0, 100).
         """
 
         if not isinstance(self._hsv_vtl_data, np.ndarray):
@@ -459,6 +477,9 @@ class Image3C(QThread):
     def save_load_data(self, load_image):
         """
         Save load image from clipboard, etc.
+
+        Args:
+            load_image (QImage): display image data.
         """
 
         i = 0
@@ -483,6 +504,10 @@ class Image3C(QThread):
     def save_rgb_full_data(self, rgb_data, prefix):
         """
         Save rgb full channel image (0_0.png for category 0 and 4 and channel 0).
+
+        Args:
+            rgb_data (3D array): rgb image array.
+            prefix (int): graph category as image name prefix.
         """
 
         rgb = QImage(rgb_data, rgb_data.shape[1], rgb_data.shape[0], rgb_data.shape[1] * 3, QImage.Format_RGB888)
@@ -497,7 +522,11 @@ class Image3C(QThread):
 
     def save_rgb_chnl_data(self, rgb_data, prefix):
         """
-        Save r, g, b channel images.
+        Save r, g, b, not r, not g and not b channel images separately.
+
+        Args:
+            rgb_data (3D array): rgb image array.
+            prefix (int): graph category as image name prefix.
         """
 
         z_chl = np.zeros((rgb_data.shape[0], rgb_data.shape[1]), dtype=np.uint8)
@@ -534,7 +563,11 @@ class Image3C(QThread):
 
     def save_hsv_chnl_data(self, hsv_data, prefix):
         """
-        Save h, s, v channel images.
+        Save h, s, v, not h, not s and not v channel images separately.
+
+        Args:
+            hsv_data (3D array): hsv image array.
+            prefix (int): graph category as image name prefix.
         """
 
         ones = np.ones(hsv_data.shape[:2])
@@ -573,6 +606,10 @@ class Image3C(QThread):
     def load_image(self, category, channel):
         """
         Load image with category and channel.
+
+        Args:
+            category (int): graph category index.
+            channel (int): graph channel index.
         """
 
         if category in (0, 4) and channel == 0:
@@ -601,6 +638,7 @@ class Image3C(QThread):
         Enhance rgb display by factor. Modify r, g or (and) b values to enhance the contrast of image.
 
         Args:
+            process_scope (tuple or list): in format (start point, total length), e.g. (0, 100).
             values (tuple or list): (region, separation, factor, reserve).
         """
 
@@ -664,6 +702,7 @@ class Image3C(QThread):
         Enhance hsv display by factor. Modify h, s or (and) v values to enhance the contrast of image.
 
         Args:
+            process_scope (tuple or list): in format (start point, total length), e.g. (0, 100).
             values (tuple or list): (region, separation, factor, reserve).
         """
 
@@ -738,6 +777,7 @@ class Image3C(QThread):
         Inverse rgb display. Modify r, g or (and) b values to inverse the contrast of image.
 
         Args:
+            process_scope (tuple or list): in format (start point, total length), e.g. (0, 100).
             values (tuple or list): (region, reserve).
         """
 
@@ -766,6 +806,7 @@ class Image3C(QThread):
         Inverse hsv display. Modify h, s or (and) v values to inverse the contrast of image.
 
         Args:
+            process_scope (tuple or list): in format (start point, total length), e.g. (0, 100).
             values (tuple or list): (region, reserve).
         """
 
@@ -804,6 +845,7 @@ class Image3C(QThread):
         Cover rgb display. Modify r, g or (and) b values to cover the channel of image.
 
         Args:
+            process_scope (tuple or list): in format (start point, total length), e.g. (0, 100).
             values (tuple or list): (region, reserve, path).
         """
 
@@ -847,6 +889,7 @@ class Image3C(QThread):
         Cover hsv display. Modify h, s or (and) v values to cover the channel of image.
 
         Args:
+            process_scope (tuple or list): in format (start point, total length), e.g. (0, 100).
             values (tuple or list): (region, reserve, path).
         """
 
@@ -895,9 +938,10 @@ class Image3C(QThread):
 
     def run_extract(self, process_scope, values):
         """
-        Cover hsv display. Modify h, s or (and) v values to cover the channel of image.
+        Extract a set of colors in different extract types.
 
         Args:
+            process_scope (tuple or list): in format (start point, total length), e.g. (0, 100).
             values (tuple or list): (random number, color type).
         """
 

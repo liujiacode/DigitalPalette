@@ -878,7 +878,7 @@ class Image(QWidget):
 
     def extract_image(self, values):
         """
-        Modify r, g or (and) b values to enhance or inverse the contrast of image.
+        Extract a set of colors from image.
         """
 
         if not (self.isVisible() and self.overlabel_display.isVisible() and self._image3c.display):
@@ -1072,7 +1072,7 @@ class Image(QWidget):
             rgb = self._image3c.rgb_data[int(value[i][1] * (self._image3c.rgb_data.shape[0] - 1))][int(value[i][0] * (self._image3c.rgb_data.shape[1] - 1))]
 
             color = Color(rgb, tp="rgb", overflow=self._args.sys_color_set.get_overflow())
-            self._args.sys_color_set.modify(self._args.hm_rule, i, color)
+            self._args.sys_color_set.modify(self._args.hm_rule, i, color, do_sync=False)
 
         self.ps_color_changed.emit(True)
         # similar to modify_color_loc,
