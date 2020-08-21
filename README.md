@@ -1,7 +1,7 @@
 # DigitalPalette
 ![DigitalPalette](src/main/icons/full/icon_full_256.png)
 
-DigitalPalette is a free software for generating harmonious colors from color wheel and local images.
+DigitalPalette is a free software for generating a set of harmonious colors from a color wheel or an existed image and applying it into your creative works.
 
 # Repository
 [Source Code](https://github.com/liujiacode/DigitalPalette)
