@@ -80,14 +80,14 @@ class Args(object):
         self.usr_langs = tuple(lang_paths)
 
         # software informations.
-        self.info_main_site = "https://liujiacode.github.io/DigitalPalette/"
+        self.info_main_site = "https://eigenmiao.github.io/digipale/"
         self.info_update_site = "https://github.com/liujiacode/DigitalPalette/releases"
-        self.info_version_zh = "v2.2.9-x1d1s1-开发版"
-        self.info_version_en = "v2.2.9-x1d1s1-dev"
+        self.info_version_zh = "v2.2.10-x1d1s1-预览版"
+        self.info_version_en = "v2.2.10-x1d1s1-pre"
         self.info_author_zh = "本征喵函数"
         self.info_author_en = "Eigenmiao"
-        self.info_date_zh = "2020年8月2日"
-        self.info_date_en = "August 2, 2020"
+        self.info_date_zh = "2020年8月23日"
+        self.info_date_en = "August 23, 2020"
 
         # init settings.
         self.usr_store = os.sep.join((os.path.expanduser('~'), "Documents", "DigitalPalette"))
