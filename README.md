@@ -1,8 +1,4 @@
-# DigitalPalette
-<div style="text-align:center; margin: 1.2em"><img src='src/main/icons/full/repository.png' alt='<div>
-DigitalPalette icon.
-</div>' width='90%'></img>
-</div>
+<div style="text-align:center"><img src='src/main/icons/full/repository.png' width='90%' /></div>
 
 # Introduction
 DigitalPalette is a free software for generating a set of harmonious colors from a color wheel or an existed image and applying it into your creative works.
