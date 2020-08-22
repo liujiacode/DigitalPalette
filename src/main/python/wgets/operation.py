@@ -307,7 +307,7 @@ class Operation(QWidget):
                 json.dump(color_dict, f, indent=4, ensure_ascii=False)
 
         elif depot_file.split(".")[-1].lower() == "txt":
-            with open(depot_file, "w") as f:
+            with open(depot_file, "w", encoding='utf-8') as f:
                 f.write("# DigitalPalette Color Depot Export\n")
                 f.write("# Please refer to website {} for more information.\n".format(self._args.info_main_site))
                 f.write("# Version: {}\n".format(self._args.info_version_en))
@@ -319,11 +319,11 @@ class Operation(QWidget):
                 f.write(export_swatch(color_list))
 
         elif depot_file.split(".")[-1].lower() == "gpl":
-            with open(depot_file, "w") as f:
+            with open(depot_file, "w", encoding='utf-8') as f:
                 f.write(export_gpl(color_list))
 
         elif depot_file.split(".")[-1].lower() == "xml":
-            with open(depot_file, "w") as f:
+            with open(depot_file, "w", encoding='utf-8') as f:
                 f.write(export_xml(color_list))
 
         else:
@@ -504,7 +504,7 @@ class Operation(QWidget):
                 json.dump(color_dict, f, indent=4, ensure_ascii=False)
 
         elif set_file.split(".")[-1].lower() == "txt":
-            with open(set_file, "w") as f:
+            with open(set_file, "w", encoding='utf-8') as f:
                 f.write("# DigitalPalette Color Set Export\n")
                 f.write("# Please refer to website {} for more information.\n".format(self._args.info_main_site))
                 f.write("# Version: {}\n".format(self._args.info_version_en))
@@ -516,11 +516,11 @@ class Operation(QWidget):
                 f.write(export_swatch(color_list))
 
         elif set_file.split(".")[-1].lower() == "gpl":
-            with open(set_file, "w") as f:
+            with open(set_file, "w", encoding='utf-8') as f:
                 f.write(export_gpl(color_list))
 
         elif set_file.split(".")[-1].lower() == "xml":
-            with open(set_file, "w") as f:
+            with open(set_file, "w", encoding='utf-8') as f:
                 f.write(export_xml(color_list))
 
         else:

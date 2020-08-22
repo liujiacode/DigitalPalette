@@ -13,13 +13,8 @@ infomation about DigitalPalette.
 Copyright © 2019-2020 by Eigenmiao. All Rights Reserved.
 """
 
-import os
-import time
-import json
 from PyQt5.QtWidgets import QWidget, QPushButton, QGridLayout, QScrollArea, QFrame, QSpacerItem, QSizePolicy, QGroupBox, QLabel, QSlider
 from PyQt5.QtCore import Qt, pyqtSignal, QCoreApplication, QSize
-from clibs.export import export_list, export_text, export_swatch
-from clibs.color import Color
 
 
 class Script(QWidget):
