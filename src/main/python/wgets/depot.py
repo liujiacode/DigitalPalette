@@ -53,7 +53,7 @@ class Info(QDialog, Ui_InfoDialog):
         self.setWindowIcon(app_icon)
 
         self._clone = None
-        self._unit_cell = UnitCell(self.colors, self._args, [None, None, None, None, None], "", "", "", (-1.0, -1.0))
+        self._unit_cell = UnitCell(self.colors, self._args, [None, None, None, None, None], "", "", "", (0, 0))
 
         color_grid_layout = QGridLayout(self.colors)
         color_grid_layout.setContentsMargins(1, 1, 1, 1)
@@ -285,6 +285,7 @@ class Depot(QWidget):
     ps_export = pyqtSignal(int)
     ps_status_changed = pyqtSignal(tuple)
     ps_dropped = pyqtSignal(tuple)
+    ps_appended = pyqtSignal(tuple)
 
     def __init__(self, wget, args):
         """
@@ -629,7 +630,7 @@ class Depot(QWidget):
             event.ignore()
             return
 
-        if depot_file.split(".")[-1].lower() in ("dpc", "json"):
+        if depot_file.split(".")[-1].lower() in ("dpc", "dps", "json"):
             self._drop_file = depot_file
             event.accept()
 
@@ -638,7 +639,12 @@ class Depot(QWidget):
 
     def dropEvent(self, event):
         if self._drop_file:
-            self.ps_dropped.emit((self._drop_file, False))
+            if self._drop_file.split(".")[-1].lower() in ("dpc", "json"):
+                self.ps_dropped.emit((self._drop_file, False))
+
+            else:
+                self.ps_appended.emit((self._drop_file, False))
+
             self._drop_file = None
 
             event.accept()
@@ -661,7 +667,7 @@ class Depot(QWidget):
 
             self._scroll_grid_layout.addWidget(unit_cell)
 
-        empty_cell = UnitCell(self._scroll_contents, self._args, [None, None, None, None, None], "", "", "", (-1.0, -1.0))
+        empty_cell = UnitCell(self._scroll_contents, self._args, [None, None, None, None, None], "", "", "", (0, 0))
         unit_cells.append(empty_cell)
 
         self._scroll_grid_layout.addWidget(empty_cell)
@@ -972,7 +978,7 @@ class Depot(QWidget):
             self._info.clone_cell(self._args.stab_ucells[self._current_idx])
             self._info.show()
 
-    def attach_set(self):
+    def attach_set(self, color_list=None):
         """
         Attach current color set into depot.
         """
@@ -982,9 +988,14 @@ class Depot(QWidget):
 
         self.activate_idx(len(self._args.stab_ucells) - 1)
 
-        hsv_set = (self._args.sys_color_set[0].hsv, self._args.sys_color_set[1].hsv, self._args.sys_color_set[2].hsv, self._args.sys_color_set[3].hsv, self._args.sys_color_set[4].hsv)
+        if color_list:
+            hsv_set = tuple(color_list[0][i].hsv for i in range(5))
+            unit_cell = UnitCell(self._scroll_contents, self._args, hsv_set, color_list[1], color_list[2], color_list[3], color_list[4])
 
-        unit_cell = UnitCell(self._scroll_contents, self._args, hsv_set, self._args.hm_rule, "", "", (time.time(), time.time()))
+        else:
+            hsv_set = tuple(self._args.sys_color_set[i].hsv for i in range(5))
+            unit_cell = UnitCell(self._scroll_contents, self._args, hsv_set, self._args.hm_rule, "", "", (time.time(), time.time()))
+
         self._scroll_grid_layout.addWidget(unit_cell)
 
         unit_cell._func_tr_()
@@ -1031,6 +1042,9 @@ class Depot(QWidget):
             if depot_file.split(".")[-1].lower() in ("dpc", "json") and os.path.isfile(depot_file):
                     self.ps_dropped.emit((depot_file, False))
 
+            elif depot_file.split(".")[-1].lower() in ("dps", "json") and os.path.isfile(depot_file):
+                    self.ps_appended.emit((depot_file, False))
+
         else:
             try:
                 color_dict = json.loads(clipboard.text(), encoding='utf-8')
@@ -1041,6 +1055,9 @@ class Depot(QWidget):
             if isinstance(color_dict, dict) and "type" in color_dict and "palettes" in color_dict:
                 if color_dict["type"] == "depot":
                     self.ps_dropped.emit((color_dict, True))
+
+                elif color_dict["type"] == "set":
+                    self.ps_appended.emit((color_dict, True))
 
     def clipboard_cur(self, ctp):
         """

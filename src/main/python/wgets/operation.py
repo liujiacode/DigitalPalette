@@ -234,7 +234,7 @@ class Operation(QWidget):
                         cr_time = [float(color["time"][0]), float(color["time"][1])]
 
                     else:
-                        cr_time = (-1.0, -1.0)
+                        cr_time = (0, 0)
 
                     if len(hsv_set) == 5:
                         if "rule" in color:
@@ -346,7 +346,7 @@ class Operation(QWidget):
 
         self.dp_import(cb_file[0])
 
-    def dp_import(self, set_file, direct_dict=False):
+    def dp_import(self, set_file, direct_dict=False, return_set=False):
         """
         Import a color set file.
         """
@@ -437,8 +437,35 @@ class Operation(QWidget):
 
         if "rule" in color_dict:
             if color_dict["rule"] in self._args.global_hm_rules:
-                self._args.hm_rule = color_dict["rule"]
-                self._args.sys_color_set.import_color_set(color_set)
+                if return_set:
+                    set_name = ""
+                    set_desc = ""
+                    set_time = (0, 0)
+
+                    try:
+                        if "name" in color_dict:
+                            set_name = str(color_dict["name"])
+
+                        if "desc" in color_dict:
+                            set_desc = str(color_dict["desc"])
+
+                        if "time" in color_dict:
+                            init_time, modify_time = tuple(color_dict["time"])[:2]
+                            current_time = time.time()
+                            init_time = 0 if init_time < 0 else init_time
+                            init_time = current_time if init_time > current_time else init_time
+                            modify_time = 0 if modify_time < 0 else modify_time
+                            modify_time = current_time if modify_time > current_time else modify_time
+                            set_time = (init_time, modify_time)
+
+                    except Exception as err:
+                        pass
+
+                    return color_set, color_dict["rule"], set_name, set_desc, set_time
+
+                else:
+                    self._args.hm_rule = color_dict["rule"]
+                    self._args.sys_color_set.import_color_set(color_set)
 
             else:
                 self.warning(self._operation_errs[8] + "\n{}\n{}".format(self._operation_errs[17], color_dict["rule"]))

@@ -452,6 +452,7 @@ class DigitalPalette(QMainWindow, Ui_MainWindow):
 
         self._wget_wheel.ps_dropped.connect(lambda x: self._inner_import(x))
         self._wget_depot.ps_dropped.connect(lambda x: self._inner_open(x))
+        self._wget_depot.ps_appended.connect(lambda x: self._inner_append(x))
 
     def _setup_script(self):
         """
@@ -669,6 +670,17 @@ class DigitalPalette(QMainWindow, Ui_MainWindow):
         self._wget_operation.dp_import(set_file[0], direct_dict=set_file[1])
 
         self.update()
+
+    def _inner_append(self, set_file):
+        """
+        Append a set file.
+        """
+
+        color_list = self._wget_operation.dp_import(set_file[0], direct_dict=set_file[1], return_set=True)
+        self._wget_depot.attach_set(color_list=color_list)
+
+        # self.update() is completed by self._wget_depot.attach_set(color_list=color_list) above.
+        # self.update()
 
     def _install_translator(self):
         """
