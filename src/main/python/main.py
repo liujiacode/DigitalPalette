@@ -677,7 +677,11 @@ class DigitalPalette(QMainWindow, Ui_MainWindow):
         """
 
         color_list = self._wget_operation.dp_import(set_file[0], direct_dict=set_file[1], return_set=True)
-        self._wget_depot.attach_set(color_list=color_list)
+
+        # The color list is none if dp_import failed, thus should be discarded.
+        # Func attach_set(None) represent add color set from wheel.
+        if color_list:
+            self._wget_depot.attach_set(color_list=color_list)
 
         # self.update() is completed by self._wget_depot.attach_set(color_list=color_list) above.
         # self.update()

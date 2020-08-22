@@ -980,7 +980,7 @@ class Depot(QWidget):
 
     def attach_set(self, color_list=None):
         """
-        Attach current color set into depot.
+        Attach current color set from wheel or color list from file into depot.
         """
 
         if not self.isVisible():
@@ -988,6 +988,7 @@ class Depot(QWidget):
 
         self.activate_idx(len(self._args.stab_ucells) - 1)
 
+        # Arg color_list with None or False represent add color set from wheel instead of discard.
         if color_list:
             hsv_set = tuple(color_list[0][i].hsv for i in range(5))
             unit_cell = UnitCell(self._scroll_contents, self._args, hsv_set, color_list[1], color_list[2], color_list[3], color_list[4])

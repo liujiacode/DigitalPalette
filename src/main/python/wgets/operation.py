@@ -461,7 +461,7 @@ class Operation(QWidget):
                     except Exception as err:
                         pass
 
-                    return color_set, color_dict["rule"], set_name, set_desc, set_time
+                    return (color_set, color_dict["rule"], set_name, set_desc, set_time)
 
                 else:
                     self._args.hm_rule = color_dict["rule"]
