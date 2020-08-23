@@ -74,7 +74,7 @@ class Args(object):
                 glang = re.split("\.|_|-", lang)[0]
 
                 if glang in all_langs:
-                    lang_paths.append((all_langs.index(glang), lang))
+                    lang_paths.append((all_langs.index(glang), lang[:-3]))
 
         self.lang = "default"
         self.usr_langs = tuple(lang_paths)
@@ -123,7 +123,10 @@ class Args(object):
         """
 
         # load default language.
-        self.modify_settings("lang", "default")
+        self.lang = "default"
+
+        if self.lang not in [x[1] for x in self.usr_langs]:
+            self.lang = "default"
 
         # load local store tag.
         self.press_act = False
